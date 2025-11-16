@@ -1,93 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Prismledger Accounting Service | Contact</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Prismledger Accounting</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Prism<span>ledger</span></div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+
+<header>
+    <nav class="navbar">
+        <img src="images/logo-purple.png" class="nav-logo" alt="Logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
-      </nav>
+    </nav>
+</header>
+
+<section class="contact-section">
+    <h2>Get in Touch</h2>
+
+    <div class="contact-box">
+        <p><strong>Prismledger Accounting Services</strong></p>
+        <p>Phone: <a href="tel:2365152976">236-515-2976</a></p>
+        <p>Email: <a href="mailto:prism.taxes@gmail.com">prism.taxes@gmail.com</a></p>
+        <p>Instagram: @prismaccounting</p>
     </div>
-  </header>
+</section>
 
-  <main class="container">
-    <section>
-      <h1 class="section-title">Contact Us</h1>
-      <p class="section-subtitle">
-        Ready to get started or have questions? Send a message and we’ll get back to you.
-      </p>
+<footer>
+    <p>© 2025 Prismledger Accounting Services</p>
+</footer>
 
-      <div class="contact-grid">
-        <div>
-          <!-- Simple contact form (this does not send emails by itself, but looks professional) -->
-          <form>
-            <div>
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your full name" />
-            </div>
-
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@example.com" />
-            </div>
-
-            <div>
-              <label for="subject">Subject</label>
-              <input id="subject" type="text" placeholder="Bookkeeping, tax, payroll..." />
-            </div>
-
-            <div>
-              <label for="message">Message</label>
-              <textarea id="message" placeholder="Tell us a bit about your situation..."></textarea>
-            </div>
-
-            <button type="submit" class="btn-primary">Send message (demo)</button>
-          </form>
-          <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">
-            This is a demo form only. To contact us, please use the email or phone below.
-          </p>
-        </div>
-
-        <div class="about-box">
-          <h3>Contact Details</h3>
-          <p>
-            <strong>Prismledger Accounting Service</strong><br />
-            Richmond, British Columbia, Canada
-          </p>
-          <br />
-          <p>
-            <strong>Phone:</strong> 236-515-2976<br />
-            <strong>Email:</strong> prism.taxes@gmail.com
-          </p>
-          <br />
-          <p>
-            Prefer WhatsApp or a quick call? Send a short message with your name, business type,
-            and what you need help with (tax, bookkeeping, payroll, or all three).
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Prismledger Accounting Service
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
