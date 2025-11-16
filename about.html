@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Prismledger Accounting</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Prismledger Accounting</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
-    <nav class="navbar fade-in">
-        <div class="logo">
-            <img src="images/logo-purple.png" alt="Prismledger Logo" />
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a class="active" href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+<body class="dark">
+  <nav class="navbar fade-in">
+    <div class="nav-left">
+      <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
+      <span class="nav-brand">Prismledger Accounting</span>
+    </div>
 
-    <header class="page-header fade-up">
-        <h1>About Prismledger</h1>
-    </header>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a class="active" href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-    <section class="about-container fade-in">
-        <img src="images/head.png" class="about-photo" alt="Gangadhar Tandale" />
+    <div class="nav-right">
+      <a href="contact.html#quote" class="btn-small">Get a Quote</a>
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </nav>
 
-        <div class="about-text">
-            <h2>Meet Gangadhar Tandale</h2>
-            <p>
-                Founder of Prismledger Accounting Services, dedicated to providing
-                high-quality bookkeeping, payroll, and tax filing services for 
-                individuals and small businesses in Canada.
-            </p>
-        </div>
-    </section>
+  <header class="page-header fade-up">
+    <h1>About Prismledger</h1>
+  </header>
 
-    <footer>
-        © 2025 Prismledger Accounting Services
-    </footer>
+  <section class="about-container fade-in">
+    <img src="images/head.png" class="about-photo" alt="Gangadhar Tandale" />
+
+    <div class="about-text">
+      <h2>Meet Gangadhar Tandale</h2>
+      <p>
+        Gangadhar founded Prismledger Accounting Services to support individuals,
+        newcomers, and small business owners with clear, reliable, and affordable
+        accounting support.
+      </p>
+      <p>
+        With experience in tax filing, bookkeeping, payroll, and collections,
+        he understands both the CRA side and the client side of compliance.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Prismledger Accounting Services
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
