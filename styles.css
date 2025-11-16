@@ -429,4 +429,18 @@ footer {
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   object-fit: cover;
 }
+.why-list {
+  margin-top: 15px;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.why-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.why-list strong {
+  color: var(--accent); /* matches brand color */
+}
 
