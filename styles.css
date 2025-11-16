@@ -443,4 +443,23 @@ footer {
 .why-list strong {
   color: var(--accent); /* matches brand color */
 }
+.success-popup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #28a745;
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.6s ease-out;
+  z-index: 9999;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
