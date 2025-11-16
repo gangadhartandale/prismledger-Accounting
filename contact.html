@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="dark">
+<body>
+  <!-- NAVBAR -->
   <nav class="navbar fade-in">
     <div class="nav-left">
       <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
@@ -23,6 +24,8 @@
     </ul>
 
     <div class="nav-right">
+      <a href="contact.html#quote" class="btn-small">Get a Quote</a>
+
       <div class="theme-toggle">
         <label class="switch">
           <input type="checkbox" id="theme-toggle">
@@ -32,43 +35,84 @@
     </div>
   </nav>
 
+  <!-- HEADER -->
   <header class="page-header fade-up">
     <h1>Contact Us</h1>
-    <p>Have a question or want a custom quote? Send a message below.</p>
+    <p>Have a question or need help? Send us a message and we’ll get back to you soon.</p>
   </header>
 
+  <!-- CONTACT SECTION -->
   <section class="contact-layout fade-in">
+
+    <!-- CONTACT DETAILS -->
     <div class="contact-info">
-      <h2>Details</h2>
+      <h2>Office Details</h2>
       <p><strong>Email:</strong> <a href="mailto:prism.taxes@gmail.com">prism.taxes@gmail.com</a></p>
       <p><strong>Phone:</strong> <a href="tel:2365152976">236-515-2976</a></p>
       <p><strong>Instagram:</strong> @prismaccounting</p>
+      <p>We respond to most inquiries within 2–4 hours.</p>
     </div>
 
+    <!-- CONTACT FORM -->
     <div class="contact-form-box" id="quote">
-      <h2>Get a Quote</h2>
-      <!-- simple mailto form (no backend needed for now) -->
-      <form action="mailto:prism.taxes@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Name*</label>
-        <input type="text" id="name" name="Name" required />
+      <h2>Send Us a Message</h2>
 
-        <label for="email">Email*</label>
-        <input type="email" id="email" name="Email" required />
+      <form 
+        action="https://formspree.io/f/xwkdyqaz"
+        method="POST"
+        autocomplete="on"
+        class="contact-form"
+      >
+        <label for="name">Full Name*</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Your full name" 
+          required 
+          autocomplete="name"
+        />
+
+        <label for="email">Email Address*</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="your@email.com" 
+          required 
+          autocomplete="email"
+        />
+
+        <label for="phone">Phone Number</label>
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone" 
+          placeholder="604-123-4567"
+          autocomplete="tel"
+        />
 
         <label for="service">Service Interested In</label>
-        <select id="service" name="Service">
+        <select id="service" name="service" autocomplete="off">
           <option value="Tax Filing">Tax Filing</option>
           <option value="Bookkeeping">Bookkeeping</option>
           <option value="Payroll">Payroll</option>
-          <option value="Multiple / Other">Multiple / Other</option>
+          <option value="Multiple">Multiple / Other</option>
         </select>
 
-        <label for="message">Tell us about your situation</label>
-        <textarea id="message" name="Message" rows="5"></textarea>
+        <label for="message">Your Message*</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="5" 
+          placeholder="Tell us how we can help you…" 
+          required
+        ></textarea>
 
-        <button type="submit" class="btn-primary">Send Request</button>
+        <button type="submit" class="btn-primary">Send Message</button>
       </form>
     </div>
+
   </section>
 
   <footer>
