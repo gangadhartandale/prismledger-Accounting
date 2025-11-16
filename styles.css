@@ -132,3 +132,71 @@ footer {
     color: white;
     margin-top: 40px;
 }
+/* ---------------------------
+   SMOOTH ANIMATIONS
+---------------------------- */
+
+/* Fade In */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+/* Slide In From Left */
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.slide-left {
+    animation: slideInLeft 1.2s ease forwards;
+    opacity: 0;
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(40px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.slide-right {
+    animation: slideInRight 1.2s ease forwards;
+    opacity: 0;
+}
+
+/* Zoom In */
+@keyframes zoomIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.zoom-in {
+    animation: zoomIn 1s ease forwards;
+    opacity: 0;
+}
+
+/* Hover Lift Effect */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Animated Button */
+.btn-primary {
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #ffe56c;
+    color: #4e1bcf;
+    transform: scale(1.05);
+}
