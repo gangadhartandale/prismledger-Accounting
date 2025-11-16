@@ -1,94 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Prismledger Accounting Service | Services</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Prismledger Accounting</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Prism<span>ledger</span></div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+
+<header>
+    <nav class="navbar">
+        <img src="images/logo-purple.png" class="nav-logo" alt="Logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-      </nav>
+    </nav>
+</header>
+
+<section class="services-section">
+    <h2>Our Services</h2>
+
+    <div class="services-grid">
+
+        <div class="service-item">
+            <img src="images/tax35.png" alt="Tax Filing">
+            <h3>Tax Filing</h3>
+            <p>Get your taxes done professionally for only $35.</p>
+        </div>
+
+        <div class="service-item">
+            <img src="images/bookkeeping129.png" alt="Bookkeeping">
+            <h3>Bookkeeping</h3>
+            <p>Small business bookkeeping plans starting from $129/month.</p>
+        </div>
+
+        <div class="service-item">
+            <img src="images/payroll3months.png" alt="Payroll Free 3 Months">
+            <h3>Payroll Services</h3>
+            <p>Get your first 3 months of payroll services FREE.</p>
+        </div>
+
     </div>
-  </header>
+</section>
 
-  <main class="container">
-    <section>
-      <h1 class="section-title">Services</h1>
-      <p class="section-subtitle">
-        Clear pricing and practical support for individuals, self-employed professionals and
-        small businesses.
-      </p>
+<footer>
+    <p>© 2025 Prismledger Accounting Services</p>
+</footer>
 
-      <div class="cards">
-        <div class="card">
-          <span class="tag">Bookkeeping</span>
-          <h3>Small Business Bookkeeping</h3>
-          <p>
-            Monthly bookkeeping starting from <strong>$129/month</strong> for small businesses.
-            Includes recording income/expenses, reconciliations, and basic reporting.
-          </p>
-          <p>
-            <strong>Includes:</strong> bank and credit card reconciliations, receipts
-            organization, simple management reports.
-          </p>
-        </div>
-
-        <div class="card">
-          <span class="tag">Tax</span>
-          <h3>Tax Filing & Compliance</h3>
-          <p>
-            We prepare and file returns for:
-          </p>
-          <ul>
-            <li>T1 personal tax returns</li>
-            <li>Self-employed and sole proprietors</li>
-            <li>Small corporations (T2)</li>
-            <li>GST/PST returns</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <span class="tag">Payroll</span>
-          <h3>Payroll Services</h3>
-          <p>
-            Ideal for small teams, such as restaurants and trades businesses. We calculate
-            employee pay, prepare paystubs, and manage CRA remittances.
-          </p>
-          <p>
-            <strong>Optional add-ons:</strong> ROEs, T4/T4A slips, WSBC reporting.
-          </p>
-        </div>
-
-        <div class="card">
-          <span class="tag">Add-on</span>
-          <h3>Cleanup & Catch-up Work</h3>
-          <p>
-            Behind on your books? We help clean up prior years, fix errors, and organize your
-            records so you can move forward with clarity.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Prismledger Accounting Service
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
