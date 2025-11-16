@@ -1,52 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prismledger Accounting Services</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prismledger Accounting Services</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <nav class="navbar fade-in">
-        <div class="logo">
-            <img src="images/logo-purple.png" alt="Prismledger Logo" />
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar fade-in">
+    <div class="nav-left">
+      <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
+      <span class="nav-brand">Prismledger Accounting</span>
+    </div>
 
-    <header class="hero fade-up">
-        <div class="hero-text">
-            <h1>Professional Accounting for Individuals & Small Businesses</h1>
-            <p>Your trusted partner for tax filing, bookkeeping & payroll services.</p>
-            <a href="services.html" class="btn-primary">Explore Services</a>
-        </div>
-        <div class="hero-image">
-            <img src="images/calci.jpg" alt="Accounting calculator" />
-        </div>
-    </header>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-    <section class="promo-section fade-in">
-        <div class="promo-card">
-            <img src="images/tax35.png" alt="Tax Filing $35" />
-        </div>
+    <div class="nav-right">
+      <a href="contact.html#quote" class="btn-small">Get a Quote</a>
 
-        <div class="promo-card">
-            <img src="images/bookkeeping129.png" alt="Bookkeeping $129" />
-        </div>
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </nav>
 
-        <div class="promo-card">
-            <img src="images/payroll3months.png" alt="Payroll 3 months free" />
-        </div>
-    </section>
+  <!-- HERO -->
+  <header class="hero fade-up">
+    <div class="hero-text">
+      <h1>Professional Accounting for Individuals & Small Businesses</h1>
+      <p>Your trusted partner for tax filing, bookkeeping & payroll services in Canada.</p>
+      <div class="hero-buttons">
+        <a href="pricing.html" class="btn-primary">View Pricing</a>
+        <a href="contact.html#quote" class="btn-ghost">Get a Free Quote</a>
+      </div>
+    </div>
 
-    <footer>
-        © 2025 Prismledger Accounting Services
-    </footer>
+    <div class="hero-image">
+      <img src="images/calci.jpg" alt="Accounting calculator" />
+    </div>
+  </header>
+
+  <!-- PROMO CARDS -->
+  <section class="promo-section fade-in">
+    <div class="promo-card">
+      <img src="images/tax35.png" alt="Tax Filing $35" />
+    </div>
+
+    <div class="promo-card">
+      <img src="images/bookkeeping129.png" alt="Bookkeeping $129" />
+    </div>
+
+    <div class="promo-card">
+      <img src="images/payroll3months.png" alt="Payroll 3 months free" />
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials fade-up">
+    <h2>What Clients Say</h2>
+    <div class="testimonial-grid">
+      <article class="testimonial-card">
+        <p>“Gangadhar made my first tax filing in Canada so easy. Everything was explained clearly and done on time.”</p>
+        <h4>– Student, Vancouver</h4>
+      </article>
+
+      <article class="testimonial-card">
+        <p>“Prismledger looks after our bookkeeping every month, so I can focus on running my restaurant.”</p>
+        <h4>– Small Business Owner, Richmond</h4>
+      </article>
+
+      <article class="testimonial-card">
+        <p>“The payroll setup was smooth, and the 3-month free offer helped us switch from our old system.”</p>
+        <h4>– Startup Founder, BC</h4>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Prismledger Accounting Services
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
