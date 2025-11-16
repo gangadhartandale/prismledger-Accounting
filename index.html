@@ -1,106 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Prismledger Accounting Service | Home</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prismledger Accounting Services</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Prism<span>ledger</span></div>
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
     <section class="hero">
-      <div class="hero-text">
-        <h1>
-          Simple, reliable <span class="highlight">accounting support</span><br />
-          for small businesses in BC.
-        </h1>
-        <p>
-          Prismledger Accounting Service helps you stay compliant and stress-free with
-          professional bookkeeping, tax filing, and payroll services tailored for
-          self-employed professionals and small businesses.
-        </p>
-        <div class="hero-buttons">
-          <a class="btn-primary" href="services.html">View our services</a>
-          <a class="btn-secondary" href="contact.html">Book a free consultation</a>
+        <div class="hero-text">
+            <h1>Professional Accounting for Individuals & Small Businesses</h1>
+            <p>Your trusted partner for tax filing, bookkeeping & payroll services.</p>
+            <a href="services.html" class="btn-primary">Explore Services</a>
         </div>
-      </div>
 
-      <div class="hero-image">
-        <h3>Laptop, ledger & calculator ready.</h3>
-        <p>
-          Imagine a clean desk: laptop open with your QuickBooks, a calculator beside it, and
-          your books fully reconciled. That’s what we do in the background so you can focus on
-          running your business.
-        </p>
-        <div class="fake-screen">
-          <strong>Example workflow</strong><br /><br />
-          • Record daily sales and expenses<br />
-          • Reconcile bank and credit card accounts<br />
-          • Prepare payroll for your team<br />
-          • File GST/PST and year-end taxes on time
+        <div class="hero-image">
+            <img src="images/calci.jpg" alt="Accounting calculator">
         </div>
-      </div>
     </section>
 
-    <section>
-      <h2 class="section-title">What we can help you with</h2>
-      <p class="section-subtitle">
-        End-to-end support: from monthly bookkeeping to full payroll and year-end filings.
-      </p>
-
-      <div class="cards">
-        <div class="card">
-          <span class="tag">Bookkeeping</span>
-          <h3>Monthly bookkeeping</h3>
-          <p>
-            We record your income and expenses, reconcile your bank accounts, and keep clean
-            ledgers so you always know where your business stands.
-          </p>
+    <!-- HIGHLIGHT SECTION -->
+    <section class="promo-section">
+        <div class="promo-card">
+            <img src="images/tax35.png" alt="Tax Filing $35">
         </div>
 
-        <div class="card">
-          <span class="tag">Tax Filing</span>
-          <h3>Personal & business tax</h3>
-          <p>
-            From T1 (personal) returns to small corporate filings, we help you stay compliant
-            with CRA and avoid surprises at year-end.
-          </p>
+        <div class="promo-card">
+            <img src="images/bookkeeping129.png" alt="Bookkeeping $129 per month">
         </div>
 
-        <div class="card">
-          <span class="tag">Payroll</span>
-          <h3>Payroll & remittances</h3>
-          <p>
-            We calculate employee pay, prepare paystubs, and ensure CPP, EI, and tax remittances
-            are submitted to CRA correctly and on time.
-          </p>
+        <div class="promo-card">
+            <img src="images/payroll3months.png" alt="Payroll 3 months free">
         </div>
-      </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Prismledger Accounting Service · Richmond, BC · Email: prism.taxes@gmail.com
-    </div>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Prismledger Accounting Services</p>
+    </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
