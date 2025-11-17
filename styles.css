@@ -459,3 +459,14 @@ footer {
     flex-direction: column;
   }
 }
+/* ===== Scroll Progress Bar ===== */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--accent);
+  width: 0%;
+  z-index: 99999;
+  transition: width 0.15s ease-out;
+}
