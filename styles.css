@@ -477,4 +477,105 @@ footer {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* ===== FULL-PAGE SCROLL SNAP ===== */
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ===== TITLES ===== */
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* ===== SERVICE CARDS ON PAGE 1 ===== */
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #2d0e78;
+  padding: 25px;
+  border-radius: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+/* ===== INFO BOX ===== */
+.info-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #2d0e78;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.info-box ul {
+  margin-left: 20px;
+}
+
+/* ===== HIGHLIGHT ===== */
+.highlight {
+  color: #ffd24c;
+  font-weight: 700;
+}
+
+/* ===== FADE ANIMATIONS ===== */
+.fade-up {
+  animation: fadeUp 1.2s ease;
+}
+
+.fade-in {
+  animation: fadeIn 1.4s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
