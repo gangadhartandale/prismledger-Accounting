@@ -5,105 +5,64 @@
   <title>About Prismledger Accounting | Small Business Accountant in White Rock & Surrey</title>
   <meta name="description" content="Learn about Gangadhar Tandale, Accounting Manager at Prismledger Accounting Services, with experience at MNP, Manning Elliott, Buckley Dodds and CRA Collections." />
   <link rel="canonical" href="https://prismledger.ca/about.html" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://prismledger.ca/#organization",
-      "name": "Prismledger Accounting Services",
-      "url": "https://prismledger.ca/",
-      "logo": "https://prismledger.ca/images/logo-purple.png",
-      "email": "prism.taxes@gmail.com",
-      "telephone": "+1-236-515-2976",
-      "sameAs": [
-        "https://www.instagram.com/prismaccounting"
-      ]
-    },
-    {
-      "@type": "AccountingService",
-      "@id": "https://prismledger.ca/#whiterock",
-      "name": "Prismledger Accounting Services - White Rock Office",
-      "url": "https://prismledger.ca/",
-      "image": "https://prismledger.ca/images/logo-purple.png",
-      "telephone": "+1-236-515-2976",
-      "email": "prism.taxes@gmail.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "15170 Prospect Ave",
-        "addressLocality": "White Rock",
-        "addressRegion": "BC",
-        "postalCode": "V4B 3Y8",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.024,
-        "longitude": -122.801
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "White Rock"
-        },
-        {
-          "@type": "City",
-          "name": "Surrey"
-        },
-        {
-          "@type": "City",
-          "name": "Delta"
-        }
-      ],
-      "description": "Tax filing, bookkeeping and payroll services for individuals, newcomers and small businesses. Office inside Karigars Interiors on Prospect Avenue in White Rock, BC."
-    },
-    {
-      "@type": "AccountingService",
-      "@id": "https://prismledger.ca/#surrey",
-      "name": "Prismledger Accounting Services - Surrey Office",
-      "url": "https://prismledger.ca/",
-      "image": "https://prismledger.ca/images/logo-purple.png",
-      "telephone": "+1-236-515-2976",
-      "email": "prism.taxes@gmail.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "105-12827 76 Ave",
-        "addressLocality": "Surrey",
-        "addressRegion": "BC",
-        "postalCode": "V3W 2V3",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.132,
-        "longitude": -122.874
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Surrey"
-        },
-        {
-          "@type": "City",
-          "name": "Delta"
-        },
-        {
-          "@type": "City",
-          "name": "Langley"
-        }
-      ],
-      "description": "Small business bookkeeping from $129/month, payroll and year-round tax support from our Surrey office near Newton."
-    }
-  ]
-}
-</script>
 
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- SEO SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://prismledger.ca/#organization",
+        "name": "Prismledger Accounting Services",
+        "url": "https://prismledger.ca/",
+        "logo": "https://prismledger.ca/images/logo-purple.png",
+        "email": "prism.taxes@gmail.com",
+        "telephone": "+1-236-515-2976",
+        "sameAs": [
+          "https://www.instagram.com/prismaccounting"
+        ]
+      },
+      {
+        "@type": "AccountingService",
+        "@id": "https://prismledger.ca/#whiterock",
+        "name": "Prismledger Accounting Services - White Rock Office",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "15170 Prospect Ave",
+          "addressLocality": "White Rock",
+          "addressRegion": "BC",
+          "postalCode": "V4B 3Y8",
+          "addressCountry": "CA"
+        },
+        "image": "https://prismledger.ca/images/logo-purple.png"
+      },
+      {
+        "@type": "AccountingService",
+        "@id": "https://prismledger.ca/#surrey",
+        "name": "Prismledger Accounting Services - Surrey Office",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "105-12827 76 Ave",
+          "addressLocality": "Surrey",
+          "addressRegion": "BC",
+          "postalCode": "V3W 2V3",
+          "addressCountry": "CA"
+        },
+        "image": "https://prismledger.ca/images/logo-purple.png"
+      }
+    ]
+  }
+  </script>
 </head>
 
-<body>
+<body class="dark">
+  
+  <!-- PROGRESS BAR -->
+  <div id="progress-bar"></div>
+
   <!-- NAVBAR -->
   <nav class="navbar fade-in">
     <div class="nav-left">
@@ -133,117 +92,78 @@
   <!-- PAGE HEADER -->
   <header class="page-header fade-up">
     <h1>About Prismledger</h1>
-    <p>Clear, reliable and affordable accounting support for individuals, newcomers and small businesses in Canada.</p>
+    <p>Clear, reliable, and affordable accounting support for individuals, newcomers, and small businesses.</p>
   </header>
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT MAIN -->
   <section class="about-container fade-in">
-    <img src="images/self.png" class="about-photo" alt="Gangadhar Tandale" />
+
+    <img src="images/self.png" class="about-photo profile-photo" alt="Gangadhar Tandale">
 
     <div class="about-text">
       <h2>Meet Gangadhar Tandale</h2>
 
       <p>
-        Gangadhar Tandale is the Accounting Manager at <strong>Prismledger Accounting Services</strong>, where he is
-        dedicated to supporting individuals, newcomers and small business owners with clear, reliable and affordable
-        accounting solutions. His approach is grounded in accuracy, integrity and a genuine commitment to helping clients
-        stay compliant and confident in their financial responsibilities.
+        Gangadhar is the Accounting Manager at <strong>Prismledger Accounting Services</strong>, serving individuals,
+        newcomers, families, and small businesses across Surrey, Delta, and White Rock. He specializes in providing
+        clear, reliable, and affordable accounting solutions with a focus on compliance, accuracy, and client care.
       </p>
 
       <p>
-        Gangadhar brings extensive experience across <strong>tax filing, bookkeeping, payroll, audit and collections</strong>,
-        allowing him to understand both sides of compliance – the <strong>CRA perspective</strong> and the
-        <strong>client experience</strong>. His background includes roles at respected accounting firms in Vancouver such as
-        <strong>MNP LLP, Manning Elliott LLP and Buckley Dodds CPA LLP</strong>, where he gained hands-on experience serving
-        a wide range of clients and industries.
+        His experience spans <strong>tax filing, bookkeeping, payroll, audits, and CRA collections</strong>. He has
+        worked with leading accounting firms including <strong>MNP LLP, Manning Elliott LLP, and Buckley Dodds CPA LLP</strong>.
       </p>
 
       <p>
-        He founded <strong>Prismledger Accounting Services</strong> with a mission to help individuals and small businesses
-        who struggle with tax compliance, outstanding balances and collection challenges. His recent tenure with the
-        <strong>Government of Canada</strong> as an <strong>Income Tax Collections Officer</strong> provided deep insight into
-        how the CRA initiates legal actions, garnishments, liens and other enforcement measures. With this knowledge, he
-        helps clients <strong>avoid stressful collection situations</strong> and resolve tax matters proactively and
-        respectfully.
+        His recent role with the <strong>Government of Canada</strong> as an <strong>Income Tax Collections Officer</strong>
+        gave him first-hand insight into legal actions such as garnishments, liens, and enforcement measures —
+        knowledge that he now uses to help clients avoid stressful CRA situations.
       </p>
 
       <p>
-        Gangadhar is currently preparing for the <strong>Chartered Professional Accountant (CPA)</strong> designation to
-        further strengthen his technical expertise and continue delivering high-quality professional services. He has also
-        contributed to the community as a volunteer with the <strong>City of Vancouver’s Community Tax Clinic</strong>,
-        where he completed <strong>over 300 tax filings</strong> for low-income individuals and newcomers.
+        Gangadhar completed over <strong>300 tax returns</strong> as a volunteer with the <strong>City of Vancouver’s Community Tax Clinic</strong>.
       </p>
 
       <p>
-        To complement his accounting background, Gangadhar has completed the <strong>IBM Data Analytics Essentials</strong>
-        and <strong>IBM Data Visualization &amp; Dashboard Essentials</strong> certificates, enhancing his ability to interpret
-        financial data, create clear dashboards and communicate insights in a way that clients can easily understand.
+        He has also earned certificates in:
       </p>
 
-      <p>
-        Outside of his professional work, Gangadhar is passionate about financial education and empowering newcomers to
-        Canada by helping them understand their tax obligations, available credits and financial rights.
-      </p>
+      <ul>
+        <li>IBM Data Analytics Essentials</li>
+        <li>IBM Data Visualization & Dashboard Essentials</li>
+      </ul>
     </div>
   </section>
 
   <!-- CERTIFICATES SECTION -->
   <section class="about-container fade-in">
-    <div class="about-text certificates">
-      <h3>Certificates &amp; Community Involvement</h3>
-      <ul>
-        <li>
-          <a href="docs/cvitp-certificate.pdf" target="_blank">
-            City of Vancouver – Community Tax Clinic (over 300 tax returns filed)
-          </a>
-        </li>
-        <li>
-          <a href="docs/ibm-data-analytics.pdf" target="_blank">
-            IBM Data Analytics Essentials Certificate
-          </a>
-        </li>
-        <li>
-          <a href="docs/ibm-data-visualization.pdf" target="_blank">
-            IBM Data Visualization &amp; Dashboard Essentials Certificate
-          </a>
-        </li>
+    <div class="about-text">
+      <h3>Certificates & Community Work</h3>
+
+      <ul class="why-list">
+        <li><a href="docs/cvitp.pdf" target="_blank">City of Vancouver – Community Tax Clinic (300+ returns)</a></li>
+        <li><a href="docs/IBMDataAnalyticsCertificate.pdf" target="_blank">IBM Data Analytics Essentials</a></li>
+        <li><a href="docs/IBMdatavisual.pdf" target="_blank">IBM Data Visualization Certificate</a></li>
       </ul>
     </div>
   </section>
-<!-- WHY CHOOSE PRISMLEDGER -->
-<section class="about-container fade-in">
-  <div class="about-text">
-    <h3>Why Choose Prismledger?</h3>
 
-    <p>
-      Choosing the right accountant can make a significant difference in your financial confidence,
-      peace of mind, and long-term stability. Prismledger Accounting Services was built on values
-      of clarity, trust and hands-on support — especially for individuals, newcomers and small
-      business owners who deserve simple, transparent and reliable service.
-    </p>
+  <!-- WHY CHOOSE -->
+  <section class="about-container fade-in">
+    <div class="about-text">
+      <h3>Why Choose Prismledger?</h3>
 
-    <ul class="why-list">
-      <li><strong>✔ CRA Expertise</strong> — First-hand experience as a former CRA Income Tax Collections Officer provides unique insight into compliance, audits, collections and how to avoid costly enforcement actions.</li>
-
-      <li><strong>✔ Affordable, Transparent Pricing</strong> — No hidden fees. No surprises. Just clear, fair pricing designed for individuals and small businesses.</li>
-
-      <li><strong>✔ Personalized Support</strong> — You work directly with a qualified accounting professional who understands your situation and provides guidance tailored to your needs.</li>
-
-      <li><strong>✔ Full-Cycle Accounting Services</strong> — Tax filing, bookkeeping, payroll, financial reporting and more — everything handled in one place.</li>
-
-      <li><strong>✔ Newcomer-Friendly</strong> — Clear explanations, step-by-step guidance and help navigating Canadian tax rules, credits and benefits.</li>
-
-      <li><strong>✔ Proven Community Impact</strong> — More than 300 tax returns completed for the City of Vancouver’s Community Tax Clinic, supporting low-income families and newcomers.</li>
-
-      <li><strong>✔ Data-Driven Approach</strong> — With IBM certificates in Data Analytics and Data Visualization, you receive reports that are clear, understandable and decision-ready.</li>
-    </ul>
-
-    <p>
-      At Prismledger, our mission is simple:
-      <strong>make accounting stress-free and accessible for everyone.</strong>
-    </p>
-  </div>
-</section>
+      <ul class="why-list">
+        <li><strong>✔ CRA expertise:</strong> Former Income Tax Collections Officer with insider understanding.</li>
+        <li><strong>✔ Transparent, affordable pricing</strong> with no hidden fees.</li>
+        <li><strong>✔ Personalized support</strong> — you work directly with a qualified accounting professional.</li>
+        <li><strong>✔ Full-cycle services</strong> — tax filing, bookkeeping, payroll, CRA representation.</li>
+        <li><strong>✔ Newcomer-friendly</strong> guidance with simple and clear explanations.</li>
+        <li><strong>✔ Proven community impact</strong> through City of Vancouver tax clinic work.</li>
+        <li><strong>✔ Data-driven reporting</strong> using analytics & dashboards.</li>
+      </ul>
+    </div>
+  </section>
 
   <footer>
     © 2025 Prismledger Accounting Services
