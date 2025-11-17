@@ -2,108 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Transparent Accounting Pricing | Prismledger Accounting Services</title>
-  <meta name="description" content="Clear, upfront pricing for tax filing, bookkeeping from $129/month, and payroll services for small businesses in White Rock and Surrey, BC." />
-  <link rel="canonical" href="https://prismledger.ca/pricing.html" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://prismledger.ca/#organization",
-      "name": "Prismledger Accounting Services",
-      "url": "https://prismledger.ca/",
-      "logo": "https://prismledger.ca/images/logo-purple.png",
-      "email": "prism.taxes@gmail.com",
-      "telephone": "+1-236-515-2976",
-      "sameAs": [
-        "https://www.instagram.com/prismaccounting"
-      ]
-    },
-    {
-      "@type": "AccountingService",
-      "@id": "https://prismledger.ca/#whiterock",
-      "name": "Prismledger Accounting Services - White Rock Office",
-      "url": "https://prismledger.ca/",
-      "image": "https://prismledger.ca/images/logo-purple.png",
-      "telephone": "+1-236-515-2976",
-      "email": "prism.taxes@gmail.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "15170 Prospect Ave",
-        "addressLocality": "White Rock",
-        "addressRegion": "BC",
-        "postalCode": "V4B 3Y8",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.024,
-        "longitude": -122.801
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "White Rock"
-        },
-        {
-          "@type": "City",
-          "name": "Surrey"
-        },
-        {
-          "@type": "City",
-          "name": "Delta"
-        }
-      ],
-      "description": "Tax filing, bookkeeping and payroll services for individuals, newcomers and small businesses. Office inside Karigars Interiors on Prospect Avenue in White Rock, BC."
-    },
-    {
-      "@type": "AccountingService",
-      "@id": "https://prismledger.ca/#surrey",
-      "name": "Prismledger Accounting Services - Surrey Office",
-      "url": "https://prismledger.ca/",
-      "image": "https://prismledger.ca/images/logo-purple.png",
-      "telephone": "+1-236-515-2976",
-      "email": "prism.taxes@gmail.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "105-12827 76 Ave",
-        "addressLocality": "Surrey",
-        "addressRegion": "BC",
-        "postalCode": "V3W 2V3",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.132,
-        "longitude": -122.874
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Surrey"
-        },
-        {
-          "@type": "City",
-          "name": "Delta"
-        },
-        {
-          "@type": "City",
-          "name": "Langley"
-        }
-      ],
-      "description": "Small business bookkeeping from $129/month, payroll and year-round tax support from our Surrey office near Newton."
-    }
-  ]
-}
-</script>
+  <title>Pricing – Affordable Tax Filing & Bookkeeping in Surrey & White Rock</title>
+  <meta name="description" content="Affordable pricing for tax filing, bookkeeping, payroll and year-round accounting services in Surrey, Delta, White Rock and nearby cities. Bookkeeping from $129/month." />
+  <link rel="canonical" href="https://prismledger.ca/pricing.html">
 
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .pricing-header {
+      text-align: center;
+      padding: 60px 24px 30px;
+    }
+    .pricing-header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 14px;
+    }
+    .pricing-header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .pricing-grid {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding: 20px 40px 80px;
+    }
+
+    .pricing-card {
+      background: var(--bg-card);
+      width: 300px;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      border: 1px solid var(--border-soft);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent);
+    }
+
+    .pricing-card h2 {
+      margin-bottom: 12px;
+    }
+
+    .price-tag {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      margin: 0 0 18px 0;
+      padding: 0;
+      line-height: 1.7;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .pricing-card .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #111;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 16px;
+      background: var(--bg-navbar);
+      border-top: 1px solid var(--border-soft);
+    }
+  </style>
 </head>
 
 <body class="dark">
+
+  <!-- NAVBAR -->
   <nav class="navbar fade-in">
     <div class="nav-left">
       <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
@@ -129,45 +113,54 @@
     </div>
   </nav>
 
-  <header class="page-header fade-up">
-    <h1>Transparent Pricing</h1>
-    <p>Clear, simple packages so you always know what you’re paying for.</p>
+  <!-- PRICING HEADER -->
+  <header class="pricing-header fade-up">
+    <h1>Transparent, Affordable Pricing</h1>
+    <p>No hidden fees. No surprises — just clear pricing for real people & small businesses.</p>
   </header>
 
+  <!-- PRICING GRID -->
   <section class="pricing-grid fade-in">
+
+    <!-- TAX FILING -->
     <div class="pricing-card">
       <h2>Tax Filing</h2>
-      <p class="price">$35</p>
+      <div class="price-tag">From $35</div>
       <ul>
-        <li>Personal or student return</li>
-        <li>Electronic filing to CRA</li>
-        <li>Eligible credits and benefits checked</li>
+        <li>Student returns</li>
+        <li>Newcomer support</li>
+        <li>Family, rental, small business</li>
+        <li>CRA compliance review</li>
       </ul>
-      <a href="contact.html#quote" class="btn-primary">Get Started</a>
+      <a href="contact.html#quote" class="cta-btn">File My Taxes</a>
     </div>
 
-    <div class="pricing-card featured">
-      <h2>Bookkeeping</h2>
-      <p class="price">From $129/month</p>
-      <ul>
-        <li>Monthly transaction posting</li>
-        <li>Bank reconciliation</li>
-        <li>Basic monthly reporting</li>
-      </ul>
-      <a href="contact.html#quote" class="btn-primary">Book a Call</a>
-    </div>
-
+    <!-- BOOKKEEPING -->
     <div class="pricing-card">
-      <h2>Payroll</h2>
-      <p class="price">3 months free*</p>
+      <h2>Bookkeeping</h2>
+      <div class="price-tag">$129/month</div>
       <ul>
-        <li>Payroll setup & onboarding</li>
-        <li>Monthly processing</li>
-        <li>Source deductions calculated</li>
+        <li>Monthly reconciliation</li>
+        <li>GST/PST filing</li>
+        <li>Financial statements</li>
+        <li>Expense tracking</li>
       </ul>
-      <a href="contact.html#quote" class="btn-primary">Start Payroll</a>
-      <p class="footnote">*With qualifying bookkeeping plan.</p>
+      <a href="contact.html#quote" class="cta-btn">Start Bookkeeping</a>
     </div>
+
+    <!-- PAYROLL -->
+    <div class="pricing-card">
+      <h2>Payroll & HR</h2>
+      <div class="price-tag">First 3 Months Free</div>
+      <ul>
+        <li>Employee paystubs</li>
+        <li>ROEs, T4s, remittances</li>
+        <li>Time sheets & onboarding</li>
+        <li>GST remittance support</li>
+      </ul>
+      <a href="contact.html#quote" class="cta-btn">Get Payroll Setup</a>
+    </div>
+
   </section>
 
   <footer>
