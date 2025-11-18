@@ -5,14 +5,15 @@
   <title>Accounting Services in White Rock & Surrey | Prismledger Accounting</title>
   <meta name="description" content="Tax filing, bookkeeping, payroll and CRA compliance support for individuals, newcomers and small businesses in White Rock, Surrey and Delta BC." />
   <link rel="canonical" href="https://prismledger.ca/services.html" />
+
   <link rel="stylesheet" href="styles.css">
 
-  <!-- VANTA SCRIPTS -->
+  <!-- VANTA -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 
   <style>
-    /* VANTA BACKGROUND */
+    /* Vanta Background */
     #vanta-bg {
       position: fixed;
       top: 0;
@@ -22,47 +23,21 @@
       z-index: -1;
     }
 
-    /* Make text readable over dark triangles */
+    /* Make sure all content stays ABOVE Vanta */
+    .navbar,
+    .services-wrapper,
     .service-section,
-    .service-card,
-    .info-box,
     footer {
       position: relative;
-      z-index: 5;
-    }
-
-    /* Service Cards on dark background */
-    .service-card {
-      background: rgba(25, 0, 55, 0.82);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      box-shadow: 0 0 25px rgba(120, 60, 255, 0.35);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: #fff;
-    }
-
-    .service-card:hover {
-      box-shadow: 0 0 35px rgba(180, 120, 255, 0.55);
-    }
-
-    .info-box {
-      background: rgba(30, 0, 60, 0.82);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 0 25px rgba(120, 60, 255, 0.35);
-      color: #fff;
-    }
-
-    footer {
-      color: #fff;
-      margin-top: 40px;
+      z-index: 10;
     }
   </style>
 
 </head>
+
 <body class="dark">
 
-<!-- VANTA BACKGROUND -->
+<!-- BACKGROUND -->
 <div id="vanta-bg"></div>
 
 <!-- NAVBAR -->
@@ -91,7 +66,7 @@
   </div>
 </nav>
 
-<!-- WRAPPER -->
+<!-- SCROLL WRAPPER -->
 <div class="services-wrapper">
 
   <!-- PAGE 1 -->
@@ -173,7 +148,7 @@
 
 <script src="script.js"></script>
 
-<!-- VANTA DARK TRIANGLES INIT -->
+<!-- VANTA INIT -->
 <script>
 VANTA.NET({
   el: "#vanta-bg",
@@ -182,16 +157,16 @@ VANTA.NET({
   gyroControls: false,
   minHeight: 200.00,
   minWidth: 200.00,
-  scale: 1.05,
+  scale: 1.00,
   scaleMobile: 1.00,
 
-  // DARK + PREMIUM PURPLE
+  // DARK PREMIUM TRIANGLES
   color: 0x5a00ff,
-  backgroundColor: 0x04000c,
-  points: 9.0,
-  maxDistance: 22.0,
+  backgroundColor: 0x05000c,
+  points: 10.0,
+  maxDistance: 20.0,
   spacing: 14.0
-})
+});
 </script>
 
 </body>
