@@ -8,10 +8,34 @@
 
   <link rel="stylesheet" href="styles.css">
 
+  <!-- VANTA UNIVERSE THEME -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.space.min.js"></script>
+
   <style>
+    /* UNIVERSE BACKGROUND */
+    #vanta-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .navbar,
+    .pricing-header,
+    .pricing-grid,
+    footer {
+      position: relative;
+      z-index: 10;
+    }
+
+    /* PRICING HEADER */
     .pricing-header {
       text-align: center;
       padding: 60px 24px 30px;
+      color: #fff;
     }
     .pricing-header h1 {
       font-size: 2.6rem;
@@ -22,6 +46,7 @@
       font-size: 1.1rem;
     }
 
+    /* GRID */
     .pricing-grid {
       display: flex;
       justify-content: center;
@@ -30,19 +55,23 @@
       padding: 20px 40px 80px;
     }
 
+    /* CARDS */
     .pricing-card {
-      background: var(--bg-card);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
       width: 300px;
       padding: 25px;
       border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      border: 1px solid var(--border-soft);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.45);
       transition: 0.3s ease;
       cursor: pointer;
+      color: #fff;
     }
     .pricing-card:hover {
       transform: translateY(-10px);
       border-color: var(--accent);
+      box-shadow: 0 0 25px rgba(255,255,255,0.7);
     }
 
     .pricing-card h2 {
@@ -61,14 +90,14 @@
       margin: 0 0 18px 0;
       padding: 0;
       line-height: 1.7;
-      color: var(--text-muted);
       font-size: 0.95rem;
+      color: #eee;
     }
 
-    .pricing-card .cta-btn {
+    .cta-btn {
       display: inline-block;
       background: var(--accent);
-      color: #111;
+      color: #111 !important;
       padding: 10px 18px;
       border-radius: 999px;
       font-weight: 700;
@@ -76,97 +105,121 @@
     }
 
     footer {
-      margin-top: 40px;
       text-align: center;
       padding: 16px;
-      background: var(--bg-navbar);
-      border-top: 1px solid var(--border-soft);
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body class="dark">
 
-  <!-- NAVBAR -->
-  <nav class="navbar fade-in">
-    <div class="nav-left">
-      <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
-      <span class="nav-brand">Prismledger Accounting</span>
-    </div>
+<!-- UNIVERSE BACKGROUND -->
+<div id="vanta-bg"></div>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a class="active" href="pricing.html">Pricing</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+<!-- NAVBAR -->
+<nav class="navbar fade-in">
+  <div class="nav-left">
+    <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
+    <span class="nav-brand">Prismledger Accounting</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a class="active" href="pricing.html">Pricing</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="contact.html#quote" class="btn-small">Get a Quote</a>
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</nav>
+
+<!-- PRICING HEADER -->
+<header class="pricing-header fade-up">
+  <h1>Transparent, Affordable Pricing</h1>
+  <p>No hidden fees. No surprises — just clear pricing for real people & small businesses.</p>
+</header>
+
+<!-- GRID -->
+<section class="pricing-grid fade-in">
+
+  <!-- TAX -->
+  <div class="pricing-card">
+    <h2>Tax Filing</h2>
+    <div class="price-tag">From $35</div>
+    <ul>
+      <li>Student returns</li>
+      <li>Newcomer support</li>
+      <li>Family, rental, small business</li>
+      <li>CRA compliance review</li>
     </ul>
+    <a href="contact.html#quote" class="cta-btn">File My Taxes</a>
+  </div>
 
-    <div class="nav-right">
-      <a href="contact.html#quote" class="btn-small">Get a Quote</a>
-      <div class="theme-toggle">
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle">
-          <span class="slider"></span>
-        </label>
-      </div>
-    </div>
-  </nav>
+  <!-- BOOKKEEPING -->
+  <div class="pricing-card">
+    <h2>Bookkeeping</h2>
+    <div class="price-tag">$129/month</div>
+    <ul>
+      <li>Monthly reconciliation</li>
+      <li>GST/PST filing</li>
+      <li>Financial statements</li>
+      <li>Expense tracking</li>
+    </ul>
+    <a href="contact.html#quote" class="cta-btn">Start Bookkeeping</a>
+  </div>
 
-  <!-- PRICING HEADER -->
-  <header class="pricing-header fade-up">
-    <h1>Transparent, Affordable Pricing</h1>
-    <p>No hidden fees. No surprises — just clear pricing for real people & small businesses.</p>
-  </header>
+  <!-- PAYROLL -->
+  <div class="pricing-card">
+    <h2>Payroll & HR</h2>
+    <div class="price-tag">First 3 Months Free</div>
+    <ul>
+      <li>Employee paystubs</li>
+      <li>ROEs, T4s, remittances</li>
+      <li>Onboarding & termination</li>
+      <li>GST remittance support</li>
+    </ul>
+    <a href="contact.html#quote" class="cta-btn">Get Payroll Setup</a>
+  </div>
 
-  <!-- PRICING GRID -->
-  <section class="pricing-grid fade-in">
+</section>
 
-    <!-- TAX FILING -->
-    <div class="pricing-card">
-      <h2>Tax Filing</h2>
-      <div class="price-tag">From $35</div>
-      <ul>
-        <li>Student returns</li>
-        <li>Newcomer support</li>
-        <li>Family, rental, small business</li>
-        <li>CRA compliance review</li>
-      </ul>
-      <a href="contact.html#quote" class="cta-btn">File My Taxes</a>
-    </div>
+<footer>
+  © 2025 Prismledger Accounting Services
+</footer>
 
-    <!-- BOOKKEEPING -->
-    <div class="pricing-card">
-      <h2>Bookkeeping</h2>
-      <div class="price-tag">$129/month</div>
-      <ul>
-        <li>Monthly reconciliation</li>
-        <li>GST/PST filing</li>
-        <li>Financial statements</li>
-        <li>Expense tracking</li>
-      </ul>
-      <a href="contact.html#quote" class="cta-btn">Start Bookkeeping</a>
-    </div>
+<script src="script.js"></script>
 
-    <!-- PAYROLL -->
-    <div class="pricing-card">
-      <h2>Payroll & HR</h2>
-      <div class="price-tag">First 3 Months Free</div>
-      <ul>
-        <li>Employee paystubs</li>
-        <li>ROEs, T4s, remittances</li>
-        <li>Time sheets & onboarding</li>
-        <li>GST remittance support</li>
-      </ul>
-      <a href="contact.html#quote" class="cta-btn">Get Payroll Setup</a>
-    </div>
+<!-- VANTA UNIVERSE JS -->
+<script>
+VANTA.SPACE({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200,
+  minWidth: 200,
+  scale: 1.00,
+  scaleMobile: 1.00,
 
-  </section>
+  // ⭐ Universe Look
+  backgroundColor: 0x05000c,
+  color: 0x8a2eff,   // purple stars
+  spaceColor: 0x21006b,
+  galaxyColor: 0x551fff,
+  starSize: 1.40,
+  starSpacing: 2.0
+});
+</script>
 
-  <footer>
-    © 2025 Prismledger Accounting Services
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
