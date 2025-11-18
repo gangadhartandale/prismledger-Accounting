@@ -8,6 +8,10 @@
 
   <link rel="stylesheet" href="styles.css">
 
+  <!-- VANTA TRIANGLES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+
   <style>
     /* VANTA BACKGROUND */
     #vanta-bg {
@@ -19,7 +23,7 @@
       z-index: -1;
     }
 
-    /* Bring content above background */
+    /* Bring content above VANTA */
     .navbar,
     .pricing-header,
     .pricing-grid,
@@ -28,19 +32,25 @@
       z-index: 10;
     }
 
+    /* HEADER */
     .pricing-header {
       text-align: center;
       padding: 60px 24px 30px;
     }
+
     .pricing-header h1 {
       font-size: 2.6rem;
       margin-bottom: 14px;
+      animation: fadeUp 1s ease-out;
     }
+
     .pricing-header p {
       color: var(--text-muted);
       font-size: 1.1rem;
+      animation: fadeUp 1.2s ease-out;
     }
 
+    /* GRID */
     .pricing-grid {
       display: flex;
       justify-content: center;
@@ -49,18 +59,32 @@
       padding: 20px 40px 80px;
     }
 
+    /* CARDS — GLOW + FADE IN */
     .pricing-card {
-      background: var(--bg-card);
+      background: rgba(255,255,255,0.06);
       width: 300px;
       padding: 25px;
       border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      border: 1px solid var(--border-soft);
-      transition: 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(6px);
+      box-shadow:
+        0 0 20px rgba(138, 46, 255, 0.4),
+        0 0 35px rgba(138, 46, 255, 0.2);
+      transition: 0.3s ease-out;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .pricing-card.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .pricing-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-12px);
+      box-shadow:
+        0 0 25px rgba(255,255,255,0.9),
+        0 0 50px rgba(138, 46, 255, 0.6);
       border-color: var(--accent);
     }
 
@@ -71,15 +95,6 @@
       color: var(--accent);
     }
 
-    .pricing-card ul {
-      list-style: none;
-      margin: 0 0 18px 0;
-      padding: 0;
-      line-height: 1.7;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
     .cta-btn {
       display: inline-block;
       background: var(--accent);
@@ -88,9 +103,16 @@
       border-radius: 999px;
       font-weight: 700;
     }
+
+    /* Fade animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 
 </head>
+
 <body class="dark">
 
 <!-- VANTA BACKGROUND -->
@@ -129,9 +151,9 @@
 </header>
 
 <!-- PRICING GRID -->
-<section class="pricing-grid fade-in">
+<section class="pricing-grid">
 
-  <div class="pricing-card">
+  <div class="pricing-card fade-card">
     <h2>Tax Filing</h2>
     <div class="price-tag">From $35</div>
     <ul>
@@ -143,7 +165,7 @@
     <a href="contact.html#quote" class="cta-btn">File My Taxes</a>
   </div>
 
-  <div class="pricing-card">
+  <div class="pricing-card fade-card">
     <h2>Bookkeeping</h2>
     <div class="price-tag">$129/month</div>
     <ul>
@@ -155,7 +177,7 @@
     <a href="contact.html#quote" class="cta-btn">Start Bookkeeping</a>
   </div>
 
-  <div class="pricing-card">
+  <div class="pricing-card fade-card">
     <h2>Payroll & HR</h2>
     <div class="price-tag">First 3 Months Free</div>
     <ul>
@@ -173,29 +195,42 @@
   © 2025 Prismledger Accounting Services
 </footer>
 
-<!-- CORRECT VANTA SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.space.min.js"></script>
-
-<!-- VANTA INIT -->
+<!-- INIT VANTA TRIANGLES -->
 <script>
-VANTA.SPACE({
+VANTA.NET({
   el: "#vanta-bg",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
   minHeight: 200,
   minWidth: 200,
-  scale: 1.00,
-  scaleMobile: 1.00,
+  scale: 1.0,
+  scaleMobile: 1.0,
 
+  /* DARK TRIANGLE THEME */
+  color: 0x6a00ff,
   backgroundColor: 0x05000c,
-  color: 0x8a2eff,
-  galaxyColor: 0x3a0096,
-  spaceColor: 0x11003a,
-  starSize: 1.3,
-  starSpacing: 1.8
+  points: 12.0,
+  maxDistance: 22.0,
+  spacing: 15.0
 });
+</script>
+
+<!-- SCROLL FADE-IN -->
+<script>
+const cards = document.querySelectorAll('.pricing-card');
+
+function revealCards() {
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 80) {
+      card.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealCards);
+window.addEventListener('load', revealCards);
 </script>
 
 <script src="script.js"></script>
