@@ -6,169 +6,186 @@
   <meta name="description" content="Learn about Gangadhar Tandale, Accounting Manager at Prismledger Accounting Services, with experience at MNP, Manning Elliott, Buckley Dodds and CRA Collections." />
   <link rel="canonical" href="https://prismledger.ca/about.html" />
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 
-  <!-- SEO SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://prismledger.ca/#organization",
-        "name": "Prismledger Accounting Services",
-        "url": "https://prismledger.ca/",
-        "logo": "https://prismledger.ca/images/logo-purple.png",
-        "email": "prism.taxes@gmail.com",
-        "telephone": "+1-236-515-2976",
-        "sameAs": [
-          "https://www.instagram.com/prismaccounting"
-        ]
-      },
-      {
-        "@type": "AccountingService",
-        "@id": "https://prismledger.ca/#whiterock",
-        "name": "Prismledger Accounting Services - White Rock Office",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "15170 Prospect Ave",
-          "addressLocality": "White Rock",
-          "addressRegion": "BC",
-          "postalCode": "V4B 3Y8",
-          "addressCountry": "CA"
-        },
-        "image": "https://prismledger.ca/images/logo-purple.png"
-      },
-      {
-        "@type": "AccountingService",
-        "@id": "https://prismledger.ca/#surrey",
-        "name": "Prismledger Accounting Services - Surrey Office",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "105-12827 76 Ave",
-          "addressLocality": "Surrey",
-          "addressRegion": "BC",
-          "postalCode": "V3W 2V3",
-          "addressCountry": "CA"
-        },
-        "image": "https://prismledger.ca/images/logo-purple.png"
-      }
-    ]
-  }
-  </script>
+  <!-- VANTA (WAVES) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+
+  <!-- VANTA BACKGROUND POSITION -->
+  <style>
+    #vanta-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Make about page readable over waves */
+    .about-container,
+    .page-header,
+    .about-text,
+    .certificates,
+    .why-list {
+      position: relative;
+      z-index: 5;
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 60px 20px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .about-container {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.25);
+      margin: 20px;
+    }
+
+    .about-text h2,
+    .about-text h3 {
+      color: #ffdd57;
+    }
+
+    footer {
+      position: relative;
+      z-index: 5;
+    }
+  </style>
+
 </head>
 
-<body class="dark">
-  
-  <!-- PROGRESS BAR -->
-  <div id="progress-bar"></div>
+<body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar fade-in">
-    <div class="nav-left">
-      <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
-      <span class="nav-brand">Prismledger Accounting</span>
+<!-- VANTA BACKGROUND -->
+<div id="vanta-bg"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar fade-in">
+  <div class="nav-left">
+    <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
+    <span class="nav-brand">Prismledger Accounting</span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a class="active" href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="contact.html#quote" class="btn-small">Get a Quote</a>
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+      </label>
     </div>
+  </div>
+</nav>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a class="active" href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+<!-- PAGE HEADER -->
+<header class="page-header fade-up">
+  <h1>About Prismledger</h1>
+  <p>Clear, reliable and affordable accounting support for individuals, newcomers and small businesses in Canada.</p>
+</header>
+
+<!-- ABOUT SECTION -->
+<section class="about-container fade-in">
+  <img src="images/self.png" class="about-photo" alt="Gangadhar Tandale" />
+
+  <div class="about-text">
+    <h2>Meet Gangadhar Tandale</h2>
+
+    <p>
+      Gangadhar Tandale is the Accounting Manager at <strong>Prismledger Accounting Services</strong>,
+      dedicated to supporting individuals, newcomers and small business owners with accurate and affordable accounting solutions.
+    </p>
+
+    <p>
+      His extensive experience includes roles at <strong>MNP LLP, Manning Elliott LLP, and Buckley Dodds CPA LLP</strong>,
+      where he served diverse industries and handled tax, bookkeeping and audit matters.
+    </p>
+
+    <p>
+      Gangadhar also worked as a <strong>CRA Income Tax Collections Officer</strong>,
+      giving him insider-level understanding of audits, garnishments, liens, collections and compliance.
+    </p>
+
+    <p>
+      He has completed <strong>IBM Data Analytics</strong> and <strong>IBM Data Visualization & Dashboard Essentials</strong>,
+      improving his ability to interpret numbers and present clear insights to clients.
+    </p>
+
+    <p>
+      Gangadhar is currently pursuing the <strong>CPA designation</strong> to further enhance his professional knowledge.
+    </p>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="about-container fade-in">
+  <div class="about-text certificates">
+    <h3>Certificates & Community Involvement</h3>
+    <ul>
+      <li><a href="docs/cvitp-certificate.pdf" target="_blank">City of Vancouver – Community Tax Clinic</a></li>
+      <li><a href="docs/ibm-data-analytics.pdf" target="_blank">IBM Data Analytics Essentials</a></li>
+      <li><a href="docs/ibm-data-visualization.pdf" target="_blank">IBM Data Visualization Essentials</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="about-container fade-in">
+  <div class="about-text">
+    <h3>Why Choose Prismledger?</h3>
+
+    <ul class="why-list">
+      <li><strong>CRA Expertise</strong> — Former CRA collections officer.</li>
+      <li><strong>Affordable Pricing</strong> — No hidden fees.</li>
+      <li><strong>Personalized Guidance</strong> — One-on-one accounting support.</li>
+      <li><strong>Newcomer Friendly</strong> — Simplified tax explanations.</li>
+      <li><strong>300+ Tax Returns Filed</strong> — Trusted community support.</li>
+      <li><strong>Data-Driven</strong> — Clear dashboards and reports.</li>
     </ul>
 
-    <div class="nav-right">
-      <a href="contact.html#quote" class="btn-small">Get a Quote</a>
-      <div class="theme-toggle">
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle">
-          <span class="slider"></span>
-        </label>
-      </div>
-    </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- PAGE HEADER -->
-  <header class="page-header fade-up">
-    <h1>About Prismledger</h1>
-    <p>Clear, reliable, and affordable accounting support for individuals, newcomers, and small businesses.</p>
-  </header>
+<footer>
+  © 2025 Prismledger Accounting Services
+</footer>
 
-  <!-- ABOUT MAIN -->
-  <section class="about-container fade-in">
+<!-- VANTA WAVES INIT -->
+<script>
+VANTA.WAVES({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x4b1d92,
+  shininess: 55.00,
+  waveHeight: 18.00,
+  waveSpeed: 1.25,
+  zoom: 0.85
+})
+</script>
 
-    <img src="images/self.png" class="about-photo profile-photo" alt="Gangadhar Tandale">
+<script src="script.js"></script>
 
-    <div class="about-text">
-      <h2>Meet Gangadhar Tandale</h2>
-
-      <p>
-        Gangadhar is the Accounting Manager at <strong>Prismledger Accounting Services</strong>, serving individuals,
-        newcomers, families, and small businesses across Surrey, Delta, and White Rock. He specializes in providing
-        clear, reliable, and affordable accounting solutions with a focus on compliance, accuracy, and client care.
-      </p>
-
-      <p>
-        His experience spans <strong>tax filing, bookkeeping, payroll, audits, and CRA collections</strong>. He has
-        worked with leading accounting firms including <strong>MNP LLP, Manning Elliott LLP, and Buckley Dodds CPA LLP</strong>.
-      </p>
-
-      <p>
-        His recent role with the <strong>Government of Canada</strong> as an <strong>Income Tax Collections Officer</strong>
-        gave him first-hand insight into legal actions such as garnishments, liens, and enforcement measures —
-        knowledge that he now uses to help clients avoid stressful CRA situations.
-      </p>
-
-      <p>
-        Gangadhar completed over <strong>300 tax returns</strong> as a volunteer with the <strong>City of Vancouver’s Community Tax Clinic</strong>.
-      </p>
-
-      <p>
-        He has also earned certificates in:
-      </p>
-
-      <ul>
-        <li>IBM Data Analytics Essentials</li>
-        <li>IBM Data Visualization & Dashboard Essentials</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CERTIFICATES SECTION -->
-  <section class="about-container fade-in">
-    <div class="about-text">
-      <h3>Certificates & Community Work</h3>
-
-      <ul class="why-list">
-        <li><a href="docs/cvitp.pdf" target="_blank">City of Vancouver – Community Tax Clinic (300+ returns)</a></li>
-        <li><a href="docs/IBMDataAnalyticsCertificate.pdf" target="_blank">IBM Data Analytics Essentials</a></li>
-        <li><a href="docs/IBMdatavisual.pdf" target="_blank">IBM Data Visualization Certificate</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE -->
-  <section class="about-container fade-in">
-    <div class="about-text">
-      <h3>Why Choose Prismledger?</h3>
-
-      <ul class="why-list">
-        <li><strong>✔ CRA expertise:</strong> Former Income Tax Collections Officer with insider understanding.</li>
-        <li><strong>✔ Transparent, affordable pricing</strong> with no hidden fees.</li>
-        <li><strong>✔ Personalized support</strong> — you work directly with a qualified accounting professional.</li>
-        <li><strong>✔ Full-cycle services</strong> — tax filing, bookkeeping, payroll, CRA representation.</li>
-        <li><strong>✔ Newcomer-friendly</strong> guidance with simple and clear explanations.</li>
-        <li><strong>✔ Proven community impact</strong> through City of Vancouver tax clinic work.</li>
-        <li><strong>✔ Data-driven reporting</strong> using analytics & dashboards.</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Prismledger Accounting Services
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
