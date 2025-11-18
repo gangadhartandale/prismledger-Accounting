@@ -17,7 +17,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 
   <style>
-    /* Vanta Background DIV */
+    /* Vanta Background */
     #vanta-bg {
       position: fixed;
       top: 0;
@@ -26,13 +26,54 @@
       height: 100%;
       z-index: -1;
     }
+
+    /* FIXED — Remove dark overlay */
+    .address-section {
+      background: transparent !important;
+      padding: 60px 20px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Glowing Beautiful Cards */
+    .address-card {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 25px 30px;
+      border-radius: 18px;
+      width: 320px;
+      text-align: center;
+      color: #000;
+      box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(140, 80, 255, 0.4);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: 0.3s ease;
+    }
+
+    .address-card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 0 30px rgba(255, 255, 255, 1),
+        0 0 60px rgba(140, 80, 255, 0.6);
+    }
+
+    .address-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
   </style>
 
 </head>
 
 <body>
 
-<!-- VANTA BACKGROUND CONTAINER -->
+<!-- VANTA BACKGROUND -->
 <div id="vanta-bg"></div>
 
 <!-- NAVBAR -->
@@ -61,7 +102,7 @@
   </div>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <header class="hero fade-up">
   <div class="hero-text">
     <h1>Professional Accounting for Individuals & Small Businesses</h1>
@@ -85,27 +126,9 @@
   <div class="promo-card"><img src="images/payroll3months.png" /></div>
 </section>
 
-<!-- ADDRESS SECTION -->
+<!-- ⭐ FINAL CLEAN OFFICE SECTION (Single Version Only) -->
 <section class="address-section fade-up">
   <h2>Visit Us</h2>
-  <div class="address-boxes">
-
-    <div class="address-card">
-      <h3>White Rock Office</h3>
-      <p>15170 Prospect Ave<br>White Rock, BC V4B 3Y8</p>
-    </div>
-
-    <div class="address-card">
-      <h3>Surrey Office (Newton)</h3>
-      <p>105-12827 76 Ave<br>Surrey, BC V3W 2V3</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="address-section fade-up">
-  <h2 style="text-align:center; margin-bottom:30px;">Visit Us</h2>
 
   <div class="address-boxes">
 
@@ -129,7 +152,6 @@
   </div>
 </section>
 
-
 <!-- FLOATING BUTTON -->
 <a href="contact.html#quote" class="floating-quote-btn">Get a Quote</a>
 
@@ -144,7 +166,6 @@
       <img src="images/instagram.png" class="social-icon" />
     </a>
   </div>
-
   © 2025 Prismledger Accounting Services
 </footer>
 
@@ -159,12 +180,12 @@ VANTA.NET({
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-  color: 0x6a0dad, 
+  color: 0x6a0dad,
   backgroundColor: 0x090017,
   points: 12.0,
   maxDistance: 22.0,
   spacing: 15.0
-})
+});
 </script>
 
 <script src="script.js"></script>
