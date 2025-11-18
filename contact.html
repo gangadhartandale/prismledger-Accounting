@@ -9,9 +9,106 @@
   <link rel="canonical" href="https://prismledger.ca/contact.html" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- VANTA SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
+
+  <style>
+    /* VANTA BACKGROUND */
+    #vanta-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Bring content above Vanta */
+    .navbar,
+    .page-header,
+    .contact-layout,
+    footer {
+      position: relative;
+      z-index: 10;
+    }
+
+    /* TITLE SECTION — Centered & Fancy */
+    .page-header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      animation: fadeUp 1s ease-out;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #dcb4ff, #ffffff, #c79bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowTitle 3s infinite ease-in-out;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+    }
+
+    @keyframes glowTitle {
+      0% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+      50% { text-shadow: 0 0 20px rgba(255,255,255,0.6); }
+      100% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+    }
+
+    /* CONTACT FORM + INFO — Glowing Cards */
+    .contact-info,
+    .contact-form-box {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow:
+        0 0 20px rgba(138,46,255,0.35),
+        0 0 35px rgba(138,46,255,0.2);
+      backdrop-filter: blur(5px);
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    /* Fade animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* SUCCESS POPUP UPGRADE */
+    .popup {
+      background: #28a745;
+      padding: 14px 22px;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: bold;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      z-index: 9999;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      animation: fadeUp 0.7s ease-out;
+    }
+  </style>
 </head>
 
 <body>
+
+<div id="vanta-bg"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar fade-in">
@@ -39,16 +136,16 @@
   </div>
 </nav>
 
-<!-- PAGE HEADER -->
-<header class="page-header fade-up">
+<!-- HEADER (Centered Fancy Title) -->
+<header class="page-header">
   <h1>Contact Us</h1>
   <p>Have questions about tax filing, bookkeeping or payroll? We’re here to help.</p>
 </header>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT LAYOUT -->
 <section class="contact-layout fade-in">
 
-  <!-- LEFT SIDE – CONTACT INFO -->
+  <!-- LEFT INFO -->
   <div class="contact-info">
     <h2>Get In Touch</h2>
     <p>Email: <strong>prism.taxes@gmail.com</strong></p>
@@ -60,43 +157,36 @@
     15170 Prospect Ave, White Rock, BC V4B 3Y8<br>
     Inside Karigars Interiors</p>
 
-    <iframe 
-      src="https://www.google.com/maps?q=15170+Prospect+Ave,+White+Rock,+BC&output=embed" 
-      width="100%" height="180" style="border:0; border-radius:12px; margin-top:10px;">
-    </iframe>
+    <iframe src="https://www.google.com/maps?q=15170+Prospect+Ave,+White+Rock,+BC&output=embed"
+      width="100%" height="180" style="border:0; border-radius:12px; margin-top:10px;"></iframe>
 
     <p style="margin-top:25px;"><strong>Surrey Office</strong><br>
     105-12827 76 Ave, Surrey, BC V3W 2V3</p>
 
-    <iframe 
-      src="https://www.google.com/maps?q=105-12827+76+Ave,+Surrey,+BC&output=embed" 
-      width="100%" height="180" style="border:0; border-radius:12px; margin-top:10px;">
-    </iframe>
+    <iframe src="https://www.google.com/maps?q=105-12827+76+Ave,+Surrey,+BC&output=embed"
+      width="100%" height="180" style="border:0; border-radius:12px; margin-top:10px;"></iframe>
 
     <h3 style="margin-top:30px;">Follow Us</h3>
 
     <div style="display:flex; gap:14px; align-items:center; margin-top:6px;">
       <a href="https://www.facebook.com/profile.php?id=61581016124708" target="_blank">
-        <img src="images/facebook.png" width="32" alt="Facebook" />
+        <img src="images/facebook.png" width="32" />
       </a>
 
       <a href="https://www.instagram.com/prismaccounting/" target="_blank">
-        <img src="images/instagram2.png" width="32" alt="Instagram" />
+        <img src="images/instagram2.png" width="32" />
       </a>
     </div>
   </div>
 
-  <!-- RIGHT SIDE – CONTACT FORM -->
+  <!-- RIGHT FORM -->
   <div class="contact-form-box" id="quote">
     <h2>Send Us a Message</h2>
 
     <form id="contactForm" action="https://formspree.io/f/manaaojj" method="POST">
-
-      <input type="text" name="full_name" placeholder="Full Name" required autocomplete="name" />
-
-      <input type="email" name="email" placeholder="Email Address" required autocomplete="email" />
-
-      <input type="tel" name="phone" placeholder="Phone Number" required autocomplete="tel" />
+      <input type="text" name="full_name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
 
       <select name="service" required>
         <option value="">Service Interested In</option>
@@ -112,7 +202,6 @@
       <button class="btn-primary" type="submit">Send Message</button>
     </form>
 
-    <!-- SUCCESS POPUP -->
     <div id="successPopup" class="popup">Message sent successfully!</div>
   </div>
 
@@ -123,19 +212,36 @@
   © 2025 Prismledger Accounting Services
 </footer>
 
+<!-- VANTA INIT — Lighter, Slower Birds + Triangle Feel -->
 <script>
-// THEME TOGGLE
-document.getElementById("theme-toggle")?.addEventListener("change", () =>
-  document.body.classList.toggle("light-mode")
-);
+VANTA.BIRDS({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200,
+  minWidth: 200,
+  scale: 1.0,
+  scaleMobile: 1.0,
 
-// FORMSPREE AJAX SUBMIT + POPUP
+  backgroundColor: 0x0a0020,
+  color1: 0x9d4bff,
+  color2: 0xffffff,
+  wingSpan: 18,
+  speedLimit: 2.0,
+  cohesion: 15,
+  quantity: 2.0  // VERY light + slow
+});
+</script>
+
+<!-- FORM SUBMIT POPUP -->
+<script>
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const form = e.target;
   const data = new FormData(form);
-  
+
   const response = await fetch(form.action, {
     method: "POST",
     body: data,
@@ -143,12 +249,11 @@ document.getElementById("contactForm").addEventListener("submit", async function
   });
 
   if (response.ok) {
-    document.getElementById("successPopup").style.display = "block";
+    const popup = document.getElementById("successPopup");
+    popup.style.display = "block";
     form.reset();
 
-    setTimeout(() => {
-      document.getElementById("successPopup").style.display = "none";
-    }, 3000);
+    setTimeout(() => popup.style.display = "none", 3500);
   } else {
     alert("Something went wrong. Please try again.");
   }
