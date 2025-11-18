@@ -470,3 +470,20 @@ footer {
   z-index: 99999;
   transition: width 0.15s ease-out;
 }
+.footer-social {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}
