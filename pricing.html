@@ -8,12 +8,8 @@
 
   <link rel="stylesheet" href="styles.css">
 
-  <!-- VANTA UNIVERSE THEME -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.space.min.js"></script>
-
   <style>
-    /* BACKGROUND CONTAINER */
+    /* VANTA BACKGROUND */
     #vanta-bg {
       position: fixed;
       top: 0;
@@ -23,7 +19,7 @@
       z-index: -1;
     }
 
-    /* Bring content above Vanta */
+    /* Bring content above background */
     .navbar,
     .pricing-header,
     .pricing-grid,
@@ -97,7 +93,7 @@
 </head>
 <body class="dark">
 
-<!-- SINGLE CLEAN VANTA CONTAINER -->
+<!-- VANTA BACKGROUND -->
 <div id="vanta-bg"></div>
 
 <!-- NAVBAR -->
@@ -132,7 +128,7 @@
   <p>No hidden fees. No surprises — just clear pricing for real people & small businesses.</p>
 </header>
 
-<!-- GRID -->
+<!-- PRICING GRID -->
 <section class="pricing-grid fade-in">
 
   <div class="pricing-card">
@@ -173,7 +169,13 @@
 
 </section>
 
-<footer>© 2025 Prismledger Accounting Services</footer>
+<footer>
+  © 2025 Prismledger Accounting Services
+</footer>
+
+<!-- CORRECT VANTA SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.space.min.js"></script>
 
 <!-- VANTA INIT -->
 <script>
