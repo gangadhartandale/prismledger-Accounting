@@ -2,140 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prismledger Accounting | Tax Filing, Bookkeeping & Payroll in White Rock & Surrey</title>
 
-  <title>Prismledger Accounting Services | Tax Filing, Bookkeeping & Payroll in White Rock & Surrey, BC</title>
-
-  <meta name="description" content="Prismledger Accounting Services provides personal tax filing, small business bookkeeping, and payroll services in White Rock, Surrey and Delta, BC. Work with a CPA-track accountant who understands both CRA collections and small business needs." />
-
-  <meta name="keywords" content="accountant White Rock, accountant Surrey, tax filing White Rock, tax services Surrey, bookkeeping White Rock, bookkeeping Surrey, payroll services Surrey, small business accounting, tax accountant BC" />
-
-  <!-- Canonical URL -->
+  <meta name="description" content="Affordable and reliable tax filing, bookkeeping, payroll and CRA compliance support for individuals, newcomers and small businesses in White Rock, Surrey and Delta. Bookkeeping from $129/month." />
   <link rel="canonical" href="https://prismledger.ca/" />
 
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Prismledger Accounting Services | Tax Filing, Bookkeeping & Payroll" />
-  <meta property="og:description" content="Professional accounting support for individuals, newcomers and small businesses in White Rock, Surrey and Delta, BC." />
-  <meta property="og:url" content="https://prismledger.ca/" />
-  <meta property="og:image" content="https://prismledger.ca/images/logo-purple.png" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Prismledger Accounting Services" />
-  <meta name="twitter:description" content="Tax filing, bookkeeping & payroll services for individuals and small businesses in White Rock, Surrey & Delta, BC." />
-  <meta name="twitter:image" content="https://prismledger.ca/images/logo-purple.png" />
-
-  <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://prismledger.ca/#organization",
-      "name": "Prismledger Accounting Services",
-      "url": "https://prismledger.ca/",
-      "logo": "https://prismledger.ca/images/logo-purple.png",
-      "email": "prism.taxes@gmail.com",
-      "telephone": "+1-236-515-2976",
-      "sameAs": [
-        "https://www.instagram.com/prismaccounting"
-      ]
-    },
-    {
-      "@type": "AccountingService",
-      "@id": "https://prismledger.ca/#whiterock",
-      "name": "Prismledger Accounting Services - White Rock Office",
-      "url": "https://prismledger.ca/",
-      "image": "https://prismledger.ca/images/logo-purple.png",
-      "telephone": "+1-236-515-2976",
-      "email": "prism.taxes@gmail.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "15170 Prospect Ave",
-        "addressLocality": "White Rock",
-        "addressRegion": "BC",
-        "postalCode": "V4B 3Y8",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.024,
-        "longitude": -122.801
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "White Rock"
-        },
-        {
-          "@type": "City",
-          "name": "Surrey"
-        },
-        {
-          "@type": "City",
-          "name": "Delta"
-        }
-      ],
-      "description": "Tax filing, bookkeeping and payroll services for individuals, newcomers and small businesses. Office inside Karigars Interiors on Prospect Avenue in White Rock, BC."
-    },
-    {
-      "@type": "AccountingService",
-      "@id": "https://prismledger.ca/#surrey",
-      "name": "Prismledger Accounting Services - Surrey Office",
-      "url": "https://prismledger.ca/",
-      "image": "https://prismledger.ca/images/logo-purple.png",
-      "telephone": "+1-236-515-2976",
-      "email": "prism.taxes@gmail.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "105-12827 76 Ave",
-        "addressLocality": "Surrey",
-        "addressRegion": "BC",
-        "postalCode": "V3W 2V3",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.132,
-        "longitude": -122.874
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Surrey"
-        },
-        {
-          "@type": "City",
-          "name": "Delta"
-        },
-        {
-          "@type": "City",
-          "name": "Langley"
-        }
-      ],
-      "description": "Small business bookkeeping from $129/month, payroll and year-round tax support from our Surrey office near Newton."
-    }
-  ]
-}
-</script>
+  <link rel="stylesheet" href="styles.css">
 
 </head>
+<body class="dark">
 
+  <!-- PROGRESS BAR -->
+  <div id="progress-bar"></div>
 
-<body>
+  <!-- FLOATING QUOTE BUTTON -->
+  <a href="contact.html#quote" class="floating-quote-btn">Get a Quote</a>
+
+  <style>
+    .floating-quote-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: var(--accent);
+      color: #111 !important;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+      z-index: 9999;
+      transition: 0.3s ease;
+    }
+    .floating-quote-btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-4px);
+    }
+
+    .map-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 12px;
+      margin-top: 60px;
+    }
+    .map-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 20px 40px 60px;
+    }
+    .map-box {
+      width: 450px;
+      background: var(--bg-card);
+      padding: 18px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      border: 1px solid var(--border-soft);
+      text-align: center;
+    }
+    .map-box h3 {
+      margin-bottom: 12px;
+    }
+    .map-box iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+    }
+  </style>
+
   <!-- NAVBAR -->
   <nav class="navbar fade-in">
     <div class="nav-left">
-      <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
+      <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo">
       <span class="nav-brand">Prismledger Accounting</span>
     </div>
 
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a class="active" href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="about.html">About</a></li>
@@ -144,7 +88,6 @@
 
     <div class="nav-right">
       <a href="contact.html#quote" class="btn-small">Get a Quote</a>
-
       <div class="theme-toggle">
         <label class="switch">
           <input type="checkbox" id="theme-toggle">
@@ -154,62 +97,89 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero fade-up">
+  <!-- HERO SECTION -->
+  <section class="hero fade-up">
     <div class="hero-text">
-      <h1>Professional Accounting for Individuals & Small Businesses</h1>
-      <p>Your trusted partner for tax filing, bookkeeping & payroll services in Canada.</p>
+      <h1>Your Accountant for Tax Filing, Bookkeeping & Payroll</h1>
+      <p>
+        Affordable and reliable accounting services for individuals, newcomers and small businesses
+        across White Rock, Surrey, Delta, and surrounding areas.
+      </p>
+
       <div class="hero-buttons">
-        <a href="pricing.html" class="btn-primary">View Pricing</a>
-        <a href="contact.html#quote" class="btn-ghost">Get a Free Quote</a>
+        <a href="pricing.html" class="btn-primary">See Pricing</a>
+        <a href="services.html" class="btn-ghost">Our Services</a>
       </div>
     </div>
 
     <div class="hero-image">
-      <img src="images/calci.jpg" alt="Accounting calculator" />
+      <img src="images/calci.jpg" alt="Accounting Laptop" />
     </div>
-  </header>
+  </section>
 
-  <!-- PROMO CARDS -->
+  <!-- PROMO SECTION -->
   <section class="promo-section fade-in">
     <div class="promo-card">
-      <img src="images/tax35.png" alt="Tax Filing $35" />
+      <img src="images/129-price.png" alt="Bookkeeping From 129" />
     </div>
-
     <div class="promo-card">
-      <img src="images/bookkeeping129.png" alt="Bookkeeping $129" />
+      <img src="images/tax35.png" alt="Tax Filing From 35" />
     </div>
-
     <div class="promo-card">
-      <img src="images/payroll3months.png" alt="Payroll 3 months free" />
+      <img src="images/3monthfree.png" alt="3 Months Payroll Free" />
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials fade-up">
-    <h2>What Clients Say</h2>
-    <div class="testimonial-grid">
-      <article class="testimonial-card">
-        <p>“Gangadhar made my first tax filing in Canada so easy. Everything was explained clearly and done on time.”</p>
-        <h4>– Student, Vancouver</h4>
-      </article>
+  <!-- MINI SERVICE CARDS -->
+  <section class="service-grid fade-in">
+    <div class="service-box">
+      <h2>Tax Filing</h2>
+      <p>Affordable tax returns for individuals, families & newcomers.</p>
+    </div>
 
-      <article class="testimonial-card">
-        <p>“Prismledger looks after our bookkeeping every month, so I can focus on running my restaurant.”</p>
-        <h4>– Small Business Owner, Richmond</h4>
-      </article>
+    <div class="service-box">
+      <h2>Bookkeeping</h2>
+      <p>Small business bookkeeping starting at just $129/month.</p>
+    </div>
 
-      <article class="testimonial-card">
-        <p>“The payroll setup was smooth, and the 3-month free offer helped us switch from our old system.”</p>
-        <h4>– Startup Founder, BC</h4>
-      </article>
+    <div class="service-box">
+      <h2>Payroll & HR</h2>
+      <p>Full payroll management — first 3 months free.</p>
     </div>
   </section>
+
+  <!-- GOOGLE MAPS -->
+  <h2 class="map-title fade-up">Our Offices</h2>
+
+  <div class="map-container fade-in">
+
+    <!-- White Rock Location -->
+    <div class="map-box">
+      <h3>White Rock Office</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.403004273693!2d-122.804!3d49.0241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d98f98a0b70f%3A0xa28e3dfc2b4d87d2!2s15170%20Prospect%20Ave%2C%20White%20Rock%2C%20BC%20V4B%203Y8!5e0!3m2!1sen!2sca!4v1700250000000"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Surrey Location -->
+    <div class="map-box">
+      <h3>Surrey Office (Newton)</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2600.1589553433484!2d-122.878!3d49.1322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485dd8bfa673339%3A0xf4720a4eaa2d4fe8!2s12827%2076%20Ave%20Unit%20105%2C%20Surrey%2C%20BC%20V3W%202V3!5e0!3m2!1sen!2sca!4v1700251000000"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
 
   <footer>
     © 2025 Prismledger Accounting Services
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
