@@ -13,7 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.space.min.js"></script>
 
   <style>
-    /* REQUIRED BACKGROUND CONTAINER */
+    /* BACKGROUND CONTAINER */
     #vanta-bg {
       position: fixed;
       top: 0;
@@ -32,7 +32,6 @@
       z-index: 10;
     }
 
-    /* PRICING HEADER */
     .pricing-header {
       text-align: center;
       padding: 60px 24px 30px;
@@ -46,7 +45,6 @@
       font-size: 1.1rem;
     }
 
-    /* GRID */
     .pricing-grid {
       display: flex;
       justify-content: center;
@@ -55,7 +53,6 @@
       padding: 20px 40px 80px;
     }
 
-    /* CARDS */
     .pricing-card {
       background: var(--bg-card);
       width: 300px;
@@ -65,13 +62,10 @@
       border: 1px solid var(--border-soft);
       transition: 0.3s ease;
     }
+
     .pricing-card:hover {
       transform: translateY(-10px);
       border-color: var(--accent);
-    }
-
-    .pricing-card h2 {
-      margin-bottom: 12px;
     }
 
     .price-tag {
@@ -90,26 +84,20 @@
       font-size: 0.95rem;
     }
 
-    .pricing-card .cta-btn {
+    .cta-btn {
       display: inline-block;
       background: var(--accent);
       color: #111;
       padding: 10px 18px;
       border-radius: 999px;
       font-weight: 700;
-      text-decoration: none;
-    }
-
-    footer {
-      margin-top: 40px;
     }
   </style>
 
 </head>
 <body class="dark">
-  <div id="vanta-bg"></div>
 
-<!-- ⭐ VANTA BACKGROUND CONTAINER -->
+<!-- SINGLE CLEAN VANTA CONTAINER -->
 <div id="vanta-bg"></div>
 
 <!-- NAVBAR -->
@@ -144,7 +132,7 @@
   <p>No hidden fees. No surprises — just clear pricing for real people & small businesses.</p>
 </header>
 
-<!-- PRICING GRID -->
+<!-- GRID -->
 <section class="pricing-grid fade-in">
 
   <div class="pricing-card">
@@ -185,13 +173,9 @@
 
 </section>
 
-<footer>
-  © 2025 Prismledger Accounting Services
-</footer>
+<footer>© 2025 Prismledger Accounting Services</footer>
 
-<script src="script.js"></script>
-
-<!-- ⭐ VANTA UNIVERSE INIT -->
+<!-- VANTA INIT -->
 <script>
 VANTA.SPACE({
   el: "#vanta-bg",
@@ -203,29 +187,6 @@ VANTA.SPACE({
   scale: 1.00,
   scaleMobile: 1.00,
 
-  // UNIVERSE THEME COLORS
-  backgroundColor: 0x05000c,
-  color: 0x8a2eff,   // star glow
-  galaxyColor: 0x3a0096,
-  spaceColor: 0x11003a,
-  starSize: 1.3,
-  starSpacing: 1.8
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.space.min.js"></script>
-
-<script>
-VANTA.SPACE({
-  el: "#vanta-bg",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-
   backgroundColor: 0x05000c,
   color: 0x8a2eff,
   galaxyColor: 0x3a0096,
@@ -234,6 +195,8 @@ VANTA.SPACE({
   starSpacing: 1.8
 });
 </script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
