@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canada Tax Calculator | Prismledger Accounting</title>
+  <meta name="description" content="Estimate your Canadian income tax with Prismledger's free online calculator. Includes federal and British Columbia tax, CPP, EI and net income estimate." />
+  <link rel="canonical" href="https://prismledger.ca/tax-calculator.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ---------- PAGE LAYOUT ---------- */
+    .calc-wrapper {
+      max-width: 1100px;
+      margin: 40px auto 60px;
+      padding: 0 20px 40px;
+    }
+
+    .calc-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .calc-header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+    }
+    .calc-tagline {
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+    .calc-disclaimer {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .calc-grid {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .calc-card {
+      flex: 1 1 340px;
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 22px 24px;
+      box-shadow:
+        0 0 18px rgba(140, 80, 255, 0.35),
+        0 18px 30px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .calc-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top left,
+        rgba(255, 221, 87, 0.15),
+        transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .calc-card:hover::before {
+      opacity: 1;
+    }
+
+    .calc-card h2 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    /* ---------- FORM ---------- */
+    .calc-form-group {
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .calc-form-group label {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .calc-form-group input,
+    .calc-form-group select {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border-soft);
+      background: rgba(0, 0, 0, 0.25);
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .calc-form-group input:focus,
+    .calc-form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .calc-help {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .calc-actions {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-calc {
+      background: var(--accent);
+      color: #111;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .btn-reset {
+      background: transparent;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      color: var(--text-main);
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .btn-calc:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-reset:hover {
+      border-color: var(--accent);
+    }
+
+    /* ---------- RESULTS ---------- */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 18px;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .result-label {
+      color: var(--text-muted);
+    }
+    .result-value {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .results-highlight {
+      margin-top: 18px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    }
+
+    .results-highlight .result-label {
+      font-weight: 600;
+    }
+    .results-highlight .result-value {
+      font-size: 1.05rem;
+      color: var(--accent);
+    }
+
+    .results-meta {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .calc-wrapper {
+        margin-top: 24px;
+      }
+      .calc-card {
+        padding: 18px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark">
+
+  <!-- NAVBAR (same style as other pages) -->
+  <nav class="navbar fade-in">
+    <div class="nav-left">
+      <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
+      <span class="nav-brand">Prismledger Accounting</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <!-- You can add this link to other pages later if you like -->
+      <li><a class="active" href="tax-calculator.html">Tax Calculator</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a href="contact.html#quote" class="btn-small">Get a Quote</a>
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN WRAPPER -->
+  <main class="calc-wrapper fade-up">
+    <div class="calc-header">
+      <h1>Canada Tax Calculator (Estimate)</h1>
+      <p class="calc-tagline">
+        Quick estimate of your federal and British Columbia income tax, CPP and EI — inspired by CRA’s layout,
+        but simplified for planning.
+      </p>
+      <p class="calc-disclaimer">
+        <strong>Important:</strong> For illustration only. Uses 2023-style brackets and basic personal amounts.
+        Real CRA calculations are more detailed — always confirm before filing.
+      </p>
+    </div>
+
+    <div class="calc-grid">
+
+      <!-- INPUT CARD -->
+      <section class="calc-card">
+        <h2>1. Your Details</h2>
+
+        <form id="taxForm">
+          <div class="calc-form-group">
+            <label for="province">Province / Territory</label>
+            <select id="province" name="province">
+              <option value="BC">British Columbia (supported)</option>
+              <option value="OTHER">Other province (federal only estimate)</option>
+            </select>
+            <div class="calc-help">Right now, full details are tuned for BC.</div>
+          </div>
+
+          <div class="calc-form-group">
+            <label for="employmentIncome">Employment income ($)</label>
+            <input type="number" id="employmentIncome" min="0" step="100" value="60000" />
+          </div>
+
+          <div class="calc-form-group">
+            <label for="selfEmploymentIncome">Self-employment net income ($)</label>
+            <input type="number" id="selfEmploymentIncome" min="0" step="100" value="0" />
+            <div class="calc-help">After business expenses.</div>
+          </div>
+
+          <div class="calc-form-group">
+            <label for="otherIncome">Other taxable income ($)</label>
+            <input type="number" id="otherIncome" min="0" step="100" value="0" />
+            <div class="calc-help">Interest, investment income, rental, etc.</div>
+          </div>
+
+          <div class="calc-form-group">
+            <label for="rrsp">RRSP contributions to deduct ($)</label>
+            <input type="number" id="rrsp" min="0" step="100" value="0" />
+          </div>
+
+          <div class="calc-form-group">
+            <label for="tuition">Eligible tuition paid ($)</label>
+            <input type="number" id="tuition" min="0" step="100" value="0" />
+            <div class="calc-help">Used only as a tuition tax credit estimate.</div>
+          </div>
+
+          <div class="calc-actions">
+            <button type="button" class="btn-calc" id="calcBtn">Calculate my tax</button>
+            <button type="button" class="btn-reset" id="resetBtn">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- RESULTS CARD -->
+      <section class="calc-card">
+        <h2>2. Results (Estimate)</h2>
+
+        <div class="results-grid" id="resultsGrid">
+          <!-- Filled by JS -->
+        </div>
+
+        <div class="results-meta" id="resultsMeta">
+          Enter your details and click <strong>Calculate my tax</strong> to see an estimate.
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Prismledger Accounting Services
+  </footer>
+
+  <!-- Your existing site script (theme toggle, etc.) -->
+  <script src="script.js"></script>
+
+  <!-- CALCULATOR LOGIC -->
+  <script>
+    // ---- Helper: tax on brackets ----
+    function calcBracketTax(income, brackets) {
+      let remaining = income;
+      let tax = 0;
+      let marginalRate = 0;
+
+      for (let i = 0; i < brackets.length; i++) {
+        const { upTo, rate } = brackets[i];
+        const prevLimit = i === 0 ? 0 : brackets[i - 1].upTo;
+        const slice = Math.max(Math.min(remaining, upTo - prevLimit), 0);
+        tax += slice * rate;
+        if (remaining > 0 && slice > 0) {
+          marginalRate = rate;
+        }
+        remaining -= slice;
+      }
+      return { tax, marginalRate };
+    }
+
+    // ---- Constants (approximate 2023-style) ----
+    const FEDERAL_BRACKETS = [
+      { upTo: 53359, rate: 0.15 },
+      { upTo: 106717, rate: 0.205 },
+      { upTo: 165430, rate: 0.26 },
+      { upTo: 235675, rate: 0.29 },
+      { upTo: Infinity, rate: 0.33 }
+    ];
+    const FED_BASIC_PERSONAL = 15000;
+    const FED_CREDIT_RATE = 0.15;
+
+    const BC_BRACKETS = [
+      { upTo: 45154, rate: 0.0506 },
+      { upTo: 90308, rate: 0.077 },
+      { upTo: 104835, rate: 0.105 },
+      { upTo: 127299, rate: 0.1229 },
+      { upTo: 172602, rate: 0.147 },
+      { upTo: 240716, rate: 0.168 },
+      { upTo: Infinity, rate: 0.205 }
+    ];
+    const BC_BASIC_PERSONAL = 11481;
+    const BC_CREDIT_RATE = 0.0506;
+
+    // CPP & EI (very rough 2023-style)
+    const CPP_RATE = 0.0595;
+    const CPP_YBE = 3500;
+    const CPP_YMPE = 66600;
+
+    const EI_RATE = 0.0163;
+    const EI_MAX_EARNINGS = 61500;
+
+    function calcCPP(employmentIncome, selfEmploymentIncome) {
+      // Employment CPP
+      const pensionableEmployment = Math.max(
+        Math.min(employmentIncome, CPP_YMPE) - CPP_YBE,
+        0
+      );
+      const employmentCPP = pensionableEmployment * CPP_RATE;
+
+      // Self-employment CPP is roughly double (employee + employer portions)
+      const pensionableSelf = Math.max(
+        Math.min(selfEmploymentIncome, CPP_YMPE) - CPP_YBE,
+        0
+      );
+      const selfCPP = pensionableSelf * CPP_RATE * 2;
+
+      return employmentCPP + selfCPP;
+    }
+
+    function calcEI(employmentIncome) {
+      const insurable = Math.min(employmentIncome, EI_MAX_EARNINGS);
+      return insurable * EI_RATE;
+    }
+
+    // ---- Main calculation ----
+    function formatMoney(value) {
+      return value.toLocaleString("en-CA", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+      });
+    }
+
+    function calculateTax() {
+      const province = document.getElementById("province").value;
+      const employment = Number(document.getElementById("employmentIncome").value) || 0;
+      const selfEmp = Number(document.getElementById("selfEmploymentIncome").value) || 0;
+      const other = Number(document.getElementById("otherIncome").value) || 0;
+      const rrsp = Number(document.getElementById("rrsp").value) || 0;
+      const tuition = Number(document.getElementById("tuition").value) || 0;
+
+      const grossIncome = employment + selfEmp + other;
+      const rrspDeduction = Math.min(rrsp, grossIncome); // simple cap
+      const taxableIncome = Math.max(grossIncome - rrspDeduction, 0);
+
+      // Federal
+      const { tax: fedBeforeCredits, marginalRate: fedMarginal } =
+        calcBracketTax(taxableIncome, FEDERAL_BRACKETS);
+      const fedCredits =
+        (FED_BASIC_PERSONAL + tuition) * FED_CREDIT_RATE;
+      const federalTax = Math.max(fedBeforeCredits - fedCredits, 0);
+
+      // Provincial (BC only estimate)
+      let provincialTax = 0;
+      let provMarginal = 0;
+      let provinceNote = "";
+
+      if (province === "BC") {
+        const { tax: bcBeforeCredits, marginalRate: bcMarginal } =
+          calcBracketTax(taxableIncome, BC_BRACKETS);
+        const bcCredits = BC_BASIC_PERSONAL * BC_CREDIT_RATE;
+        provincialTax = Math.max(bcBeforeCredits - bcCredits, 0);
+        provMarginal = bcMarginal;
+      } else {
+        provinceNote =
+          "Provincial tax for provinces other than BC is not fully modelled. This shows federal plus CPP/EI only.";
+      }
+
+      // CPP + EI
+      const cpp = calcCPP(employment, selfEmp);
+      const ei = calcEI(employment);
+
+      const totalTax = federalTax + provincialTax + cpp + ei;
+      const netIncome = grossIncome - totalTax;
+
+      const averageRate = grossIncome > 0 ? (totalTax / grossIncome) * 100 : 0;
+      const marginalRateCombined = (fedMarginal + provMarginal) * 100;
+
+      // ---- Inject into DOM ----
+      const resultsGrid = document.getElementById("resultsGrid");
+      resultsGrid.innerHTML = `
+        <div class="result-label">Federal tax</div>
+        <div class="result-value">$${formatMoney(federalTax)}</div>
+
+        <div class="result-label">BC provincial tax</div>
+        <div class="result-value">$${formatMoney(provincialTax)}</div>
+
+        <div class="result-label">CPP contributions</div>
+        <div class="result-value">$${formatMoney(cpp)}</div>
+
+        <div class="result-label">EI premiums</div>
+        <div class="result-value">$${formatMoney(ei)}</div>
+
+        <div class="result-label">Total income tax & deductions</div>
+        <div class="result-value">$${formatMoney(totalTax)}</div>
+
+        <div class="result-label">Net income after tax</div>
+        <div class="result-value">$${formatMoney(netIncome)}</div>
+
+        <div class="results-highlight result-label">Average tax rate</div>
+        <div class="results-highlight result-value">
+          ${averageRate.toFixed(1)}%
+        </div>
+
+        <div class="result-label">Approx. marginal rate (BC)</div>
+        <div class="result-value">
+          ${marginalRateCombined.toFixed(1)}%
+        </div>
+      `;
+
+      const meta = document.getElementById("resultsMeta");
+      meta.innerHTML = `
+        Calculated on an estimated 2023 federal + BC tax model. 
+        RRSP and tuition are simplified. Always confirm numbers using CRA tools 
+        or professional advice before filing.${provinceNote ? "<br><br>" + provinceNote : ""}
+      `;
+    }
+
+    // ---- Event listeners ----
+    document.getElementById("calcBtn").addEventListener("click", calculateTax);
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      document.getElementById("taxForm").reset();
+      document.getElementById("resultsGrid").innerHTML = "";
+      document.getElementById("resultsMeta").textContent =
+        "Enter your details and click \"Calculate my tax\" to see an estimate.";
+    });
+
+    // Optional: trigger once with defaults
+    calculateTax();
+  </script>
+</body>
+</html>
