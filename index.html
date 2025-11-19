@@ -16,9 +16,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 
-  <!-- PAGE-SPECIFIC STYLES -->
   <style>
-    /* Vanta Background */
+    /* MAIN VANTA BACKGROUND */
     #vanta-bg {
       position: fixed;
       top: 0;
@@ -28,79 +27,44 @@
       z-index: -1;
     }
 
-    /* PREMIUM VISIT-US SECTION */
-    .address-section {
-      background: transparent !important;
+    /* TAX CALCULATOR SECTION */
+    .taxcalc-section {
+      position: relative;
       padding: 80px 20px;
       text-align: center;
       color: #fff;
-      position: relative;
-      z-index: 10;
+      margin-top: 30px;
     }
 
-    .address-section h2 {
+    #vanta-calc {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .taxcalc-container h2 {
       font-size: 42px;
       font-weight: 800;
-      margin-bottom: 40px;
-      text-shadow: 0 0 20px rgba(180, 120, 255, 0.6);
+      margin-bottom: 8px;
+      text-shadow: 0 0 18px rgba(150, 90, 255, 0.7);
     }
 
-    .address-boxes {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
+    .taxcalc-sub {
+      font-size: 18px;
+      opacity: 0.85;
+      margin-bottom: 30px;
     }
 
-    .address-card {
-      background: rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-
-      padding: 32px 34px;
-      width: 330px;
-      border-radius: 22px;
-
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.35),
-        0 0 22px rgba(150, 90, 255, 0.5);
-
-      transition: 0.35s ease;
-      animation: floatCard 5s ease-in-out infinite;
-      color: #fff;
-    }
-
-    .address-card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow:
-        0 0 25px rgba(255, 255, 255, 0.9),
-        0 0 50px rgba(150, 90, 255, 0.9);
-    }
-
-    .address-card h3 {
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-      color: #fff;
-    }
-
-    .address-card p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #f8f6ff;
-    }
-
-    .sub-text {
-      color: #d8c9ff;
-      font-size: 0.9rem;
-      font-style: italic;
-    }
-
-    @keyframes floatCard {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-      100% { transform: translateY(0); }
+    .taxcalc-iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 600px;
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 0 35px rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
     }
   </style>
 
@@ -108,7 +72,7 @@
 
 <body>
 
-<!-- VANTA BACKGROUND -->
+<!-- PAGE BACKGROUND -->
 <div id="vanta-bg"></div>
 
 <!-- NAVBAR -->
@@ -162,12 +126,27 @@
   <div class="promo-card"><img src="images/payroll3months.png"></div>
 </section>
 
-<!-- ⭐ FINAL PREMIUM Visit Us SECTION -->
+<!-- ⭐ NEW TAX CALCULATOR SECTION -->
+<section class="taxcalc-section fade-up">
+  <div id="vanta-calc"></div>
+
+  <div class="taxcalc-container">
+    <h2>Instant Canadian Tax Calculator</h2>
+    <p class="taxcalc-sub">Estimate your 2024 taxes instantly before filing.</p>
+
+    <iframe 
+      src="taxcalc-proxy.html"
+      class="taxcalc-iframe"
+      loading="lazy"
+    ></iframe>
+  </div>
+</section>
+
+<!-- ⭐ VISIT US SECTION -->
 <section class="address-section fade-up">
   <h2>Visit Us</h2>
 
   <div class="address-boxes">
-
     <div class="address-card">
       <h3>White Rock Office</h3>
       <p>
@@ -184,7 +163,6 @@
         Surrey, BC V3W 2V3
       </p>
     </div>
-
   </div>
 </section>
 
@@ -206,26 +184,26 @@
   © 2025 Prismledger Accounting Services
 </footer>
 
-<!-- VANTA ACTIVATION -->
+<!-- MAIN VANTA -->
 <script>
 VANTA.NET({
   el: "#vanta-bg",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
+  minHeight: 200,
+  minWidth: 200,
+  scale: 1.0,
+  scaleMobile: 1.0,
   color: 0x6a0dad,
   backgroundColor: 0x090017,
-  points: 12.0,
-  maxDistance: 22.0,
-  spacing: 15.0
+  points: 12,
+  maxDistance: 22,
+  spacing: 15
 });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 
+<!-- CALCULATOR VANTA -->
 <script>
 VANTA.NET({
   el: "#vanta-calc",
@@ -234,15 +212,13 @@ VANTA.NET({
   gyroControls: false,
   minHeight: 200,
   minWidth: 200,
-  scale: 1.00,
-  scaleMobile: 1.00,
-
-  // DARK PREMIUM CLOUDY TRIANGLES
+  scale: 1.0,
+  scaleMobile: 1.0,
   color: 0x6a0dad,
-  backgroundColor: 0x05000a,
-  points: 10.0,
-  maxDistance: 20.0,
-  spacing: 14.0
+  backgroundColor: 0x000000,
+  points: 10,
+  maxDistance: 18,
+  spacing: 14
 });
 </script>
 
@@ -250,19 +226,3 @@ VANTA.NET({
 
 </body>
 </html>
-<!-- ⭐ TAX CALCULATOR SECTION WITH VANTA.NET BACKGROUND -->
-<section class="taxcalc-section">
-  <div id="vanta-calc"></div>
-
-  <div class="taxcalc-container fade-up">
-    <h2>Instant Canadian Tax Calculator</h2>
-    <p class="taxcalc-sub">Estimate your 2024 taxes instantly before filing.</p>
-
-    <!-- Calculator iframe -->
-    <iframe 
-      src="taxcalc-proxy.html"
-      class="taxcalc-iframe"
-      loading="lazy"
-    ></iframe>
-  </div>
-</section>
