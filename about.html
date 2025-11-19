@@ -8,9 +8,9 @@
 
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- VANTA (WAVES) -->
+  <!-- VANTA (CLOUDS) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.clouds.min.js"></script>
 
   <!-- VANTA BACKGROUND POSITION -->
   <style>
@@ -23,7 +23,7 @@
       z-index: -1;
     }
 
-    /* Make about page readable over waves */
+    /* Make about page readable over clouds */
     .about-container,
     .page-header,
     .about-text,
@@ -166,9 +166,9 @@
   © 2025 Prismledger Accounting Services
 </footer>
 
-<!-- VANTA WAVES INIT -->
+<!-- VANTA CLOUDS INIT -->
 <script>
-VANTA.WAVES({
+VANTA.CLOUDS({
   el: "#vanta-bg",
   mouseControls: true,
   touchControls: true,
@@ -177,11 +177,14 @@ VANTA.WAVES({
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-  color: 0x4b1d92,
-  shininess: 55.00,
-  waveHeight: 18.00,
-  waveSpeed: 1.25,
-  zoom: 0.85
+
+  /* DARK + PURPLE CLOUD STYLE */
+  skyColor: 0x05000a,
+  cloudColor: 0x4b1d92,
+  cloudShadowColor: 0x1a0a33,
+  sunColor: 0x000000,
+  sunGlareColor: 0x000000,
+  speed: 0.40
 })
 </script>
 
