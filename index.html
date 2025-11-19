@@ -103,7 +103,7 @@
       100% { transform: translateY(0); }
     }
 
-    /* ===== TAX CALCULATOR SECTION (NEW) ===== */
+    /* ===== TAX CALCULATOR SECTION ===== */
     .taxcalc-section {
       padding: 60px 20px 40px;
       position: relative;
@@ -259,29 +259,100 @@
         font-size: 1.7rem;
       }
     }
+
+    /* ===== LEAD MAGNET (FREE TAX CHECKLIST) BELOW CALCULATOR ===== */
+    .lead-magnet-section {
+      padding: 10px 20px 60px;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+    }
+
+    .lead-box {
+      max-width: 800px;
+      width: 100%;
+      background: radial-gradient(circle at top, rgba(255, 255, 255, 0.16), rgba(15, 0, 40, 0.96));
+      border-radius: 22px;
+      padding: 24px 26px 26px;
+      box-shadow:
+        0 0 24px rgba(255, 255, 255, 0.15),
+        0 18px 36px rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.17);
+      color: #fff;
+      text-align: center;
+    }
+
+    .lead-box h2 {
+      font-size: 1.9rem;
+      margin-bottom: 6px;
+      text-shadow: 0 0 16px rgba(255, 255, 255, 0.75);
+    }
+
+    .lead-box p {
+      color: #e6ddff;
+      font-size: 0.98rem;
+      margin-bottom: 18px;
+    }
+
+    .lead-box form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .lead-box input[type="text"],
+    .lead-box input[type="email"] {
+      flex: 1 1 220px;
+      min-width: 0;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(5, 0, 25, 0.9);
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    .lead-box input::placeholder {
+      color: #b7aee8;
+    }
+
+    .lead-box input:focus {
+      outline: none;
+      border-color: #ffdd57;
+      box-shadow: 0 0 0 2px rgba(255, 221, 87, 0.45);
+    }
+
+    .lead-box .btn-primary {
+      padding-inline: 28px;
+      white-space: nowrap;
+    }
+
+    .lead-note {
+      font-size: 0.8rem;
+      color: #d5cfff;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 800px) {
+      .lead-box {
+        padding: 20px 18px 22px;
+      }
+      .lead-box form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .lead-box h2 {
+        font-size: 1.6rem;
+      }
+    }
   </style>
 
 </head>
 
 <body>
-<!-- FREE TAX CHECKLIST FORM -->
-<section class="lead-magnet-section">
-  <div class="lead-box">
-    <h2>Get Your Free Tax Checklist</h2>
-    <p>Enter your email and we’ll send you the checklist instantly.</p>
-
-    <form action="https://formspree.io/f/manaaojj" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-
-      <input type="hidden" name="checklist" value="send_pdf">
-
-      <button type="submit" class="btn-primary">Download Checklist</button>
-    </form>
-
-    <p class="lead-note">* We never share your email.</p>
-  </div>
-</section>
 
 <!-- VANTA BACKGROUND -->
 <div id="vanta-bg"></div>
@@ -426,6 +497,27 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== LEAD MAGNET: FREE TAX CHECKLIST (JUST BELOW CALCULATOR) ===== -->
+<section class="lead-magnet-section fade-up">
+  <div class="lead-box">
+    <h2>Get Your Free Tax Checklist</h2>
+    <p>Enter your name and email and we’ll send you the checklist instantly.</p>
+
+    <form action="https://formspree.io/f/mldznwwd" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <!-- Tell Formspree to redirect to your PDF after a successful submit -->
+      <input type="hidden" name="_redirect" value="https://prismledger.ca/Prismledger_Tax_Checklist.pdf">
+      <input type="hidden" name="source" value="homepage-tax-checklist">
+
+      <button type="submit" class="btn-primary">Download Checklist</button>
+    </form>
+
+    <p class="lead-note">* We never share your email.</p>
   </div>
 </section>
 
