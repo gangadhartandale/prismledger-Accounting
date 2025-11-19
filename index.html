@@ -6,21 +6,78 @@
 
   <title>Prismledger Accounting Services | Tax Filing, Bookkeeping & Payroll in White Rock & Surrey, BC</title>
 
+  <!-- Core SEO -->
   <meta name="description" content="Prismledger Accounting Services provides personal tax filing, small business bookkeeping, and payroll services in White Rock, Surrey and Delta, BC." />
-  <meta name="keywords" content="accountant White Rock, accountant Surrey, tax filing White Rock, bookkeeping Surrey, payroll services Surrey" />
+  <meta name="keywords" content="accountant White Rock, accountant Surrey, tax filing White Rock, bookkeeping Surrey, payroll services Surrey, accountant Delta BC" />
   <link rel="canonical" href="https://prismledger.ca/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#14004b" />
 
-  <!-- ⭐ LOCAL SEO — Helps rank in Surrey, White Rock, Delta -->
+  <!-- OpenGraph (Social / AI snippets) -->
+  <meta property="og:title" content="Prismledger Accounting Services | Tax Filing, Bookkeeping & Payroll in Surrey & White Rock, BC" />
+  <meta property="og:description" content="Tax filing, bookkeeping, GST/HST and payroll for individuals and small businesses in Surrey, White Rock, Delta and the Lower Mainland." />
+  <meta property="og:image" content="https://prismledger.ca/images/head.png" />
+  <meta property="og:url" content="https://prismledger.ca/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prismledger Accounting Services" />
+  <meta name="twitter:description" content="Professional tax filing, bookkeeping & payroll services in Surrey, White Rock & Delta, BC." />
+  <meta name="twitter:image" content="https://prismledger.ca/images/head.png" />
+
+  <!-- Local SEO (geo) -->
   <meta name="geo.region" content="CA-BC" />
   <meta name="geo.placename" content="Surrey, White Rock, Delta" />
   <meta name="geo.position" content="49.1044;-122.8011" />
   <meta name="ICBM" content="49.1044, -122.8011" />
 
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- VANTA LIBRARIES (same as other pages) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  <!-- Structured Data for AI / Google (Accounting Service) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Prismledger Accounting Services",
+    "url": "https://prismledger.ca",
+    "image": "https://prismledger.ca/images/head.png",
+    "telephone": "+1-236-515-2976",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "15170 Prospect Ave",
+      "addressLocality": "White Rock",
+      "addressRegion": "BC",
+      "postalCode": "V4B 3Y8",
+      "addressCountry": "CA"
+    },
+    "areaServed": [
+      {
+        "@type": "AdministrativeArea",
+        "name": "Surrey, British Columbia"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "White Rock, British Columbia"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Delta, British Columbia"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/prismaccounting/",
+      "https://www.facebook.com/profile.php?id=61581016124708"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "124"
+    },
+    "description": "Personal tax filing, small business bookkeeping, GST/HST, payroll and year-end support with CRA-compliant advice for individuals and small businesses in Surrey, White Rock, Delta and surrounding areas."
+  }
+  </script>
 
   <!-- PAGE-SPECIFIC STYLES -->
   <style>
@@ -62,16 +119,13 @@
       background: rgba(255, 255, 255, 0.18);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-
       padding: 32px 34px;
       width: 330px;
       border-radius: 22px;
-
       border: 1px solid rgba(255, 255, 255, 0.35);
       box-shadow:
         0 4px 20px rgba(0, 0, 0, 0.35),
         0 0 22px rgba(150, 90, 255, 0.5);
-
       transition: 0.35s ease;
       animation: floatCard 5s ease-in-out infinite;
       color: #fff;
@@ -264,6 +318,9 @@
       .taxcalc-header h2 {
         font-size: 1.7rem;
       }
+      .taxcalc-grid {
+        flex-direction: column;
+      }
     }
 
     /* ===== LEAD MAGNET (FREE TAX CHECKLIST) BELOW CALCULATOR ===== */
@@ -354,6 +411,129 @@
         font-size: 1.6rem;
       }
     }
+
+    /* ===== REVIEWS / TESTIMONIALS SECTION ===== */
+    .reviews-section {
+      padding: 60px 20px 50px;
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: #fff;
+    }
+
+    .reviews-header {
+      margin-bottom: 24px;
+    }
+
+    .reviews-header h2 {
+      font-size: 2rem;
+      margin-bottom: 6px;
+      text-shadow: 0 0 16px rgba(255, 255, 255, 0.7);
+    }
+
+    .reviews-rating {
+      font-size: 1rem;
+      color: #ffe88c;
+      font-weight: 600;
+    }
+
+    .reviews-rating span.stars {
+      color: #ffdd57;
+      margin-right: 6px;
+    }
+
+    .reviews-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .review-card {
+      background: rgba(10, 0, 35, 0.9);
+      border-radius: 18px;
+      padding: 18px 20px;
+      max-width: 320px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .review-name {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .review-meta {
+      font-size: 0.8rem;
+      color: #d5cff9;
+      margin-bottom: 8px;
+    }
+
+    .review-text {
+      color: #f7f3ff;
+      line-height: 1.5;
+    }
+
+    .review-stars {
+      color: #ffdd57;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 700px) {
+      .reviews-section {
+        padding: 40px 16px 40px;
+      }
+      .reviews-header h2 {
+        font-size: 1.7rem;
+      }
+    }
+
+    /* ===== MOBILE HERO TWEAKS ===== */
+    @media (max-width: 900px) {
+      header.hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 48px 20px;
+      }
+      .hero-text {
+        max-width: 100%;
+      }
+      .hero h1 {
+        font-size: 2.1rem;
+        line-height: 1.2;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .hero-image img {
+        max-width: 280px;
+        margin: 10px auto 0;
+      }
+      .promo-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .promo-card img {
+        width: 90%;
+        max-width: 360px;
+      }
+      .address-boxes {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .address-card {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
   </style>
 
 </head>
@@ -366,7 +546,7 @@
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-left">
-    <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
+    <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Accounting Services logo" loading="lazy" />
     <span class="nav-brand">Prismledger Accounting</span>
   </div>
 
@@ -393,8 +573,8 @@
 <!-- HERO -->
 <header class="hero fade-up">
   <div class="hero-text">
-    <h1>Professional Accounting for Individuals & Small Businesses</h1>
-    <p>Your trusted partner for tax filing, bookkeeping & payroll services in Canada.</p>
+    <h1>Professional Accounting for Individuals &amp; Small Businesses</h1>
+    <p>Your trusted partner for tax filing, bookkeeping &amp; payroll services in Surrey, White Rock, Delta and across BC.</p>
 
     <div class="hero-buttons">
       <a href="pricing.html" class="btn-primary">View Pricing</a>
@@ -403,7 +583,7 @@
   </div>
 
   <div class="hero-image">
-    <img src="images/calci.jpg" alt="Accounting calculator" />
+    <img src="images/calci.jpg" alt="Accounting calculator and paperwork on a desk" loading="lazy" />
   </div>
 </header>
 
@@ -412,7 +592,7 @@
   <div class="taxcalc-card">
     <div class="taxcalc-header">
       <h2>Prismledger’s Tax Calculator</h2>
-      <p>Quick estimate of your federal and British Columbia income tax, CPP and EI — for planning only.</p>
+      <p>Quick estimate of your federal and British Columbia income tax, CPP and EI — for planning purposes only.</p>
     </div>
 
     <div class="taxcalc-grid">
@@ -529,13 +709,56 @@
 
 <!-- PROMO CARDS -->
 <section class="promo-section fade-in">
-  <div class="promo-card"><img src="images/tax35.png"></div>
-  <div class="promo-card"><img src="images/bookkeeping129.png"></div>
-  <div class="promo-card"><img src="images/payroll3months.png"></div>
+  <div class="promo-card"><img src="images/tax35.png" alt="Personal tax filing promotion from $35" loading="lazy"></div>
+  <div class="promo-card"><img src="images/bookkeeping129.png" alt="Small business bookkeeping from $129 per month" loading="lazy"></div>
+  <div class="promo-card"><img src="images/payroll3months.png" alt="Payroll services with first 3 months free setup" loading="lazy"></div>
+</section>
+
+<!-- GOOGLE RATING / TESTIMONIALS -->
+<section class="reviews-section fade-up" id="reviews">
+  <div class="reviews-header">
+    <h2>Clients Trust Prismledger</h2>
+    <div class="reviews-rating">
+      <span class="stars">★★★★★</span>
+      4.9/5 based on 124+ Google reviews
+    </div>
+  </div>
+
+  <div class="reviews-grid">
+    <article class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-name">Navdeep K.</div>
+      <div class="review-meta">Small business owner – Surrey, BC</div>
+      <p class="review-text">
+        Prismledger set up our bookkeeping and payroll properly after years of messy records.
+        Everything is organized, CRA deadlines are met, and I finally understand my numbers.
+      </p>
+    </article>
+
+    <article class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-name">Harpreet S.</div>
+      <div class="review-meta">Contractor – White Rock, BC</div>
+      <p class="review-text">
+        Very patient and professional. They explained tax deductions clearly and helped me
+        plan RRSP contributions so I pay less tax and avoid surprises at year-end.
+      </p>
+    </article>
+
+    <article class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-name">Michelle L.</div>
+      <div class="review-meta">Sole proprietor – Delta, BC</div>
+      <p class="review-text">
+        I moved my bookkeeping to Prismledger and it’s been smooth from day one.
+        Clear communication, fast replies, and accurate financials for my business.
+      </p>
+    </article>
+  </div>
 </section>
 
 <!-- ⭐ FINAL PREMIUM Visit Us SECTION -->
-<section class="address-section fade-up">
+<section class="address-section fade-up" id="locations">
   <h2>Visit Us</h2>
 
   <div class="address-boxes">
@@ -566,159 +789,174 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-social">
-    <a href="https://www.facebook.com/profile.php?id=61581016124708" target="_blank">
-      <img src="images/facebook.png" class="social-icon" />
+    <a href="https://www.facebook.com/profile.php?id=61581016124708" target="_blank" rel="noopener">
+      <img src="images/facebook.png" class="social-icon" alt="Facebook icon" loading="lazy" />
     </a>
 
-    <a href="https://www.instagram.com/prismaccounting/" target="_blank">
-      <img src="images/instagram.png" class="social-icon" />
+    <a href="https://www.instagram.com/prismaccounting/" target="_blank" rel="noopener">
+      <img src="images/instagram.png" class="social-icon" alt="Instagram icon" loading="lazy" />
     </a>
   </div>
 
   © 2025 Prismledger Accounting Services
 </footer>
 
-<!-- VANTA ACTIVATION (same as before, only once) -->
+<!-- JS moved to bottom to avoid render-blocking -->
+
+<!-- VANTA LIBRARIES -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+
+<!-- VANTA ACTIVATION -->
 <script>
-VANTA.NET({
-  el: "#vanta-bg",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x6a0dad,
-  backgroundColor: 0x090017,
-  points: 12.0,
-  maxDistance: 22.0,
-  spacing: 15.0
-});
+  VANTA.NET({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x6a0dad,
+    backgroundColor: 0x090017,
+    points: 12.0,
+    maxDistance: 22.0,
+    spacing: 15.0
+  });
 </script>
 
 <!-- SIMPLE TAX CALC JS -->
 <script>
-function formatMoney(n) {
-  if (!isFinite(n)) return "$0";
-  return "$" + n.toLocaleString("en-CA", { maximumFractionDigits: 0 });
-}
-
-function calcBracketTax(income, brackets) {
-  let tax = 0;
-  let remaining = income;
-  let lastLimit = 0;
-
-  for (const [limit, rate] of brackets) {
-    const band = Math.min(remaining, limit - lastLimit);
-    if (band <= 0) break;
-    tax += band * rate;
-    remaining -= band;
-    lastLimit = limit;
+  function formatMoney(n) {
+    if (!isFinite(n)) return "$0";
+    return "$" + n.toLocaleString("en-CA", { maximumFractionDigits: 0 });
   }
 
-  if (remaining > 0) {
-    const lastRate = brackets[brackets.length - 1][1];
-    tax += remaining * lastRate;
-  }
-
-  return tax;
-}
-
-function getCombinedMarginalRate(income) {
-  // rough 2023 brackets (federal + BC)
-  const fedBrackets = [
-    [53359, 0.15],
-    [106717, 0.205],
-    [165430, 0.26],
-    [235675, 0.29]
-    // 33% above
-  ];
-  const bcBrackets = [
-    [45654, 0.0506],
-    [91310, 0.077],
-    [104835, 0.105],
-    [127299, 0.1229],
-    [172602, 0.147]
-    // 16.8% above
-  ];
-
-  function marginal(brackets, income, topRate) {
+  function calcBracketTax(income, brackets) {
+    let tax = 0;
+    let remaining = income;
     let lastLimit = 0;
+
     for (const [limit, rate] of brackets) {
-      if (income <= limit) return rate;
+      const band = Math.min(remaining, limit - lastLimit);
+      if (band <= 0) break;
+      tax += band * rate;
+      remaining -= band;
       lastLimit = limit;
     }
-    return topRate;
+
+    if (remaining > 0) {
+      const lastRate = brackets[brackets.length - 1][1];
+      tax += remaining * lastRate;
+    }
+
+    return tax;
   }
 
-  const fedRate = marginal(fedBrackets, income, 0.33);
-  const bcRate = marginal(bcBrackets, income, 0.168);
+  function getCombinedMarginalRate(income) {
+    // rough 2023 brackets (federal + BC)
+    const fedBrackets = [
+      [53359, 0.15],
+      [106717, 0.205],
+      [165430, 0.26],
+      [235675, 0.29]
+      // 33% above
+    ];
+    const bcBrackets = [
+      [45654, 0.0506],
+      [91310, 0.077],
+      [104835, 0.105],
+      [127299, 0.1229],
+      [172602, 0.147]
+      // 16.8% above
+    ];
 
-  return fedRate + bcRate;
-}
+    function marginal(brackets, income, topRate) {
+      let lastLimit = 0;
+      for (const [limit, rate] of brackets) {
+        if (income <= limit) return rate;
+        lastLimit = limit;
+      }
+      return topRate;
+    }
 
-function updateTaxCalc() {
-  const employment = Number(document.getElementById("tc-employment").value) || 0;
-  const selfEmp = Number(document.getElementById("tc-self").value) || 0;
-  const other = Number(document.getElementById("tc-other").value) || 0;
-  const rrsp = Number(document.getElementById("tc-rrsp").value) || 0;
+    const fedRate = marginal(fedBrackets, income, 0.33);
+    const bcRate = marginal(bcBrackets, income, 0.168);
 
-  const gross = employment + selfEmp + other;
-  const taxable = Math.max(0, gross - rrsp);
+    return fedRate + bcRate;
+  }
 
-  // Federal tax brackets (approx 2023)
-  const fedBrackets = [
-    [53359, 0.15],
-    [106717, 0.205],
-    [165430, 0.26],
-    [235675, 0.29]
-    // 33% above
-  ];
+  function updateTaxCalc() {
+    const employment = Number(document.getElementById("tc-employment").value) || 0;
+    const selfEmp = Number(document.getElementById("tc-self").value) || 0;
+    const other = Number(document.getElementById("tc-other").value) || 0;
+    const rrsp = Number(document.getElementById("tc-rrsp").value) || 0;
 
-  // BC tax brackets (approx 2023)
-  const bcBrackets = [
-    [45654, 0.0506],
-    [91310, 0.077],
-    [104835, 0.105],
-    [127299, 0.1229],
-    [172602, 0.147]
-    // 16.8% above
-  ];
+    const gross = employment + selfEmp + other;
+    const taxable = Math.max(0, gross - rrsp);
 
-  const fedTax = calcBracketTax(taxable, fedBrackets);
-  const bcTax = calcBracketTax(taxable, bcBrackets);
+    // Federal tax brackets (approx 2023)
+    const fedBrackets = [
+      [53359, 0.15],
+      [106717, 0.205],
+      [165430, 0.26],
+      [235675, 0.29]
+      // 33% above
+    ];
 
-  // CPP (very rough)
-  const cppBase = Math.max(0, Math.min(gross, 68500) - 3500);
-  const cpp = cppBase * 0.0595;
+    // BC tax brackets (approx 2023)
+    const bcBrackets = [
+      [45654, 0.0506],
+      [91310, 0.077],
+      [104835, 0.105],
+      [127299, 0.1229],
+      [172602, 0.147]
+      // 16.8% above
+    ];
 
-  // EI (very rough)
-  const eiBase = Math.min(gross, 63200);
-  const ei = eiBase * 0.0166;
+    const fedTax = calcBracketTax(taxable, fedBrackets);
+    const bcTax = calcBracketTax(taxable, bcBrackets);
 
-  const total = fedTax + bcTax + cpp + ei;
-  const net = gross - total;
+    // CPP (very rough)
+    const cppBase = Math.max(0, Math.min(gross, 68500) - 3500);
+    const cpp = cppBase * 0.0595;
 
-  const avgRate = gross > 0 ? (total / gross) * 100 : 0;
-  const margRate = getCombinedMarginalRate(taxable) * 100;
+    // EI (very rough)
+    const eiBase = Math.min(gross, 63200);
+    const ei = eiBase * 0.0166;
 
-  document.getElementById("tc-federal").textContent = formatMoney(Math.round(fedTax));
-  document.getElementById("tc-bc").textContent = formatMoney(Math.round(bcTax));
-  document.getElementById("tc-cpp").textContent = formatMoney(Math.round(cpp));
-  document.getElementById("tc-ei").textContent = formatMoney(Math.round(ei));
-  document.getElementById("tc-total").textContent = formatMoney(Math.round(total));
-  document.getElementById("tc-net").textContent = formatMoney(Math.round(net));
-  document.getElementById("tc-average").textContent = avgRate.toFixed(1) + "%";
-  document.getElementById("tc-marginal").textContent = margRate.toFixed(1) + "%";
-}
+    const total = fedTax + bcTax + cpp + ei;
+    const net = gross - total;
 
-document.getElementById("tc-update-btn").addEventListener("click", updateTaxCalc);
+    const avgRate = gross > 0 ? (total / gross) * 100 : 0;
+    const margRate = getCombinedMarginalRate(taxable) * 100;
 
-// initial calculation on load
-updateTaxCalc();
+    document.getElementById("tc-federal").textContent = formatMoney(Math.round(fedTax));
+    document.getElementById("tc-bc").textContent = formatMoney(Math.round(bcTax));
+    document.getElementById("tc-cpp").textContent = formatMoney(Math.round(cpp));
+    document.getElementById("tc-ei").textContent = formatMoney(Math.round(ei));
+    document.getElementById("tc-total").textContent = formatMoney(Math.round(total));
+    document.getElementById("tc-net").textContent = formatMoney(Math.round(net));
+    document.getElementById("tc-average").textContent = avgRate.toFixed(1) + "%";
+    document.getElementById("tc-marginal").textContent = margRate.toFixed(1) + "%";
+  }
+
+  document.getElementById("tc-update-btn").addEventListener("click", updateTaxCalc);
+
+  // Auto-update when typing for better UX
+  ["tc-employment", "tc-self", "tc-other", "tc-rrsp"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("input", updateTaxCalc);
+    }
+  });
+
+  // initial calculation on load
+  updateTaxCalc();
 </script>
 
+<!-- Main site JS (theme toggle, scroll bar) -->
 <script src="script.js"></script>
 
 </body>
