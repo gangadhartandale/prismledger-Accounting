@@ -5,16 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Contact Prismledger Accounting | Tax Filing, Bookkeeping & Payroll Help</title>
-  <meta name="description" content="Contact Prismledger Accounting Services for tax filing, bookkeeping, payroll and CRA collections support in White Rock, Surrey and Delta BC." />
-  <link rel="canonical" href="https://prismledger.ca/contact.html" />
 
+  <!-- Core SEO -->
+  <meta name="description" content="Contact Prismledger Accounting Services for tax filing, bookkeeping, payroll and CRA support in Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver, BC." />
+  <meta name="keywords" content="contact accountant Surrey, contact tax filing Surrey, bookkeeping White Rock, accountant Delta, accounting Burnaby, accounting New Westminster, accountant Vancouver" />
+  <link rel="canonical" href="https://prismledger.ca/contact.html" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#14004b" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Contact Prismledger Accounting | Tax Filing, Bookkeeping & Payroll Help" />
+  <meta property="og:description" content="Have questions about tax filing, bookkeeping or payroll? Contact Prismledger Accounting for friendly support across Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver." />
+  <meta property="og:url" content="https://prismledger.ca/contact.html" />
+  <meta property="og:image" content="https://prismledger.ca/images/head.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Prismledger Accounting" />
+  <meta name="twitter:description" content="Reach out for help with tax filing, bookkeeping, payroll and CRA compliance across Metro Vancouver." />
+  <meta name="twitter:image" content="https://prismledger.ca/images/head.png" />
+
+  <!-- Local SEO (geo) -->
+  <meta name="geo.region" content="CA-BC" />
+  <meta name="geo.placename" content="Surrey, White Rock, Delta, Burnaby, New Westminster, Vancouver" />
+  <meta name="geo.position" content="49.1044;-122.8011" />
+  <meta name="ICBM" content="49.1044, -122.8011" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- VANTA SCRIPTS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
+  <!-- Structured Data: Contact Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Prismledger Accounting",
+    "url": "https://prismledger.ca/contact.html",
+    "about": {
+      "@type": "AccountingService",
+      "name": "Prismledger Accounting Services",
+      "url": "https://prismledger.ca",
+      "areaServed": [
+        { "@type": "City", "name": "Surrey" },
+        { "@type": "City", "name": "White Rock" },
+        { "@type": "City", "name": "Delta" },
+        { "@type": "City", "name": "Burnaby" },
+        { "@type": "City", "name": "New Westminster" },
+        { "@type": "City", "name": "Vancouver" }
+      ]
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-236-515-2976",
+      "contactType": "customer service",
+      "areaServed": "CA-BC",
+      "availableLanguage": ["en"]
+    },
+    "description": "Contact Prismledger Accounting for personal tax filing, bookkeeping, payroll and CRA support in Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver."
+  }
+  </script>
 
+  <!-- Page-specific styles -->
   <style>
+    /* Sticky footer layout */
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
     /* VANTA BACKGROUND */
     #vanta-bg {
       position: fixed;
@@ -53,8 +119,15 @@
     }
 
     .page-header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .page-header p a {
+      color: var(--accent);
+      text-decoration: underline;
     }
 
     @keyframes glowTitle {
@@ -103,162 +176,216 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.4);
       animation: fadeUp 0.7s ease-out;
     }
+
+    /* Small responsive tweaks */
+    @media (max-width: 900px) {
+      .page-header {
+        padding: 60px 16px 30px;
+      }
+      .page-header h1 {
+        font-size: 2.4rem;
+      }
+      .page-header p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .contact-layout {
+        padding: 30px 16px 40px;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <!-- VANTA BACKGROUND -->
+  <div id="vanta-bg"></div>
 
-<div id="vanta-bg"></div>
+  <div class="page-content">
+    <!-- NAVBAR -->
+    <nav class="navbar fade-in">
+      <div class="nav-left">
+        <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Accounting logo" loading="lazy" />
+        <span class="nav-brand">Prismledger Accounting</span>
+      </div>
 
-<!-- NAVBAR -->
-<nav class="navbar fade-in">
-  <div class="nav-left">
-    <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
-    <span class="nav-brand">Prismledger Accounting</span>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="#quote" class="btn-small">Get a Quote</a>
+        <div class="theme-toggle">
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER (Centered Fancy Title with internal links) -->
+    <header class="page-header">
+      <h1>Contact Us</h1>
+      <p>
+        Have questions about tax filing, bookkeeping or payroll? We’re here to help.
+        You can also <a href="services.html#services-overview">see our services</a> or
+        <a href="pricing.html">view pricing</a> before you reach out.
+      </p>
+    </header>
+
+    <!-- CONTACT LAYOUT -->
+    <section class="contact-layout fade-in">
+      <!-- LEFT INFO -->
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <p>Email: <strong>prism.taxes@gmail.com</strong></p>
+        <p>Phone: <strong>236-515-2976</strong></p>
+
+        <p style="margin-top:12px;">
+          Serving clients across <strong>Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver</strong>.
+          For details on how we can help, you can also <a href="services.html#services-overview">see our services</a> or
+          <a href="pricing.html">view pricing</a>.
+        </p>
+
+        <h3 style="margin-top:20px;">Our Offices</h3>
+
+        <p><strong>White Rock Office</strong><br>
+        15170 Prospect Ave, White Rock, BC V4B 3Y8<br>
+        Inside Karigars Interiors</p>
+
+        <iframe
+          src="https://www.google.com/maps?q=15170+Prospect+Ave,+White+Rock,+BC&output=embed"
+          width="100%"
+          height="180"
+          style="border:0; border-radius:12px; margin-top:10px;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to White Rock office">
+        </iframe>
+
+        <p style="margin-top:25px;"><strong>Surrey Office</strong><br>
+        105-12827 76 Ave, Surrey, BC V3W 2V3</p>
+
+        <iframe
+          src="https://www.google.com/maps?q=105-12827+76+Ave,+Surrey,+BC&output=embed"
+          width="100%"
+          height="180"
+          style="border:0; border-radius:12px; margin-top:10px;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map to Surrey office">
+        </iframe>
+
+        <h3 style="margin-top:30px;">Follow Us</h3>
+
+        <div style="display:flex; gap:14px; align-items:center; margin-top:6px;">
+          <a href="https://www.facebook.com/profile.php?id=61581016124708" target="_blank" rel="noopener">
+            <img src="images/facebook.png" width="32" alt="Facebook icon" loading="lazy" />
+          </a>
+
+          <a href="https://www.instagram.com/prismaccounting/" target="_blank" rel="noopener">
+            <img src="images/instagram2.png" width="32" alt="Instagram icon" loading="lazy" />
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="contact-form-box" id="quote">
+        <h2>Send Us a Message</h2>
+
+        <form id="contactForm" action="https://formspree.io/f/manaaojj" method="POST">
+          <input type="text" name="full_name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+
+          <select name="service" required>
+            <option value="">Service Interested In</option>
+            <option>Tax Filing</option>
+            <option>Bookkeeping</option>
+            <option>Payroll</option>
+            <option>CRA Collections Help</option>
+            <option>General Inquiry</option>
+          </select>
+
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+          <button class="btn-primary" type="submit">Send Message</button>
+        </form>
+
+        <div id="successPopup" class="popup">Message sent successfully!</div>
+      </div>
+    </section>
   </div>
 
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a class="active" href="contact.html">Contact</a></li>
-  </ul>
+  <!-- FOOTER (sticky at bottom) -->
+  <footer>
+    © 2025 Prismledger Accounting Services
+  </footer>
 
-  <div class="nav-right">
-    <a href="#quote" class="btn-small">Get a Quote</a>
-    <div class="theme-toggle">
-      <label class="switch">
-        <input type="checkbox" id="theme-toggle">
-        <span class="slider"></span>
-      </label>
-    </div>
-  </div>
-</nav>
+  <!-- JS moved to bottom to avoid render-blocking -->
 
-<!-- HEADER (Centered Fancy Title) -->
-<header class="page-header">
-  <h1>Contact Us</h1>
-  <p>Have questions about tax filing, bookkeeping or payroll? We’re here to help.</p>
-</header>
+  <!-- VANTA SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
 
-<!-- CONTACT LAYOUT -->
-<section class="contact-layout fade-in">
+  <!-- VANTA INIT — Light Birds -->
+  <script>
+    VANTA.BIRDS({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200,
+      minWidth: 200,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      backgroundColor: 0x0a0020,
+      color1: 0x9d4bff,
+      color2: 0xffffff,
+      wingSpan: 18,
+      speedLimit: 2.0,
+      cohesion: 15,
+      quantity: 2.0
+    });
+  </script>
 
-  <!-- LEFT INFO -->
-  <div class="contact-info">
-    <h2>Get In Touch</h2>
-    <p>Email: <strong>prism.taxes@gmail.com</strong></p>
-    <p>Phone: <strong>236-515-2976</strong></p>
+  <!-- FORM SUBMIT POPUP -->
+  <script>
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+      contactForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-    <h3 style="margin-top:20px;">Our Offices</h3>
+        const form = e.target;
+        const data = new FormData(form);
 
-    <p><strong>White Rock Office</strong><br>
-    15170 Prospect Ave, White Rock, BC V4B 3Y8<br>
-    Inside Karigars Interiors</p>
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { "Accept": "application/json" }
+        });
 
-    <iframe src="https://www.google.com/maps?q=15170+Prospect+Ave,+White+Rock,+BC&output=embed"
-      width="100%" height="180" style="border:0; border-radius:12px; margin-top:10px;"></iframe>
+        if (response.ok) {
+          const popup = document.getElementById("successPopup");
+          if (popup) {
+            popup.style.display = "block";
+            form.reset();
+            setTimeout(() => popup.style.display = "none", 3500);
+          }
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      });
+    }
+  </script>
 
-    <p style="margin-top:25px;"><strong>Surrey Office</strong><br>
-    105-12827 76 Ave, Surrey, BC V3W 2V3</p>
-
-    <iframe src="https://www.google.com/maps?q=105-12827+76+Ave,+Surrey,+BC&output=embed"
-      width="100%" height="180" style="border:0; border-radius:12px; margin-top:10px;"></iframe>
-
-    <h3 style="margin-top:30px;">Follow Us</h3>
-
-    <div style="display:flex; gap:14px; align-items:center; margin-top:6px;">
-      <a href="https://www.facebook.com/profile.php?id=61581016124708" target="_blank">
-        <img src="images/facebook.png" width="32" />
-      </a>
-
-      <a href="https://www.instagram.com/prismaccounting/" target="_blank">
-        <img src="images/instagram2.png" width="32" />
-      </a>
-    </div>
-  </div>
-
-  <!-- RIGHT FORM -->
-  <div class="contact-form-box" id="quote">
-    <h2>Send Us a Message</h2>
-
-    <form id="contactForm" action="https://formspree.io/f/manaaojj" method="POST">
-      <input type="text" name="full_name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-
-      <select name="service" required>
-        <option value="">Service Interested In</option>
-        <option>Tax Filing</option>
-        <option>Bookkeeping</option>
-        <option>Payroll</option>
-        <option>CRA Collections Help</option>
-        <option>General Inquiry</option>
-      </select>
-
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
-      <button class="btn-primary" type="submit">Send Message</button>
-    </form>
-
-    <div id="successPopup" class="popup">Message sent successfully!</div>
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2025 Prismledger Accounting Services
-</footer>
-
-<!-- VANTA INIT — Lighter, Slower Birds + Triangle Feel -->
-<script>
-VANTA.BIRDS({
-  el: "#vanta-bg",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200,
-  minWidth: 200,
-  scale: 1.0,
-  scaleMobile: 1.0,
-
-  backgroundColor: 0x0a0020,
-  color1: 0x9d4bff,
-  color2: 0xffffff,
-  wingSpan: 18,
-  speedLimit: 2.0,
-  cohesion: 15,
-  quantity: 2.0  // VERY light + slow
-});
-</script>
-
-<!-- FORM SUBMIT POPUP -->
-<script>
-document.getElementById("contactForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const data = new FormData(form);
-
-  const response = await fetch(form.action, {
-    method: "POST",
-    body: data,
-    headers: { "Accept": "application/json" }
-  });
-
-  if (response.ok) {
-    const popup = document.getElementById("successPopup");
-    popup.style.display = "block";
-    form.reset();
-
-    setTimeout(() => popup.style.display = "none", 3500);
-  } else {
-    alert("Something went wrong. Please try again.");
-  }
-});
-</script>
-
+  <!-- Shared site JS (theme toggle, scroll bar) -->
+  <script src="script.js"></script>
 </body>
 </html>
