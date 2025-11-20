@@ -2,17 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Pricing – Affordable Tax Filing & Bookkeeping in Surrey & White Rock</title>
-  <meta name="description" content="Affordable pricing for tax filing, bookkeeping, payroll and year-round accounting services in Surrey, Delta, White Rock and nearby cities. Bookkeeping from $129/month." />
-  <link rel="canonical" href="https://prismledger.ca/pricing.html">
 
-  <link rel="stylesheet" href="styles.css">
+  <!-- Core SEO -->
+  <meta name="description" content="Transparent pricing for tax filing, bookkeeping, payroll and year-round accounting services in Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver. Bookkeeping from $129/month." />
+  <meta name="keywords" content="tax filing Surrey, bookkeeping Surrey, accountant White Rock, bookkeeping Delta, payroll services Surrey, accounting Burnaby, accountant New Westminster, accounting Vancouver" />
+  <link rel="canonical" href="https://prismledger.ca/pricing.html" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#14004b" />
 
-  <!-- VANTA TRIANGLES -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Pricing – Affordable Tax Filing & Bookkeeping in Surrey & White Rock" />
+  <meta property="og:description" content="Affordable pricing for tax filing, bookkeeping, payroll and accounting services across Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver." />
+  <meta property="og:url" content="https://prismledger.ca/pricing.html" />
+  <meta property="og:image" content="https://prismledger.ca/images/head.png" />
+  <meta property="og:type" content="website" />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prismledger Accounting – Pricing" />
+  <meta name="twitter:description" content="Bookkeeping from $129/month, tax filing from $35, and payroll with first 3 months free for new clients in Metro Vancouver." />
+  <meta name="twitter:image" content="https://prismledger.ca/images/head.png" />
+
+  <!-- Local SEO (geo) -->
+  <meta name="geo.region" content="CA-BC" />
+  <meta name="geo.placename" content="Surrey, White Rock, Delta, Burnaby, New Westminster, Vancouver" />
+  <meta name="geo.position" content="49.1044;-122.8011" />
+  <meta name="ICBM" content="49.1044, -122.8011" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data: Pricing / Offers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Accounting & Tax Pricing",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "Prismledger Accounting Services",
+      "url": "https://prismledger.ca"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Surrey" },
+      { "@type": "City", "name": "White Rock" },
+      { "@type": "City", "name": "Delta" },
+      { "@type": "City", "name": "Burnaby" },
+      { "@type": "City", "name": "New Westminster" },
+      { "@type": "City", "name": "Vancouver" }
+    ],
+    "serviceType": [
+      "Personal tax filing",
+      "Small business bookkeeping",
+      "Payroll and HR services"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Prismledger Accounting Packages",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Tax Filing",
+          "description": "Tax filing for students, newcomers, families and self-employed.",
+          "price": "35",
+          "priceCurrency": "CAD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Bookkeeping",
+          "description": "Monthly bookkeeping with reconciliation, GST/PST filing and financial statements.",
+          "price": "129",
+          "priceCurrency": "CAD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Payroll & HR",
+          "description": "Payroll setup, paystubs, remittances and HR support with first 3 months free for new clients.",
+          "price": "0",
+          "priceCurrency": "CAD"
+        }
+      ]
+    },
+    "url": "https://prismledger.ca/pricing.html",
+    "description": "Transparent pricing for tax filing, bookkeeping and payroll services in Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver."
+  }
+  </script>
+
+  <!-- Page-specific styles -->
   <style>
+    /* Make footer stick to bottom (sticky footer) */
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
     /* VANTA BACKGROUND */
     #vanta-bg {
       position: fixed;
@@ -102,6 +195,7 @@
       padding: 10px 18px;
       border-radius: 999px;
       font-weight: 700;
+      margin-top: 14px;
     }
 
     /* Fade animation */
@@ -109,131 +203,160 @@
       from { opacity: 0; transform: translateY(40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
 
+    /* Mobile tweaks */
+    @media (max-width: 900px) {
+      .pricing-header {
+        padding: 50px 16px 24px;
+      }
+      .pricing-header h1 {
+        font-size: 2.2rem;
+      }
+      .pricing-header p {
+        font-size: 1rem;
+      }
+      .pricing-grid {
+        padding: 10px 16px 50px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .pricing-card {
+        width: 100%;
+        max-width: 340px;
+      }
+    }
+  </style>
 </head>
 
 <body class="dark">
+  <!-- VANTA BACKGROUND -->
+  <div id="vanta-bg"></div>
 
-<!-- VANTA BACKGROUND -->
-<div id="vanta-bg"></div>
+  <div class="page-content">
+    <!-- NAVBAR -->
+    <nav class="navbar fade-in">
+      <div class="nav-left">
+        <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Accounting logo" loading="lazy" />
+        <span class="nav-brand">Prismledger Accounting</span>
+      </div>
 
-<!-- NAVBAR -->
-<nav class="navbar fade-in">
-  <div class="nav-left">
-    <img src="images/logo-purple.png" class="nav-logo" alt="Prismledger Logo" />
-    <span class="nav-brand">Prismledger Accounting</span>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="pricing.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="contact.html#quote" class="btn-small">Get a Quote</a>
+        <div class="theme-toggle">
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="pricing-header fade-up">
+      <h1>Transparent, Affordable Pricing</h1>
+      <p>No hidden fees. No surprises — just clear pricing for real people &amp; small businesses across Metro Vancouver.</p>
+    </header>
+
+    <!-- PRICING GRID -->
+    <section class="pricing-grid" aria-label="Accounting pricing plans">
+
+      <article class="pricing-card fade-card">
+        <h2>Tax Filing</h2>
+        <div class="price-tag">From $35</div>
+        <ul>
+          <li>Student &amp; newcomer returns</li>
+          <li>Family and rental property returns</li>
+          <li>Self-employed &amp; small business</li>
+          <li>CRA compliance and basic review</li>
+        </ul>
+        <a href="contact.html#quote" class="cta-btn">File My Taxes</a>
+      </article>
+
+      <article class="pricing-card fade-card">
+        <h2>Bookkeeping</h2>
+        <div class="price-tag">From $129/month</div>
+        <ul>
+          <li>Monthly reconciliation</li>
+          <li>GST/PST tracking &amp; filing</li>
+          <li>Profit &amp; loss and balance sheet</li>
+          <li>Expense tracking &amp; categorization</li>
+        </ul>
+        <a href="contact.html#quote" class="cta-btn">Start Bookkeeping</a>
+      </article>
+
+      <article class="pricing-card fade-card">
+        <h2>Payroll &amp; HR</h2>
+        <div class="price-tag">First 3 Months Free</div>
+        <ul>
+          <li>Employee paystubs &amp; direct deposit</li>
+          <li>ROEs, T4s and remittances</li>
+          <li>Onboarding &amp; termination support</li>
+          <li>Worker classification guidance</li>
+        </ul>
+        <a href="contact.html#quote" class="cta-btn">Get Payroll Setup</a>
+      </article>
+
+    </section>
   </div>
 
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a class="active" href="pricing.html">Pricing</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <!-- FOOTER (sticky at bottom) -->
+  <footer>
+    © 2025 Prismledger Accounting Services
+  </footer>
 
-  <div class="nav-right">
-    <a href="contact.html#quote" class="btn-small">Get a Quote</a>
-    <div class="theme-toggle">
-      <label class="switch">
-        <input type="checkbox" id="theme-toggle">
-        <span class="slider"></span>
-      </label>
-    </div>
-  </div>
-</nav>
+  <!-- JS moved to bottom to avoid render-blocking -->
 
-<!-- HEADER -->
-<header class="pricing-header fade-up">
-  <h1>Transparent, Affordable Pricing</h1>
-  <p>No hidden fees. No surprises — just clear pricing for real people & small businesses.</p>
-</header>
+  <!-- VANTA LIBRARIES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 
-<!-- PRICING GRID -->
-<section class="pricing-grid">
+  <!-- INIT VANTA NET -->
+  <script>
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200,
+      minWidth: 200,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x6a00ff,
+      backgroundColor: 0x05000c,
+      points: 12.0,
+      maxDistance: 22.0,
+      spacing: 15.0
+    });
+  </script>
 
-  <div class="pricing-card fade-card">
-    <h2>Tax Filing</h2>
-    <div class="price-tag">From $35</div>
-    <ul>
-      <li>Student returns</li>
-      <li>Newcomer support</li>
-      <li>Family, rental, small business</li>
-      <li>CRA compliance review</li>
-    </ul>
-    <a href="contact.html#quote" class="cta-btn">File My Taxes</a>
-  </div>
+  <!-- SCROLL FADE-IN -->
+  <script>
+    const cards = document.querySelectorAll('.pricing-card');
 
-  <div class="pricing-card fade-card">
-    <h2>Bookkeeping</h2>
-    <div class="price-tag">$129/month</div>
-    <ul>
-      <li>Monthly reconciliation</li>
-      <li>GST/PST filing</li>
-      <li>Financial statements</li>
-      <li>Expense tracking</li>
-    </ul>
-    <a href="contact.html#quote" class="cta-btn">Start Bookkeeping</a>
-  </div>
-
-  <div class="pricing-card fade-card">
-    <h2>Payroll & HR</h2>
-    <div class="price-tag">First 3 Months Free</div>
-    <ul>
-      <li>Employee paystubs</li>
-      <li>ROEs, T4s, remittances</li>
-      <li>Onboarding & termination</li>
-      <li>GST remittance support</li>
-    </ul>
-    <a href="contact.html#quote" class="cta-btn">Get Payroll Setup</a>
-  </div>
-
-</section>
-
-<footer>
-  © 2025 Prismledger Accounting Services
-</footer>
-
-<!-- INIT VANTA TRIANGLES -->
-<script>
-VANTA.NET({
-  el: "#vanta-bg",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200,
-  minWidth: 200,
-  scale: 1.0,
-  scaleMobile: 1.0,
-
-  /* DARK TRIANGLE THEME */
-  color: 0x6a00ff,
-  backgroundColor: 0x05000c,
-  points: 12.0,
-  maxDistance: 22.0,
-  spacing: 15.0
-});
-</script>
-
-<!-- SCROLL FADE-IN -->
-<script>
-const cards = document.querySelectorAll('.pricing-card');
-
-function revealCards() {
-  cards.forEach(card => {
-    const rect = card.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 80) {
-      card.classList.add('visible');
+    function revealCards() {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+          card.classList.add('visible');
+        }
+      });
     }
-  });
-}
 
-window.addEventListener('scroll', revealCards);
-window.addEventListener('load', revealCards);
-</script>
+    window.addEventListener('scroll', revealCards);
+    window.addEventListener('load', revealCards);
+  </script>
 
-<script src="script.js"></script>
+  <!-- Shared site JS (theme toggle, scroll bar) -->
+  <script src="script.js"></script>
 
 </body>
 </html>
