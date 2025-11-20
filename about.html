@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>About Prismledger Accounting | Trusted Tax Filing & Bookkeeping in Surrey, White Rock & Delta</title>
+  <title>About Prismledger Accounting | Small Business Accountant in Surrey & White Rock</title>
 
   <!-- Core SEO -->
-  <meta name="description" content="Learn about Prismledger Accounting Services — your trusted partner for tax filing, bookkeeping, payroll and CRA collections support across Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver, BC." />
-  <meta name="keywords" content="about accountant Surrey, bookkeeping services White Rock, tax expert Surrey, payroll services Delta, CRA help Burnaby, accountant Vancouver" />
+  <meta name="description" content="Learn about Gangadhar Tandale, Accounting Manager at Prismledger Accounting Services, with experience at CRA Collections, MNP, Manning Elliott and Buckley Dodds. Serving Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver." />
+  <meta name="keywords" content="about Prismledger Accounting, accountant Surrey, accountant White Rock, small business accountant Delta, CRA collections experience, accountant Burnaby, accountant New Westminster, accountant Vancouver" />
   <link rel="canonical" href="https://prismledger.ca/about.html" />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#14004b" />
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="About Prismledger Accounting | Trusted Tax, Bookkeeping & Payroll Services" />
-  <meta property="og:description" content="Prismledger provides reliable tax filing, bookkeeping, payroll and CRA support in Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver." />
+  <meta property="og:title" content="About Prismledger Accounting | Small Business Accountant in Surrey & White Rock" />
+  <meta property="og:description" content="Meet Gangadhar Tandale, Accounting Manager at Prismledger Accounting Services, with CRA and public practice experience serving clients across Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver." />
   <meta property="og:url" content="https://prismledger.ca/about.html" />
   <meta property="og:image" content="https://prismledger.ca/images/head.png" />
   <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About Prismledger Accounting" />
-  <meta name="twitter:description" content="Trusted tax filing & bookkeeping across Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver." />
+  <meta name="twitter:description" content="Clear, reliable and affordable accounting support by Gangadhar Tandale for individuals, newcomers and small businesses in Metro Vancouver." />
   <meta name="twitter:image" content="https://prismledger.ca/images/head.png" />
 
   <!-- Local SEO (geo) -->
@@ -65,11 +65,11 @@
       "ratingValue": "4.9",
       "reviewCount": "124"
     },
-    "description": "About Prismledger Accounting: personal tax filing, small business bookkeeping, payroll and CRA collections support across Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver."
+    "description": "Learn about Prismledger Accounting and Accounting Manager Gangadhar Tandale, with CRA collections and public practice experience providing tax filing, bookkeeping and payroll support across Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver."
   }
   </script>
 
-  <!-- Page-specific styles -->
+  <!-- VANTA BACKGROUND POSITION & About Page Styling -->
   <style>
     /* Sticky footer */
     body {
@@ -77,9 +77,14 @@
       display: flex;
       flex-direction: column;
     }
-    footer { margin-top: auto; }
 
-    /* VANTA BACKGROUND */
+    footer {
+      position: relative;
+      z-index: 5;
+      margin-top: auto;
+    }
+
+    /* Vanta background */
     #vanta-bg {
       position: fixed;
       top: 0;
@@ -89,70 +94,50 @@
       z-index: -1;
     }
 
-    /* Bring content above Vanta */
-    .navbar, .page-header, .about-container, footer {
+    /* Make about page readable over waves */
+    .about-container,
+    .page-header,
+    .about-text,
+    .certificates,
+    .why-list {
       position: relative;
-      z-index: 10;
+      z-index: 5;
     }
 
-    /* HEADER */
     .page-header {
       text-align: center;
-      padding: 80px 20px 40px;
-      animation: fadeUp 1s ease-out;
-    }
-    .page-header h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #dcb4ff, #ffffff, #c79bff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glowTitle 3s infinite ease-in-out;
-    }
-    .page-header p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
+      padding: 60px 20px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
 
-    @keyframes glowTitle {
-      0% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
-      50% { text-shadow: 0 0 20px rgba(255,255,255,0.6); }
-      100% { text-shadow: 0 0 10px rgba(255,255,255,0.3); }
-    }
-
-    /* ABOUT BOX */
     .about-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px 20px 80px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.2);
-      box-shadow: 0 0 20px rgba(138,46,255,0.35), 0 0 35px rgba(138,46,255,0.2);
-      backdrop-filter: blur(5px);
-      animation: fadeIn 1.2s ease-out;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.25);
+      margin: 20px;
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .about-text h2,
+    .about-text h3 {
+      color: #ffdd57;
     }
 
-    /* Mobile tweak */
+    /* Small mobile tweak */
     @media (max-width: 900px) {
-      .page-header { padding: 60px 16px 30px; }
+      .page-header {
+        padding: 50px 16px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+<!-- VANTA BACKGROUND -->
 <div id="vanta-bg"></div>
 
 <!-- NAVBAR -->
@@ -181,74 +166,107 @@
   </div>
 </nav>
 
-<!-- HEADER -->
-<header class="page-header">
-  <h1>About Prismledger Accounting</h1>
-  <p>Your trusted partner for tax filing, bookkeeping, payroll, CRA guidance, and small business accounting.</p>
-
+<!-- PAGE HEADER -->
+<header class="page-header fade-up">
+  <h1>About Prismledger</h1>
+  <p>Clear, reliable and affordable accounting support for individuals, newcomers and small businesses in Canada.</p>
   <p style="margin-top:10px; font-size:0.95rem;">
-    Looking for services? <a href="services.html">See our services</a> or <a href="pricing.html">View pricing</a>.
+    Want to see what we offer? <a href="services.html">See our services</a> or <a href="pricing.html">View pricing</a>, or <a href="contact.html">contact us</a> for a quote.
   </p>
 </header>
 
-<!-- ABOUT CONTENT -->
+<!-- ABOUT SECTION -->
 <section class="about-container fade-in">
-  <h2>Who We Are</h2>
-  <p>
-    Prismledger Accounting Services is built on accuracy, professionalism and client-focused service.
-    We proudly support individuals, newcomers, students, families and small businesses across
-    <strong>Surrey, White Rock, Delta, Burnaby, New Westminster and Vancouver</strong>.
-  </p>
+  <img src="images/self.png" class="about-photo" alt="Gangadhar Tandale" loading="lazy" />
 
-  <h2 style="margin-top:25px;">What We Do</h2>
-  <p>
-    We specialize in:
-  </p>
-  <ul>
-    <li>Personal tax filing (simple to complex)</li>
-    <li>Small business bookkeeping starting at $129/month</li>
-    <li>Payroll setup and ongoing payroll management</li>
-    <li>GST/PST filing and financial reporting</li>
-    <li>CRA collections guidance and compliance support</li>
-  </ul>
+  <div class="about-text">
+    <h2>Meet Gangadhar Tandale</h2>
 
-  <h2 style="margin-top:25px;">Why Clients Choose Us</h2>
-  <p>
-    With a <strong>4.9/5 rating from 124+ reviews</strong>, Prismledger is known for clarity, transparency,
-    and year-round support. We don’t just file — we help you understand your finances.
-  </p>
+    <p>
+      Gangadhar Tandale is the Accounting Manager at <strong>Prismledger Accounting Services</strong>,
+      dedicated to supporting individuals, newcomers and small business owners with accurate and affordable accounting solutions.
+    </p>
+
+    <p>
+      His extensive experience includes roles at <strong>MNP LLP, Manning Elliott LLP, and Buckley Dodds CPA LLP</strong>,
+      where he served diverse industries and handled tax, bookkeeping and audit matters.
+    </p>
+
+    <p>
+      Gangadhar also worked as a <strong>CRA Income Tax Collections Officer</strong>,
+      giving him insider-level understanding of audits, garnishments, liens, collections and compliance.
+    </p>
+
+    <p>
+      He has completed <strong>IBM Data Analytics</strong> and <strong>IBM Data Visualization &amp; Dashboard Essentials</strong>,
+      improving his ability to interpret numbers and present clear insights to clients.
+    </p>
+
+    <p>
+      Gangadhar is currently pursuing the <strong>CPA designation</strong> to further enhance his professional knowledge.
+    </p>
+  </div>
 </section>
 
-<!-- FOOTER -->
+<!-- CERTIFICATES -->
+<section class="about-container fade-in">
+  <div class="about-text certificates">
+    <h3>Certificates &amp; Community Involvement</h3>
+    <ul>
+      <li><a href="docs/cvitp-certificate.pdf" target="_blank">City of Vancouver – Community Tax Clinic</a></li>
+      <li><a href="docs/ibm-data-analytics.pdf" target="_blank">IBM Data Analytics Essentials</a></li>
+      <li><a href="docs/ibm-data-visualization.pdf" target="_blank">IBM Data Visualization Essentials</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="about-container fade-in">
+  <div class="about-text">
+    <h3>Why Choose Prismledger?</h3>
+
+    <ul class="why-list">
+      <li><strong>CRA Expertise</strong> — Former CRA collections officer.</li>
+      <li><strong>Affordable Pricing</strong> — No hidden fees.</li>
+      <li><strong>Personalized Guidance</strong> — One-on-one accounting support.</li>
+      <li><strong>Newcomer Friendly</strong> — Simplified tax explanations.</li>
+      <li><strong>300+ Tax Returns Filed</strong> — Trusted community support.</li>
+      <li><strong>Data-Driven</strong> — Clear dashboards and reports.</li>
+    </ul>
+
+  </div>
+</section>
+
 <footer>
   © 2025 Prismledger Accounting Services
 </footer>
 
-<!-- Scripts moved to bottom for speed -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
+<!-- JS moved to bottom to avoid render-blocking -->
 
-<!-- VANTA INIT -->
+<!-- VANTA (WAVES) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+
+<!-- VANTA WAVES INIT -->
 <script>
-VANTA.BIRDS({
-  el: "#vanta-bg",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200,
-  minWidth: 200,
-  scale: 1.0,
-  scaleMobile: 1.0,
-  backgroundColor: 0x0a0020,
-  color1: 0x9d4bff,
-  color2: 0xffffff,
-  wingSpan: 18,
-  speedLimit: 2.0,
-  cohesion: 15,
-  quantity: 2.0
-});
+  VANTA.WAVES({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x05000a,
+    shininess: 55.00,
+    waveHeight: 18.00,
+    waveSpeed: 1.25,
+    zoom: 0.99
+  });
 </script>
 
+<!-- Shared site JS (theme toggle, scroll bar) -->
 <script src="script.js"></script>
 
 </body>
