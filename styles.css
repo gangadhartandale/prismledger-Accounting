@@ -35,24 +35,44 @@ a {
 }
 
 /* =========================================================
-   NAVIGATION BAR — RESTORED + STABLE
+   LOGO ANIMATION (NEW)
+   ========================================================= */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   NAVIGATION BAR — UPDATED + FIXED
    ========================================================= */
 .navbar {
   background: var(--bg-navbar);
-  padding: 16px 40px;   /* MEDIUM — perfect and not too thick */
+  padding: 16px 40px;   /* MEDIUM HEIGHT */
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-soft);
 }
 
-.nav-logo {
-  height: 65px;        /* Medium size — fits perfectly */
-  width: auto;
-  opacity: 0;          /* needed for animation start */
-  animation: slideInLeft 0.8s ease-out forwards;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
+/* Updated logo */
+.nav-logo {
+  height: 65px;        /* Medium size — perfect fit */
+  width: auto;
+  opacity: 0;
+  animation: slideInLeft 0.8s ease-out forwards;
+}
 
 .nav-brand {
   font-weight: 700;
@@ -316,18 +336,27 @@ footer {
     flex-wrap: wrap;
     padding: 16px 20px;
   }
+
+  /* Mobile logo */
+  .nav-logo {
+    height: 52px;
+  }
+
   .nav-links {
     width: 100%;
     justify-content: center;
     margin-top: 10px;
   }
+
   .hero {
     flex-direction: column;
     text-align: center;
   }
+
   .promo-section {
     flex-direction: column;
   }
+
   .about-container,
   .contact-layout {
     flex-direction: column;
