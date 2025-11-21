@@ -38,17 +38,20 @@ a {
    LOGO ANIMATION (NEW)
    ========================================================= */
 @keyframes slideInLeft {
-  0% { transform: translateX(-25px); opacity: 0; }
+  0% { transform: translateX(-20px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
 }
-
+@media (max-width: 900px) {
+  .nav-logo {
+    height: 65px;        /* Mobile size */
+  }
 /* =========================================================
    NAVIGATION BAR — THIN + BIG LOGO + SMOOTH ANIMATION
    ========================================================= */
 
 .navbar {
   background: var(--bg-navbar);
-  padding: 12px 40px;   /* THIN OPTION B */
+  padding: 12px 40px;    /* THIN and premium */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,7 +66,7 @@ a {
 
 /* Bigger logo + animation */
 .nav-logo {
-  height: 70px;        /* Clean + bigger but safe */
+  height: 90px;          /* NOW works because logo is HD */
   width: auto;
   opacity: 0;
   animation: slideInLeft 0.7s ease-out forwards;
