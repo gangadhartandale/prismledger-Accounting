@@ -1,5 +1,5 @@
 /* =========================================================
-   PRISMLEDGER — MASTER STYLESHEET (Stable Layout Version)
+   PRISMLEDGER — MASTER STYLESHEET (FINAL STABLE VERSION)
    ========================================================= */
 
 /* ---------- THEME VARIABLES ---------- */
@@ -12,7 +12,7 @@
   --text-muted: #d5cff9;
   --accent: #ffdd57;
   --accent-dark: #c49b05;
-  --border-soft: rgba(255,255,255,0.1);
+  --border-soft: rgba(255, 255, 255, 0.1);
 }
 
 /* ---------- GLOBAL RESET ---------- */
@@ -35,23 +35,21 @@ a {
 }
 
 /* =========================================================
-   LOGO ANIMATION (NEW)
+   LOGO ANIMATION
    ========================================================= */
+
 @keyframes slideInLeft {
-  0% { transform: translateX(-20px); opacity: 0; }
+  0% { transform: translateX(-25px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
 }
-@media (max-width: 900px) {
-  .nav-logo {
-    height: 65px;        /* Mobile size */
-  }
+
 /* =========================================================
-   NAVIGATION BAR — THIN + BIG LOGO + SMOOTH ANIMATION
+   NAVIGATION BAR — THIN + BIG LOGO
    ========================================================= */
 
 .navbar {
   background: var(--bg-navbar);
-  padding: 12px 40px;    /* THIN and premium */
+  padding: 12px 40px;   /* THIN NAVBAR */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,9 +62,8 @@ a {
   gap: 12px;
 }
 
-/* Bigger logo + animation */
 .nav-logo {
-  height: 90px;          /* NOW works because logo is HD */
+  height: 90px;          /* BIG CLEAR LOGO */
   width: auto;
   opacity: 0;
   animation: slideInLeft 0.7s ease-out forwards;
@@ -78,6 +75,7 @@ a {
 }
 
 /* Navbar links */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -96,7 +94,6 @@ a {
   border-bottom: 2px solid var(--accent);
 }
 
-/* Right side */
 .nav-right {
   display: flex;
   align-items: center;
@@ -119,6 +116,7 @@ a {
 /* =========================================================
    HERO SECTION
    ========================================================= */
+
 .hero {
   display: flex;
   justify-content: space-between;
@@ -155,7 +153,9 @@ a {
   cursor: pointer;
 }
 
-.btn-primary:hover { background: var(--accent-dark); }
+.btn-primary:hover {
+  background: var(--accent-dark);
+}
 
 .btn-ghost {
   padding: 12px 22px;
@@ -165,6 +165,7 @@ a {
 }
 
 /* Hero image */
+
 .hero-image img {
   max-width: 480px;
   width: 100%;
@@ -175,6 +176,7 @@ a {
 /* =========================================================
    PROMO IMAGES
    ========================================================= */
+
 .promo-section {
   display: flex;
   justify-content: center;
@@ -192,6 +194,7 @@ a {
 /* =========================================================
    ADDRESS SECTION
    ========================================================= */
+
 .address-section {
   background: rgba(9,0,23,0.85);
   padding: 60px 20px;
@@ -220,6 +223,7 @@ a {
 /* =========================================================
    ABOUT PAGE
    ========================================================= */
+
 .about-container {
   display: flex;
   align-items: center;
@@ -236,6 +240,7 @@ a {
 /* =========================================================
    CONTACT PAGE
    ========================================================= */
+
 .contact-layout {
   display: flex;
   padding: 40px 48px;
@@ -264,6 +269,7 @@ a {
 /* =========================================================
    TESTIMONIALS
    ========================================================= */
+
 .testimonials {
   background: var(--bg-section);
   padding: 40px 32px 60px;
@@ -288,6 +294,7 @@ a {
 /* =========================================================
    FOOTER
    ========================================================= */
+
 footer {
   background: var(--bg-navbar);
   padding: 16px;
@@ -324,6 +331,7 @@ footer {
 /* =========================================================
    RESPONSIVENESS
    ========================================================= */
+
 @media (max-width: 900px) {
 
   .navbar {
@@ -332,7 +340,7 @@ footer {
   }
 
   .nav-logo {
-    height: 55px;   /* mobile version */
+    height: 70px;   /* MOBILE SIZE */
   }
 
   .nav-links {
