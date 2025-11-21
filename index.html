@@ -13,7 +13,7 @@
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#14004b" />
 
-  <!-- OpenGraph (Social / AI snippets) -->
+  <!-- OpenGraph -->
   <meta property="og:title" content="Prismledger Accounting Services | Tax Filing, Bookkeeping & Payroll in Surrey & White Rock, BC" />
   <meta property="og:description" content="Tax filing, bookkeeping, GST/HST and payroll for individuals and small businesses in Surrey, White Rock, Delta and the Lower Mainland." />
   <meta property="og:image" content="https://prismledger.ca/images/head.png" />
@@ -26,16 +26,16 @@
   <meta name="twitter:description" content="Professional tax filing, bookkeeping & payroll services in Surrey, White Rock & Delta, BC." />
   <meta name="twitter:image" content="https://prismledger.ca/images/head.png" />
 
-  <!-- Local SEO (geo) -->
+  <!-- Local SEO -->
   <meta name="geo.region" content="CA-BC" />
   <meta name="geo.placename" content="Surrey, White Rock, Delta" />
   <meta name="geo.position" content="49.1044;-122.8011" />
   <meta name="ICBM" content="49.1044, -122.8011" />
 
-  <!-- Main stylesheet -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Structured Data for AI / Google (Accounting Service) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,18 +53,9 @@
       "addressCountry": "CA"
     },
     "areaServed": [
-      {
-        "@type": "AdministrativeArea",
-        "name": "Surrey, British Columbia"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "White Rock, British Columbia"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Delta, British Columbia"
-      }
+      { "@type": "AdministrativeArea", "name": "Surrey, British Columbia" },
+      { "@type": "AdministrativeArea", "name": "White Rock, British Columbia" },
+      { "@type": "AdministrativeArea", "name": "Delta, British Columbia" }
     ],
     "sameAs": [
       "https://www.instagram.com/prismaccounting/",
@@ -79,9 +70,8 @@
   }
   </script>
 
-  <!-- PAGE-SPECIFIC STYLES -->
+  <!-- HOMEPAGE-ONLY STYLES -->
   <style>
-    /* Vanta Background */
     #vanta-bg {
       position: fixed;
       top: 0;
@@ -91,463 +81,14 @@
       z-index: -1;
     }
 
-    /* Bigger homepage logo only */
-    .home-logo {
-      height: 64px;
-      max-height: 64px;
-      width: auto;
-    }
-
-    /* PREMIUM VISIT-US SECTION */
-    .address-section {
-      background: transparent !important;
-      padding: 80px 20px;
-      text-align: center;
-      color: #fff;
-      position: relative;
-      z-index: 10;
-    }
-
-    .address-section h2 {
-      font-size: 42px;
-      font-weight: 800;
-      margin-bottom: 40px;
-      text-shadow: 0 0 20px rgba(180, 120, 255, 0.6);
-    }
-
-    .address-boxes {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .address-card {
-      background: rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      padding: 32px 34px;
-      width: 330px;
-      border-radius: 22px;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.35),
-        0 0 22px rgba(150, 90, 255, 0.5);
-      transition: 0.35s ease;
-      animation: floatCard 5s ease-in-out infinite;
-      color: #fff;
-    }
-
-    .address-card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow:
-        0 0 25px rgba(255, 255, 255, 0.9),
-        0 0 50px rgba(150, 90, 255, 0.9);
-    }
-
-    .address-card h3 {
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-      color: #fff;
-    }
-
-    .address-card p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #f8f6ff;
-    }
-
-    .sub-text {
-      color: #d8c9ff;
-      font-size: 0.9rem;
-      font-style: italic;
-    }
-
-    @keyframes floatCard {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* ===== TAX CALCULATOR SECTION ===== */
-    .taxcalc-section {
-      padding: 60px 20px 40px;
-      position: relative;
-      z-index: 10;
-      display: flex;
-      justify-content: center;
-    }
-
-    .taxcalc-card {
-      max-width: 1100px;
-      width: 100%;
-      background: radial-gradient(circle at top, rgba(160, 120, 255, 0.25), rgba(10, 0, 40, 0.96));
-      border-radius: 26px;
-      padding: 32px 26px 30px;
-      box-shadow:
-        0 0 30px rgba(190, 140, 255, 0.7),
-        0 20px 40px rgba(0, 0, 0, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: #fff;
-    }
-
-    .taxcalc-header {
-      text-align: center;
-      margin-bottom: 26px;
-    }
-
-    .taxcalc-header h2 {
-      font-size: 2.1rem;
-      margin-bottom: 8px;
-      text-shadow: 0 0 16px rgba(255, 255, 255, 0.8);
-    }
-
-    .taxcalc-header p {
-      color: #e0d5ff;
-      font-size: 0.98rem;
-    }
-
-    .taxcalc-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-
-    .taxcalc-col {
-      flex: 1 1 320px;
-    }
-
-    .taxcalc-col h3 {
-      margin-bottom: 10px;
-      font-size: 1.05rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #fcecff;
-    }
-
-    .taxcalc-form-group {
-      margin-bottom: 10px;
-    }
-
-    .taxcalc-form-group label {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 0.9rem;
-      color: #e0d7ff;
-    }
-
-    .taxcalc-input,
-    .taxcalc-select {
-      width: 100%;
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      background: rgba(10, 0, 35, 0.85);
-      color: #fff;
-      font-size: 0.95rem;
-    }
-
-    .taxcalc-input:focus,
-    .taxcalc-select:focus {
-      outline: none;
-      border-color: #ffdd57;
-      box-shadow: 0 0 0 2px rgba(255, 221, 87, 0.35);
-    }
-
-    .taxcalc-helper {
-      font-size: 0.78rem;
-      color: #cbbcff;
-      margin-top: 3px;
-    }
-
-    .taxcalc-results-box {
-      background: rgba(6, 0, 30, 0.8);
-      border-radius: 16px;
-      padding: 14px 16px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      font-size: 0.9rem;
-    }
-
-    .taxcalc-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-
-    .taxcalc-row strong {
-      font-weight: 700;
-    }
-
-    .taxcalc-row span {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    .taxcalc-row.total {
-      padding-top: 6px;
-      border-top: 1px dashed rgba(255, 255, 255, 0.25);
-      margin-top: 4px;
-    }
-
-    .taxcalc-row.highlight {
-      margin-top: 8px;
-      padding-top: 6px;
-      border-top: 1px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .taxcalc-note {
-      margin-top: 10px;
-      font-size: 0.78rem;
-      color: #dacdff;
-      line-height: 1.4;
-    }
-
-    .taxcalc-button {
-      margin-top: 12px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: none;
-      background: #ffdd57;
-      color: #111;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 0.95rem;
-    }
-
-    .taxcalc-button:hover {
-      background: #c49b05;
-    }
-
-    @media (max-width: 900px) {
-      .taxcalc-card {
-        padding: 26px 18px 26px;
-      }
-      .taxcalc-header h2 {
-        font-size: 1.7rem;
-      }
-      .taxcalc-grid {
-        flex-direction: column;
-      }
-    }
-
-    /* ===== LEAD MAGNET (FREE TAX CHECKLIST) BELOW CALCULATOR ===== */
-    .lead-magnet-section {
-      padding: 10px 20px 60px;
-      position: relative;
-      z-index: 10;
-      display: flex;
-      justify-content: center;
-    }
-
-    .lead-box {
-      max-width: 800px;
-      width: 100%;
-      background: radial-gradient(circle at top, rgba(255, 255, 255, 0.16), rgba(15, 0, 40, 0.96));
-      border-radius: 22px;
-      padding: 24px 26px 26px;
-      box-shadow:
-        0 0 24px rgba(255, 255, 255, 0.15),
-        0 18px 36px rgba(0, 0, 0, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.17);
-      color: #fff;
-      text-align: center;
-    }
-
-    .lead-box h2 {
-      font-size: 1.9rem;
-      margin-bottom: 6px;
-      text-shadow: 0 0 16px rgba(255, 255, 255, 0.75);
-    }
-
-    .lead-box p {
-      color: #e6ddff;
-      font-size: 0.98rem;
-      margin-bottom: 18px;
-    }
-
-    .lead-box form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-
-    .lead-box input[type="text"],
-    .lead-box input[type="email"] {
-      flex: 1 1 220px;
-      min-width: 0;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      background: rgba(5, 0, 25, 0.9);
-      color: #fff;
-      font-size: 0.95rem;
-    }
-
-    .lead-box input::placeholder {
-      color: #b7aee8;
-    }
-
-    .lead-box input:focus {
-      outline: none;
-      border-color: #ffdd57;
-      box-shadow: 0 0 0 2px rgba(255, 221, 87, 0.45);
-    }
-
-    .lead-box .btn-primary {
-      padding-inline: 28px;
-      white-space: nowrap;
-    }
-
-    .lead-note {
-      font-size: 0.8rem;
-      color: #d5cfff;
-      margin-top: 4px;
-    }
-
-    @media (max-width: 800px) {
-      .lead-box {
-        padding: 20px 18px 22px;
-      }
-      .lead-box form {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .lead-box h2 {
-        font-size: 1.6rem;
-      }
-    }
-
-    /* ===== REVIEWS / TESTIMONIALS SECTION ===== */
-    .reviews-section {
-      padding: 60px 20px 50px;
-      position: relative;
-      z-index: 10;
-      text-align: center;
-      color: #fff;
-    }
-
-    .reviews-header {
-      margin-bottom: 24px;
-    }
-
-    .reviews-header h2 {
-      font-size: 2rem;
-      margin-bottom: 6px;
-      text-shadow: 0 0 16px rgba(255, 255, 255, 0.7);
-    }
-
-    .reviews-rating {
-      font-size: 1rem;
-      color: #ffe88c;
-      font-weight: 600;
-    }
-
-    .reviews-rating span.stars {
-      color: #ffdd57;
-      margin-right: 6px;
-    }
-
-    .reviews-grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 26px;
-    }
-
-    .review-card {
-      background: rgba(10, 0, 35, 0.9);
-      border-radius: 18px;
-      padding: 18px 20px;
-      max-width: 320px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
-      text-align: left;
-      font-size: 0.95rem;
-    }
-
-    .review-name {
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .review-meta {
-      font-size: 0.8rem;
-      color: #d5cff9;
-      margin-bottom: 8px;
-    }
-
-    .review-text {
-      color: #f7f3ff;
-      line-height: 1.5;
-    }
-
-    .review-stars {
-      color: #ffdd57;
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-    }
-
-    @media (max-width: 700px) {
-      .reviews-section {
-        padding: 40px 16px 40px;
-      }
-      .reviews-header h2 {
-        font-size: 1.7rem;
-      }
-    }
-
-    /* ===== MOBILE HERO TWEAKS ===== */
-    @media (max-width: 900px) {
-      header.hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 48px 20px;
-      }
-      .hero-text {
-        max-width: 100%;
-      }
-      .hero h1 {
-        font-size: 2.1rem;
-        line-height: 1.2;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      .hero-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .hero-image img {
-        max-width: 280px;
-        margin: 10px auto 0;
-      }
-      .promo-section {
-        flex-direction: column;
-        align-items: center;
-      }
-      .promo-card img {
-        width: 90%;
-        max-width: 360px;
-      }
-      .address-boxes {
-        flex-direction: column;
-        gap: 20px;
-      }
-      .address-card {
-        width: 90%;
-        margin: 0 auto;
-      }
-    }
+    .home-logo { height: 64px; width: auto; }
   </style>
 
 </head>
 
 <body>
 
-<!-- VANTA BACKGROUND -->
+<!-- BACKGROUND -->
 <div id="vanta-bg"></div>
 
 <!-- NAVBAR -->
@@ -582,123 +123,87 @@
   </div>
 
   <div class="hero-image">
-    <img src="images/calci.jpg" alt="Accounting calculator and paperwork on a desk" loading="lazy" />
+    <img src="images/calci.jpg" alt="Accounting calculator and paperwork" loading="lazy" />
   </div>
 </header>
 
-<!-- ===== TAX CALCULATOR RIGHT UNDER HERO ===== -->
+<!-- CALCULATOR -->
 <section class="taxcalc-section fade-up" id="home-tax-calculator">
   <div class="taxcalc-card">
+
     <div class="taxcalc-header">
       <h2>Prismledger’s Tax Calculator</h2>
-      <p>Quick estimate of your federal and British Columbia income tax, CPP and EI — for planning purposes only.</p>
+      <p>Quick estimate of your federal and BC income tax, CPP and EI.</p>
     </div>
 
     <div class="taxcalc-grid">
-      <!-- LEFT: INPUTS -->
+
       <div class="taxcalc-col">
         <h3>1. Your Details</h3>
 
         <div class="taxcalc-form-group">
-          <label for="tc-province">Province / Territory</label>
+          <label>Province / Territory</label>
           <select id="tc-province" class="taxcalc-select">
             <option value="BC">British Columbia (supported)</option>
-            <option value="OTHER" disabled>Other provinces – coming soon</option>
           </select>
-          <div class="taxcalc-helper">Right now, calculations are tuned for BC.</div>
         </div>
 
         <div class="taxcalc-form-group">
-          <label for="tc-employment">Employment income ($)</label>
-          <input id="tc-employment" class="taxcalc-input" type="number" min="0" value="60000" />
-          <div class="taxcalc-helper">T4 employment income before tax.</div>
+          <label>Employment income ($)</label>
+          <input id="tc-employment" class="taxcalc-input" type="number" value="60000" />
         </div>
 
         <div class="taxcalc-form-group">
-          <label for="tc-self">Self-employment net income ($)</label>
-          <input id="tc-self" class="taxcalc-input" type="number" min="0" value="0" />
-          <div class="taxcalc-helper">After business expenses.</div>
+          <label>Self-employment net income ($)</label>
+          <input id="tc-self" class="taxcalc-input" type="number" value="0" />
         </div>
 
         <div class="taxcalc-form-group">
-          <label for="tc-other">Other taxable income ($)</label>
-          <input id="tc-other" class="taxcalc-input" type="number" min="0" value="0" />
-          <div class="taxcalc-helper">Interest, rental, investments, etc.</div>
+          <label>Other taxable income ($)</label>
+          <input id="tc-other" class="taxcalc-input" type="number" value="0" />
         </div>
 
         <div class="taxcalc-form-group">
-          <label for="tc-rrsp">RRSP contributions ($)</label>
-          <input id="tc-rrsp" class="taxcalc-input" type="number" min="0" value="0" />
-          <div class="taxcalc-helper">RRSP that you plan to deduct.</div>
+          <label>RRSP contributions ($)</label>
+          <input id="tc-rrsp" class="taxcalc-input" type="number" value="0" />
         </div>
 
         <button type="button" class="taxcalc-button" id="tc-update-btn">Update estimate</button>
       </div>
 
-      <!-- RIGHT: RESULTS -->
       <div class="taxcalc-col">
         <h3>2. Results (Estimate)</h3>
 
         <div class="taxcalc-results-box" id="tc-results">
-          <div class="taxcalc-row">
-            <span>Federal tax</span>
-            <strong id="tc-federal">$0</strong>
-          </div>
-          <div class="taxcalc-row">
-            <span>BC provincial tax</span>
-            <strong id="tc-bc">$0</strong>
-          </div>
-          <div class="taxcalc-row">
-            <span>CPP contributions</span>
-            <strong id="tc-cpp">$0</strong>
-          </div>
-          <div class="taxcalc-row">
-            <span>EI premiums</span>
-            <strong id="tc-ei">$0</strong>
-          </div>
+          <div class="taxcalc-row"><span>Federal tax</span><strong id="tc-federal">$0</strong></div>
+          <div class="taxcalc-row"><span>BC tax</span><strong id="tc-bc">$0</strong></div>
+          <div class="taxcalc-row"><span>CPP</span><strong id="tc-cpp">$0</strong></div>
+          <div class="taxcalc-row"><span>EI</span><strong id="tc-ei">$0</strong></div>
 
-          <div class="taxcalc-row total">
-            <span>Total income tax &amp; deductions</span>
-            <strong id="tc-total">$0</strong>
-          </div>
-          <div class="taxcalc-row">
-            <span>Net income after tax</span>
-            <strong id="tc-net">$0</strong>
-          </div>
+          <div class="taxcalc-row total"><span>Total deductions</span><strong id="tc-total">$0</strong></div>
+          <div class="taxcalc-row"><span>Net income</span><strong id="tc-net">$0</strong></div>
 
-          <div class="taxcalc-row highlight">
-            <span>Average tax rate</span>
-            <strong id="tc-average">0%</strong>
-          </div>
-          <div class="taxcalc-row">
-            <span>Approx. marginal rate (BC)</span>
-            <strong id="tc-marginal">0%</strong>
-          </div>
+          <div class="taxcalc-row highlight"><span>Avg tax rate</span><strong id="tc-average">0%</strong></div>
+          <div class="taxcalc-row"><span>Marginal rate</span><strong id="tc-marginal">0%</strong></div>
         </div>
 
-        <div class="taxcalc-note">
-          Calculated using an estimated 2023 federal + BC tax model. RRSP and tuition are simplified.
-          Always confirm numbers using CRA tools or professional advice before filing.
-        </div>
+        <div class="taxcalc-note">Approximate estimate. Confirm with CRA before filing.</div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== LEAD MAGNET: FREE TAX CHECKLIST (JUST BELOW CALCULATOR) ===== -->
+<!-- LEAD MAGNET -->
 <section class="lead-magnet-section fade-up">
   <div class="lead-box">
     <h2>Get Your Free Tax Checklist</h2>
-    <p>Enter your name and email and we’ll send you the checklist instantly.</p>
+    <p>Enter your name and email to receive it instantly.</p>
 
     <form action="https://formspree.io/f/mldznwwd" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-
-      <!-- Tell Formspree to redirect to your PDF after a successful submit -->
       <input type="hidden" name="_redirect" value="https://prismledger.ca/Prismledger_Tax_Checklist.pdf">
-      <input type="hidden" name="source" value="homepage-tax-checklist">
-
       <button type="submit" class="btn-primary">Download Checklist</button>
     </form>
 
@@ -708,115 +213,88 @@
 
 <!-- PROMO CARDS -->
 <section class="promo-section fade-in">
-  <div class="promo-card"><img src="images/tax35.png" alt="Personal tax filing promotion from $35" loading="lazy"></div>
-  <div class="promo-card"><img src="images/bookkeeping129.png" alt="Small business bookkeeping from $129 per month" loading="lazy"></div>
-  <div class="promo-card"><img src="images/payroll3months.png" alt="Payroll services with first 3 months free setup" loading="lazy"></div>
+  <div class="promo-card"><img src="images/tax35.png" alt="Tax Filing from $35" loading="lazy"></div>
+  <div class="promo-card"><img src="images/bookkeeping129.png" alt="Bookkeeping from $129" loading="lazy"></div>
+  <div class="promo-card"><img src="images/payroll3months.png" alt="Payroll 3 months free" loading="lazy"></div>
 </section>
 
-<!-- GOOGLE RATING / TESTIMONIALS -->
+<!-- REVIEWS -->
 <section class="reviews-section fade-up" id="reviews">
   <div class="reviews-header">
     <h2>Clients Trust Prismledger</h2>
-    <div class="reviews-rating">
-      <span class="stars">★★★★★</span>
-      4.9/5 based on 124+ Google reviews
-    </div>
+    <div class="reviews-rating"><span class="stars">★★★★★</span>4.9/5 based on 124+ reviews</div>
   </div>
 
   <div class="reviews-grid">
+
     <article class="review-card">
       <div class="review-stars">★★★★★</div>
       <div class="review-name">Navdeep K.</div>
-      <div class="review-meta">Small business owner – Surrey, BC</div>
-      <p class="review-text">
-        Prismledger set up our bookkeeping and payroll properly after years of messy records.
-        Everything is organized, CRA deadlines are met, and I finally understand my numbers.
-      </p>
+      <div class="review-meta">Small business owner – Surrey</div>
+      <p class="review-text">Prismledger set up our bookkeeping and payroll properly after years of messy records.</p>
     </article>
 
     <article class="review-card">
       <div class="review-stars">★★★★★</div>
       <div class="review-name">Harpreet S.</div>
-      <div class="review-meta">Contractor – White Rock, BC</div>
-      <p class="review-text">
-        Very patient and professional. They explained tax deductions clearly and helped me
-        plan RRSP contributions so I pay less tax and avoid surprises at year-end.
-      </p>
+      <div class="review-meta">Contractor – White Rock</div>
+      <p class="review-text">Very patient and professional. Helped plan RRSP contributions and avoid surprises.</p>
     </article>
 
     <article class="review-card">
       <div class="review-stars">★★★★★</div>
       <div class="review-name">Michelle L.</div>
-      <div class="review-meta">Sole proprietor – Delta, BC</div>
-      <p class="review-text">
-        I moved my bookkeeping to Prismledger and it’s been smooth from day one.
-        Clear communication, fast replies, and accurate financials for my business.
-      </p>
+      <div class="review-meta">Sole Proprietor – Delta</div>
+      <p class="review-text">I moved my bookkeeping to Prismledger and it's been smooth since day one.</p>
     </article>
+
   </div>
 </section>
 
-<!-- ⭐ FINAL PREMIUM Visit Us SECTION -->
+<!-- VISIT US -->
 <section class="address-section fade-up" id="locations">
   <h2>Visit Us</h2>
 
   <div class="address-boxes">
-
     <div class="address-card">
       <h3>White Rock Office</h3>
-      <p>
-        15170 Prospect Ave<br>
-        White Rock, BC V4B 3Y8<br>
-        <span class="sub-text">Inside Karigars Interiors</span>
-      </p>
+      <p>15170 Prospect Ave<br>White Rock, BC V4B 3Y8<br><span class="sub-text">Inside Karigars Interiors</span></p>
     </div>
 
     <div class="address-card">
       <h3>Surrey Office (Newton)</h3>
-      <p>
-        105-12827 76 Ave<br>
-        Surrey, BC V3W 2V3
-      </p>
+      <p>105-12827 76 Ave<br>Surrey, BC V3W 2V3</p>
     </div>
-
   </div>
 </section>
-
-<!-- FLOATING BUTTON -->
-<a href="contact.html#quote" class="floating-quote-btn">Get a Quote</a>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-social">
-    <a href="https://www.facebook.com/profile.php?id=61581016124708" target="_blank" rel="noopener">
-      <img src="images/facebook.png" class="social-icon" alt="Facebook icon" loading="lazy" />
+    <a href="https://www.facebook.com/profile.php?id=61581016124708" target="_blank">
+      <img src="images/facebook.png" class="social-icon" alt="Facebook" />
     </a>
-
-    <a href="https://www.instagram.com/prismaccounting/" target="_blank" rel="noopener">
-      <img src="images/instagram.png" class="social-icon" alt="Instagram icon" loading="lazy" />
+    <a href="https://www.instagram.com/prismaccounting/" target="_blank">
+      <img src="images/instagram.png" class="social-icon" alt="Instagram" />
     </a>
   </div>
-
   © 2025 Prismledger Accounting Services
 </footer>
 
-<!-- JS moved to bottom to avoid render-blocking -->
-
-<!-- VANTA LIBRARIES -->
+<!-- JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 
-<!-- VANTA ACTIVATION -->
 <script>
   VANTA.NET({
     el: "#vanta-bg",
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
+    minHeight: 200,
+    minWidth: 200,
+    scale: 1.0,
+    scaleMobile: 1.0,
     color: 0x6a0dad,
     backgroundColor: 0x090017,
     points: 12.0,
@@ -825,137 +303,6 @@
   });
 </script>
 
-<!-- SIMPLE TAX CALC JS -->
-<script>
-  function formatMoney(n) {
-    if (!isFinite(n)) return "$0";
-    return "$" + n.toLocaleString("en-CA", { maximumFractionDigits: 0 });
-  }
-
-  function calcBracketTax(income, brackets) {
-    let tax = 0;
-    let remaining = income;
-    let lastLimit = 0;
-
-    for (const [limit, rate] of brackets) {
-      const band = Math.min(remaining, limit - lastLimit);
-      if (band <= 0) break;
-      tax += band * rate;
-      remaining -= band;
-      lastLimit = limit;
-    }
-
-    if (remaining > 0) {
-      const lastRate = brackets[brackets.length - 1][1];
-      tax += remaining * lastRate;
-    }
-
-    return tax;
-  }
-
-  function getCombinedMarginalRate(income) {
-    // rough 2023 brackets (federal + BC)
-    const fedBrackets = [
-      [53359, 0.15],
-      [106717, 0.205],
-      [165430, 0.26],
-      [235675, 0.29]
-      // 33% above
-    ];
-    const bcBrackets = [
-      [45654, 0.0506],
-      [91310, 0.077],
-      [104835, 0.105],
-      [127299, 0.1229],
-      [172602, 0.147]
-      // 16.8% above
-    ];
-
-    function marginal(brackets, income, topRate) {
-      let lastLimit = 0;
-      for (const [limit, rate] of brackets) {
-        if (income <= limit) return rate;
-        lastLimit = limit;
-      }
-      return topRate;
-    }
-
-    const fedRate = marginal(fedBrackets, income, 0.33);
-    const bcRate = marginal(bcBrackets, income, 0.168);
-
-    return fedRate + bcRate;
-  }
-
-  function updateTaxCalc() {
-    const employment = Number(document.getElementById("tc-employment").value) || 0;
-    const selfEmp = Number(document.getElementById("tc-self").value) || 0;
-    const other = Number(document.getElementById("tc-other").value) || 0;
-    const rrsp = Number(document.getElementById("tc-rrsp").value) || 0;
-
-    const gross = employment + selfEmp + other;
-    const taxable = Math.max(0, gross - rrsp);
-
-    // Federal tax brackets (approx 2023)
-    const fedBrackets = [
-      [53359, 0.15],
-      [106717, 0.205],
-      [165430, 0.26],
-      [235675, 0.29]
-      // 33% above
-    ];
-
-    // BC tax brackets (approx 2023)
-    const bcBrackets = [
-      [45654, 0.0506],
-      [91310, 0.077],
-      [104835, 0.105],
-      [127299, 0.1229],
-      [172602, 0.147]
-      // 16.8% above
-    ];
-
-    const fedTax = calcBracketTax(taxable, fedBrackets);
-    const bcTax = calcBracketTax(taxable, bcBrackets);
-
-    // CPP (very rough)
-    const cppBase = Math.max(0, Math.min(gross, 68500) - 3500);
-    const cpp = cppBase * 0.0595;
-
-    // EI (very rough)
-    const eiBase = Math.min(gross, 63200);
-    const ei = eiBase * 0.0166;
-
-    const total = fedTax + bcTax + cpp + ei;
-    const net = gross - total;
-
-    const avgRate = gross > 0 ? (total / gross) * 100 : 0;
-    const margRate = getCombinedMarginalRate(taxable) * 100;
-
-    document.getElementById("tc-federal").textContent = formatMoney(Math.round(fedTax));
-    document.getElementById("tc-bc").textContent = formatMoney(Math.round(bcTax));
-    document.getElementById("tc-cpp").textContent = formatMoney(Math.round(cpp));
-    document.getElementById("tc-ei").textContent = formatMoney(Math.round(ei));
-    document.getElementById("tc-total").textContent = formatMoney(Math.round(total));
-    document.getElementById("tc-net").textContent = formatMoney(Math.round(net));
-    document.getElementById("tc-average").textContent = avgRate.toFixed(1) + "%";
-    document.getElementById("tc-marginal").textContent = margRate.toFixed(1) + "%";
-  }
-
-  document.getElementById("tc-update-btn").addEventListener("click", updateTaxCalc);
-
-  // Auto-update when typing for better UX
-  ["tc-employment", "tc-self", "tc-other", "tc-rrsp"].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener("input", updateTaxCalc);
-    }
-  });
-
-  // initial calculation on load
-  updateTaxCalc();
-</script>
-
-<!-- Main site JS (theme toggle, scroll bar) -->
 <script src="script.js"></script>
 
 </body>
