@@ -1,5 +1,5 @@
 /* =========================================================
-   PRISMLEDGER — MASTER STYLESHEET (Optimized 2025)
+   PRISMLEDGER — MASTER STYLESHEET (Stable Layout Version)
    ========================================================= */
 
 /* ---------- THEME VARIABLES ---------- */
@@ -13,19 +13,6 @@
   --accent: #ffdd57;
   --accent-dark: #c49b05;
   --border-soft: rgba(255, 255, 255, 0.1);
-}
-
-/* Light mode overrides */
-body.light-mode {
-  --bg-main: #f5f3ff;
-  --bg-navbar: #ffffff;
-  --bg-section: #ffffff;
-  --bg-card: #ffffff;
-  --text-main: #221b3e;
-  --text-muted: #5b567d;
-  --accent: #6f3bff;
-  --accent-dark: #4b23c6;
-  --border-soft: rgba(0, 0, 0, 0.08);
 }
 
 /* ---------- GLOBAL RESET ---------- */
@@ -48,39 +35,35 @@ a {
 }
 
 /* =========================================================
-   NAVIGATION BAR
+   NAVIGATION BAR — RESTORED + STABLE
    ========================================================= */
 .navbar {
   background: var(--bg-navbar);
-  padding: 18px 48px;
-  min-height: 115px;   /* Ensures logo fits correctly */
+  padding: 16px 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-soft);
 }
 
-/* LEFT SIDE OF NAV */
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
-/* UPDATED — LARGE LOGO FOR ALL PAGES */
+/* Restore original logo size */
 .nav-logo {
-  height: 88px;            /* Main fix */
+  height: 40px;
   width: auto;
-  object-fit: contain;
-  image-rendering: -webkit-optimize-contrast;
 }
 
 .nav-brand {
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 
-/* NAV LINKS */
+/* Navbar links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -90,7 +73,7 @@ a {
 .nav-links a {
   font-weight: 600;
   padding-bottom: 4px;
-  transition: color 0.2s ease;
+  transition: 0.2s;
 }
 
 .nav-links a.active,
@@ -99,13 +82,19 @@ a {
   border-bottom: 2px solid var(--accent);
 }
 
-/* Right-side CTA + theme toggle */
+/* Navbar right section */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
+/* Remove theme toggle safely */
+.theme-toggle {
+  display: none !important;
+}
+
+/* Get-a-Quote button */
 .btn-small {
   padding: 8px 14px;
   border-radius: 999px;
@@ -113,44 +102,6 @@ a {
   color: #111;
   font-size: 0.9rem;
   font-weight: 600;
-}
-
-/* Theme Switch */
-.theme-toggle .switch {
-  position: relative;
-  width: 44px;
-  height: 24px;
-}
-
-.switch input { opacity: 0; }
-
-.slider {
-  position: absolute;
-  background: #ccc;
-  border-radius: 24px;
-  inset: 0;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.slider:before {
-  content: "";
-  position: absolute;
-  height: 18px;
-  width: 18px;
-  left: 3px;
-  bottom: 3px;
-  background: #fff;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-
-input:checked + .slider {
-  background: var(--accent);
-}
-
-input:checked + .slider:before {
-  transform: translateX(20px);
 }
 
 /* =========================================================
@@ -163,7 +114,9 @@ input:checked + .slider:before {
   gap: 40px;
 }
 
-.hero-text { max-width: 520px; }
+.hero-text {
+  max-width: 520px;
+}
 
 .hero h1 {
   font-size: 2.6rem;
@@ -190,7 +143,9 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.btn-primary:hover { background: var(--accent-dark); }
+.btn-primary:hover {
+  background: var(--accent-dark);
+}
 
 .btn-ghost {
   padding: 12px 22px;
@@ -199,12 +154,12 @@ input:checked + .slider:before {
   color: var(--accent);
 }
 
-/* Hero Image */
+/* Hero image */
 .hero-image img {
   max-width: 480px;
   width: 100%;
   border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
 /* =========================================================
@@ -221,14 +176,14 @@ input:checked + .slider:before {
 .promo-card img {
   width: 300px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 /* =========================================================
    ADDRESS SECTION
    ========================================================= */
 .address-section {
-  background: rgba(9, 0, 23, 0.85);
+  background: rgba(9,0,23,0.85);
   padding: 60px 20px;
   text-align: center;
   color: #fff;
@@ -248,8 +203,8 @@ input:checked + .slider:before {
   border-radius: 16px;
   width: 300px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  text-align: center;
   color: #000;
+  text-align: center;
 }
 
 /* =========================================================
@@ -265,16 +220,8 @@ input:checked + .slider:before {
 .about-photo {
   width: 260px;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
-
-.why-list {
-  padding-left: 20px;
-  line-height: 1.8;
-}
-
-.why-list strong { color: var(--accent); }
 
 /* =========================================================
    CONTACT PAGE
@@ -290,14 +237,8 @@ input:checked + .slider:before {
   background: var(--bg-card);
   padding: 24px;
   border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   flex: 1;
-}
-
-.contact-form-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .contact-form-box input,
@@ -306,7 +247,7 @@ input:checked + .slider:before {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid var(--border-soft);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255,255,255,0.08);
   color: var(--text-main);
 }
 
@@ -331,7 +272,7 @@ input:checked + .slider:before {
   border-radius: 16px;
   padding: 20px;
   width: 320px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 /* =========================================================
@@ -356,12 +297,9 @@ footer {
   width: 32px;
   height: 32px;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
-.social-icon:hover { transform: scale(1.15); }
-
-/* Floating Quote Button */
+/* Floating Quote button (KEEP ON NON-HOMEPAGE PAGES) */
 .floating-quote-btn {
   position: fixed;
   bottom: 25px;
@@ -371,14 +309,7 @@ footer {
   padding: 14px 22px;
   border-radius: 50px;
   font-weight: 700;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  transition: 0.3s ease;
   z-index: 9999;
-}
-
-.floating-quote-btn:hover {
-  background: var(--accent-dark);
-  transform: translateY(-4px);
 }
 
 /* =========================================================
@@ -388,30 +319,21 @@ footer {
   .navbar {
     flex-wrap: wrap;
     padding: 16px 20px;
-    min-height: 100px;
   }
-  .nav-logo { height: 70px; }
-  .nav-links { justify-content: center; width: 100%; }
-  .hero { flex-direction: column; text-align: center; }
-  .promo-section { flex-direction: column; }
-  .about-container, .contact-layout { flex-direction: column; }
-}
-
-/* ANIMATIONS */
-.fade-up {
-  animation: fadeUp 1s ease-out;
-}
-
-.fade-in {
-  animation: fadeIn 1.2s ease-out;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .promo-section {
+    flex-direction: column;
+  }
+  .about-container,
+  .contact-layout {
+    flex-direction: column;
+  }
 }
