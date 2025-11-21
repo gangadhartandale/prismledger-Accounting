@@ -12,7 +12,7 @@
   --text-muted: #d5cff9;
   --accent: #ffdd57;
   --accent-dark: #c49b05;
-  --border-soft: rgba(255, 255, 255, 0.1);
+  --border-soft: rgba(255,255,255,0.1);
 }
 
 /* ---------- GLOBAL RESET ---------- */
@@ -38,22 +38,17 @@ a {
    LOGO ANIMATION (NEW)
    ========================================================= */
 @keyframes slideInLeft {
-  0% {
-    transform: translateX(-30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  0% { transform: translateX(-25px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
 }
 
 /* =========================================================
-   NAVIGATION BAR — UPDATED + FIXED
+   NAVIGATION BAR — THIN + BIG LOGO + SMOOTH ANIMATION
    ========================================================= */
+
 .navbar {
   background: var(--bg-navbar);
-  padding: 16px 40px;   /* MEDIUM HEIGHT */
+  padding: 12px 40px;   /* THIN OPTION B */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,12 +61,12 @@ a {
   gap: 12px;
 }
 
-/* Updated logo */
+/* Bigger logo + animation */
 .nav-logo {
-  height: 65px;        /* Medium size — perfect fit */
+  height: 70px;        /* Clean + bigger but safe */
   width: auto;
   opacity: 0;
-  animation: slideInLeft 0.8s ease-out forwards;
+  animation: slideInLeft 0.7s ease-out forwards;
 }
 
 .nav-brand {
@@ -98,19 +93,17 @@ a {
   border-bottom: 2px solid var(--accent);
 }
 
-/* Navbar right section */
+/* Right side */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-/* Remove theme toggle safely */
 .theme-toggle {
   display: none !important;
 }
 
-/* Get-a-Quote button */
 .btn-small {
   padding: 8px 14px;
   border-radius: 999px;
@@ -159,9 +152,7 @@ a {
   cursor: pointer;
 }
 
-.btn-primary:hover {
-  background: var(--accent-dark);
-}
+.btn-primary:hover { background: var(--accent-dark); }
 
 .btn-ghost {
   padding: 12px 22px;
@@ -315,7 +306,6 @@ footer {
   cursor: pointer;
 }
 
-/* Floating Quote button (KEEP ON NON-HOMEPAGE PAGES) */
 .floating-quote-btn {
   position: fixed;
   bottom: 25px;
@@ -332,14 +322,14 @@ footer {
    RESPONSIVENESS
    ========================================================= */
 @media (max-width: 900px) {
+
   .navbar {
     flex-wrap: wrap;
-    padding: 16px 20px;
+    padding: 12px 24px;
   }
 
-  /* Mobile logo */
   .nav-logo {
-    height: 52px;
+    height: 55px;   /* mobile version */
   }
 
   .nav-links {
