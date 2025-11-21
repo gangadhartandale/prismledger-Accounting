@@ -511,6 +511,7 @@ footer {
   z-index: 99999;
   transition: width 0.15s ease-out;
 }
+
 /* ============================
    TAX CALCULATOR VANTA SECTION
    ============================ */
@@ -565,6 +566,7 @@ footer {
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(0,0,0,0.45);
 }
+
 .lead-magnet-section {
   width: 100%;
   display: flex;
