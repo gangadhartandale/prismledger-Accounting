@@ -410,3 +410,38 @@ html, body {
     padding: 80px 20px;
   }
 }
+
+/* =========================================================
+   CONTACT FORM FIX — VERTICAL STACKING (FINAL OVERRIDE)
+   ========================================================= */
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.25);
+  font-size: 1rem;
+  color: #fff;
+}
+
+#contactForm textarea {
+  resize: vertical;
+}
+
+#contactForm button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  border-radius: 12px;
+}
