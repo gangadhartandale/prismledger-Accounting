@@ -24,7 +24,7 @@
   <meta name="twitter:description" content="Professional tax filing, bookkeeping, payroll & digital templates for Surrey, White Rock & Delta, BC." />
   <meta name="twitter:image" content="https://prismledger.ca/images/head.png" />
 
-  <!-- Local SEO (geo) -->
+  <!-- Local SEO -->
   <meta name="geo.region" content="CA-BC" />
   <meta name="geo.placename" content="Surrey, White Rock, Delta" />
   <meta name="geo.position" content="49.1044;-122.8011" />
@@ -33,7 +33,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Structured Data for Services Page -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,18 +45,9 @@
       "url": "https://prismledger.ca"
     },
     "areaServed": [
-      {
-        "@type": "AdministrativeArea",
-        "name": "Surrey, British Columbia"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "White Rock, British Columbia"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Delta, British Columbia"
-      }
+      { "@type": "AdministrativeArea", "name": "Surrey, British Columbia" },
+      { "@type": "AdministrativeArea", "name": "White Rock, British Columbia" },
+      { "@type": "AdministrativeArea", "name": "Delta, British Columbia" }
     ],
     "serviceType": [
       "Personal tax filing",
@@ -69,9 +60,8 @@
   }
   </script>
 
-  <!-- Page-specific styles -->
+  <!-- Extra Styling -->
   <style>
-    /* Vanta Background */
     #vanta-bg {
       position: fixed;
       top: 0;
@@ -81,13 +71,11 @@
       z-index: -1;
     }
 
-    /* Keep page content above background */
     .navbar, .scroll-container, .snap-section, footer {
       position: relative;
       z-index: 10;
     }
 
-    /* Slight responsive tweaks for scroll sections */
     @media (max-width: 900px) {
       .snap-section {
         padding: 100px 20px;
@@ -117,14 +105,14 @@
 </head>
 
 <body>
-<!-- BACKGROUND -->
+
 <div id="vanta-bg"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar fade-in">
   <div class="nav-left">
     <img src="images/transparent-background-logo.png" class="nav-logo" alt="Prismledger Accounting logo" loading="lazy">
-    <span class="nav-brand">Prismledger Accounting</span>
+    <!-- REMOVED Prismledger Accounting text -->
   </div>
 
   <ul class="nav-links">
@@ -132,6 +120,7 @@
     <li><a class="active" href="services.html">Services</a></li>
     <li><a href="pricing.html">Pricing</a></li>
     <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li> <!-- ADDED BLOG -->
     <li><a href="contact.html">Contact</a></li>
   </ul>
 
@@ -149,12 +138,11 @@
 <!-- FULL SCREEN SCROLLING -->
 <div class="scroll-container">
 
-  <!-- PAGE 1: Overview -->
+  <!-- PAGE 1 -->
   <section class="snap-section fade-up" id="services-overview">
     <h1 class="section-title">Our Services</h1>
     <p class="section-subtitle">
-      Professional, reliable, and affordable accounting services for individuals, newcomers and small businesses
-      across Surrey, White Rock and Delta, BC.
+      Professional, reliable, and affordable accounting services for individuals, newcomers and small businesses across Surrey, White Rock and Delta, BC.
     </p>
 
     <div class="service-cards">
@@ -162,12 +150,10 @@
         <h2>Tax Filing</h2>
         <p>Accurate returns for students, families, newcomers &amp; self-employed individuals.</p>
       </div>
-
       <div class="card">
         <h2>Bookkeeping</h2>
         <p>Monthly bookkeeping using QuickBooks, Wave or Xero with clear financial reporting.</p>
       </div>
-
       <div class="card">
         <h2>Payroll &amp; HR</h2>
         <p>Payroll setup, ROEs, T4s, remittances and HR support for growing teams.</p>
@@ -175,7 +161,7 @@
     </div>
   </section>
 
-  <!-- PAGE 2: Tax Filing -->
+  <!-- PAGE 2 -->
   <section class="snap-section fade-up" id="tax-filing-services">
     <h1 class="section-title">Tax Filing Services</h1>
     <p class="section-subtitle">
@@ -186,7 +172,7 @@
       <h3>Tax Deadlines</h3>
       <ul>
         <li><strong>Individuals:</strong> April 30</li>
-        <li><strong>Self-Employed:</strong> June 15 (tax due April 30)</li>
+        <li><strong>Self-Employed:</strong> June 15 (balance due April 30)</li>
         <li><strong>Corporations:</strong> 6 months after fiscal year-end</li>
       </ul>
 
@@ -196,7 +182,7 @@
     </div>
   </section>
 
-  <!-- PAGE 3: Bookkeeping -->
+  <!-- PAGE 3 -->
   <section class="snap-section fade-up" id="bookkeeping-services">
     <h1 class="section-title">Bookkeeping Services</h1>
     <p class="section-subtitle">
@@ -214,7 +200,7 @@
     </div>
   </section>
 
-  <!-- PAGE 4: Payroll & HR -->
+  <!-- PAGE 4 -->
   <section class="snap-section fade-up" id="payroll-services">
     <h1 class="section-title">Payroll &amp; HR Services</h1>
     <p class="section-subtitle">
@@ -233,7 +219,7 @@
     </div>
   </section>
 
-  <!-- PAGE 5: Digital Products & Templates -->
+  <!-- PAGE 5 -->
   <section class="snap-section fade-up" id="digital-products">
     <h1 class="section-title">Digital Products &amp; Templates</h1>
     <p class="section-subtitle">
@@ -242,16 +228,15 @@
 
     <div class="info-box">
       <p>
-        Save time and reduce errors with practical, plug-and-play templates you can download and use in Excel,
-        Google Sheets or PDF. New resources will be added regularly.
+        Save time and reduce errors with practical, plug-and-play templates in Excel, Google Sheets or PDF.
       </p>
       <ul>
-        <li>Bookkeeping spreadsheets for freelancers and small businesses</li>
-        <li>Payroll calculators and employee timesheet templates</li>
-        <li>Personal and business tax checklists</li>
+        <li>Bookkeeping spreadsheets</li>
+        <li>Payroll calculators & timesheets</li>
+        <li>Tax checklists</li>
         <li>Invoice, quote and receipt templates</li>
-        <li>Cash flow tracking and budget planners</li>
-        <li>Starter packs for new corporations and sole proprietors</li>
+        <li>Cash flow trackers</li>
+        <li>Startup packs</li>
       </ul>
       <p style="margin-top:15px;">
         Digital products section coming soon — check back for downloadable templates, or
@@ -266,13 +251,10 @@
   © 2025 Prismledger Accounting Services
 </footer>
 
-<!-- JS moved to bottom to avoid render-blocking -->
-
-<!-- VANTA LIBRARIES -->
+<!-- JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 
-<!-- VANTA INIT -->
 <script>
   VANTA.NET({
     el: "#vanta-bg",
@@ -283,15 +265,14 @@
     minWidth: 200,
     scale: 1,
     scaleMobile: 1,
-    color: 0x4e1aff,           // brighter purple
-    backgroundColor: 0x05000c, // very dark background
+    color: 0x4e1aff,
+    backgroundColor: 0x05000c,
     points: 12,
     maxDistance: 22,
     spacing: 16
   });
 </script>
 
-<!-- Main site JS (theme toggle, scroll bar, etc.) -->
 <script src="script.js"></script>
 
 </body>
