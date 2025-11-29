@@ -420,6 +420,28 @@
         font-size: 1.6rem;
       }
     }
+     <section class="calculator-section">
+  <h2 class="section-title">CRA Interest Calculator</h2>
+  <p class="section-subtitle">Daily Compounded — Based on CRA Prescribed Rates</p>
+
+  <div class="calculator-card">
+    <label>Amount Owing ($):</label>
+    <input type="number" id="principal" placeholder="e.g., 1000" />
+
+    <label>Overdue Start Date:</label>
+    <input type="date" id="start-date" />
+
+    <label>Interest Calculated To:</label>
+    <input type="date" id="end-date" />
+
+    <button onclick="calculateCRAInterest()">Calculate Interest</button>
+
+    <div id="result"></div>
+  </div>
+</section>
+
+<!-- Link to calculator script -->
+<script src="cra_interest_calculator.js"></script>
 
     /* ===== REVIEWS / TESTIMONIALS SECTION ===== */
     .reviews-section {
